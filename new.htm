@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ERA5 explorer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+
+    <script type="text/javascript">
+        window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
+    </script>
+
+    <link rel="shortcut icon" href="https://cds.climate.copernicus.eu/toolbox/favicon.png">
+
+
+
+    <link rel="preload" as="fetch"
+        href="https://cds.climate.copernicus.eu/workflows/c3s/app-era5-explorer/dd26c72c31216ee858b721788eef5234e4a8d171/configuration.json?configuration_version=3.0"
+        type="application/json">
+
+
+    <link rel="preload" as="image" href="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cds.climate.copernicus.eu/apps/toolboxapp-fbe822f5b77795413c6d617b0ff9a21d.css"
+        media="all" />
+
+</head>
+
+<body class="t-ct cds-fullscreen">
+
+    <div class="app-grid">
+        <div class="topnav">
+            <a href="https://cds.climate.copernicus.eu/" class="title">
+                <h4>
+                    <img class="logo"
+                        src="https://cds.climate.copernicus.eu/live/static/public_dashboard/images/C3S_logo_White.png"
+                        alt="Home">Climate Data Store - ERA5 explorer</h4>
+            </a>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="https://cds.climate.copernicus.eu/cdsapp#!/software/app-era5-explorer?tab=app"
+                            title="Exit full screen"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M14,14H19V16H16V19H14V14M5,14H10V19H8V16H5V14M8,5H10V10H5V8H8V5M19,8V10H14V5H16V8H19Z" />
+                            </svg></a><span class="sr-only">Exit full screen</span></li>
+                    <li><a href="https://cds.climate.copernicus.eu/cdsapp#!/software/app-era5-explorer?tab=overview"
+                            title="Application overview"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+                            </svg></a><span class="sr-only">Application overview</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="cds-app-container container-fluid">
+
+            <div id="app">
+                <div class="pre-app-loading">
+                    <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg" alt="Loading">
+                    <div>
+                        &hellip;loading application&hellip;
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="app-footer">
+            <div class="container-fluid">
+                <div class="col-xs-12 text-center">
+                    <img alt="European commission"
+                        src="https://cds.climate.copernicus.eu/sites/default/files/inline-images/logo-european-commission.png">
+                    <img alt="Copernicus - Europe's eyes on Earth"
+                        src="https://cds.climate.copernicus.eu/sites/default/files/inline-images/logo-copernicus.png">
+                    <img alt="ECMWF logo" src="https://cds.climate.copernicus.eu/sites/default/files/inline-images/logo-ecmwf_0.png">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.7.2.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+
+            function createErrorPanelAt(element, error) {
+                document.getElementById(element).innerHTML = '<div class="panel panel-danger">'
+                    + '<div class="panel-heading">An error occurred</div>'
+                    + '<div class="panel-body">'
+                    + '<p>Message:</p>'
+                    + '<blockquote><code>' + error.message + '</code></blockquote>'
+                    + '<p>Check your browser console for more details.</p>'
+                    + '</div>';
+            }
+
+            document.addEventListener(
+                'DOMContentLoaded',
+                function () {
+                    try {
+                        window.cds_toolbox.runApp(
+                            'app',
+                            'https://cds.climate.copernicus.eu/workflows/c3s/app-era5-explorer/dd26c72c31216ee858b721788eef5234e4a8d171/configuration.json',
+                            { monitorViewport: true }
+                        );
+                    } catch (err) {
+                        console.error(err);
+                        createErrorPanelAt('app', err);
+                    }
+                },
+                false
+            );
+        })();
+    </script>
+
+
+</body>
+
+</html>
