@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title></title>
+  <title>Agriculture - Mosquitos</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
     .header {
@@ -891,7 +891,14 @@
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-2" dir="ltr">
-              <span id="breadcrumbs-current">Indicators in Climate-ADAPT</span>
+              <a href="index.html">Indicators in Climate-ADAPT</a>
+              <span class="breadcrumbSeparator"> /</span>
+            </span>
+            <span id="breadcrumbs-3" dir="ltr">
+              <a href="agriculture.html">Indicators in Climate-ADAPT</a>
+            </span>
+            <span id="breadcrumbs-4" dir="ltr">
+              <span id="breadcrumbs-current">Mosquitos</span>
             </span>
           </div>
         </div>
@@ -908,7 +915,7 @@
               <div class="column col-md-16 " data-panel="">
                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                   <div class="cover-richtext-tile tile-content">
-                    <h1>Climate Indicators</h1>
+                    <h1>Mosquitos</h1>
                     <div>
                       Maecenas rhoncus laoreet massa ut pellentesque. Nullam imperdiet non neque vitae lobortis.
                       Maecenas consectetur sem ac elit egestas pulvinar. Quisque non nulla mi. Vestibulum ac tortor
@@ -930,17 +937,50 @@
 
 
             <br /><br />
-            <div class="row container-themes justify-content-around">
-                <div class="column col-md-3 img-health not-active-yet" data-panel=""><h3>Health</h3></div>
-                <div class="column col-md-3 img-agriculture" data-panel="" onclick="window.location = 'agriculture.html'"><h3>Agriculture</h3></div>
-                <div class="column col-md-3 img-forestry not-active-yet" data-panel=""><h3>Forestry</h3></div>
-            </div>
-            <div class="row container-themes">
-                <div class="column col-md-3 img-energy not-active-yet" data-panel=""><h3>Energy</h3></div>
-                <div class="column col-md-3 img-insurance-and-disaster-risk-reduction not-active-yet" data-panel=""><h3>Insurance and Disaster Risk Reduction</h3></div>
-                <div class="column col-md-3 img-physical-climate-extremes not-active-yet" data-panel=""><h3>Physical Climate Extremes</h3></div>
-            </div>
+            <!-- <div class="row">
+                          <div class="column col-md-16" data-panel="">width:100%</div>
+                      </div> -->
             <br /><br />
+            <div class="row">
+              <div class="column col-md-7" data-panel="">
+
+                <script type="text/javascript">
+                  window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
+                </script>
+                <div class="t-ct">
+
+
+                  <div id="toolbox-app">
+                    <div class="pre-app-loading">
+                      <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg" alt="Loading">
+                      <div>
+                        ...loading configuration...
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <script type="text/javascript"
+                  src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.9.1.js"></script>
+                <script type="text/javascript">
+                  (function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                      console.log("gelkadlfkalskflskdf")
+                      window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mosquito-map/master/configuration.json?configuration_version=3.0');
+                    }, false);
+                  })();
+                </script>
+              </div>
+              <div class="column col-md-5" data-panel="">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna lectus, euismod porttitor ipsum eget, malesuada tincidunt enim. Nam imperdiet molestie odio tincidunt gravida.
+                  <br><br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis libero laoreet, scelerisque nulla ac, dignissim est. Sed imperdiet neque odio, commodo molestie eros aliquet id. Donec blandit tellus et augue commodo, sit amet iaculis libero tristique.
+                  <br><br>
+                <button class="standard-button primary-button" onclick="window.location = 'mosquitos-detail.html'">Explore in
+                  details</button>
+              </div>
+            </div>
           </div>
 
 
