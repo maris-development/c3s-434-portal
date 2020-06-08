@@ -36,7 +36,9 @@
     cursor:pointer;
 }
 
-
+.bold-text {
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 992px) {
     .container-themes .column { width:30%; margin-bottom:20px; }

@@ -428,7 +428,7 @@
 
   <link rel="stylesheet" type="text/css" media="screen" href="css/compiled-less.css" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style-maris.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style-maris.css?v=20200608T084400" />
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -899,7 +899,7 @@
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-4" dir="ltr">
-              <span id="breadcrumbs-current">Mosquitos</span>
+              <span id="breadcrumbs-current">Climatic suitability of tiger mosquito</span>
             </span>
           </div>
         </div>
@@ -916,19 +916,24 @@
               <div class="column col-md-16 " data-panel="">
                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                   <div class="cover-richtext-tile tile-content">
-                    <h1>Mosquitos</h1>
+                    <h1>Climatic suitability of tiger mosquito</h1>
                     <div>
-                      Maecenas rhoncus laoreet massa ut pellentesque. Nullam imperdiet non neque vitae lobortis.
-                      Maecenas consectetur sem ac elit egestas pulvinar. Quisque non nulla mi. Vestibulum ac tortor
-                      diam. Praesent vestibulum elementum velit, et facilisis quam aliquam et. Cras pharetra molestie
-                      purus, eget posuere orci sagittis quis. Nam sit amet velit pretium, tincidunt neque id, suscipit
-                      arcu. Vestibulum mattis eget nunc a hendrerit. Curabitur eleifend vulputate cursus. Phasellus eget
-                      nisl eu nulla fringilla vehicula nec ac nunc. Vestibulum facilisis rutrum magna nec tristique.
-                      <br /> <br />
-                      Morbi fermentum iaculis arcu. Aenean hendrerit luctus ante id tristique. Morbi blandit ipsum sed
-                      consectetur fringilla. Aliquam at molestie nisi, ut commodo dolor. Nulla in turpis dolor. Aliquam
-                      non risus elit. Pellentesque non vestibulum tellus. Nam mauris purus, convallis at ex vel,
-                      vehicula commodo nisi.
+                      This dataset contains climatic suitability indicators for the Aedes albopictus (tiger mosquito)
+                      for Europe produced within the C3S European Health service. The provided indicators are the
+                      climatic suitability for the presence of Aedes albopictus and the season length of presence of
+                      Aedes albopictus. This mosquito transmits vector-borne diseases, such as dengue and chikungunya.
+                      <br>
+                      <br>
+                      Environmental factors such as temperature and rainfall impact the survival chance and seasonal
+                      activity of Aedes albopictus. In Europe, the environmental conditions become more favorable for
+                      the establishment of Aedes albopictus, which is a serious threat for human health in Europe.
+                      <br>
+                      <br>
+                      The temperature statistics are calculated, either for the season winter and summer or for the
+                      whole year, based on a bias-adjusted EURO-CORDEX dataset. Then, the statistics are averaged for 30
+                      years as a smoothed average from 1971 to 2100. This results in a timeseries covering the period
+                      from 1986 to 2085. Finally, the timeseries are averaged for the model ensemble and the standard
+                      deviation to this ensemble mean is provided.
                     </div>
                   </div>
                 </div>
@@ -967,18 +972,20 @@
                 <script type="text/javascript">
                   (function () {
                     document.addEventListener('DOMContentLoaded', function () {
-                      console.log("gelkadlfkalskflskdf")
-                      window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mosquito-map/master/configuration.json?configuration_version=3.0');
+                      window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-climatic-suitability-of-tiger-mosquito/master/configuration.json?configuration_version=3.0');
                     }, false);
                   })();
                 </script>
               </div>
               <div class="column col-md-5" data-panel="">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna lectus, euismod porttitor ipsum eget, malesuada tincidunt enim. Nam imperdiet molestie odio tincidunt gravida.
-                  <br><br>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis libero laoreet, scelerisque nulla ac, dignissim est. Sed imperdiet neque odio, commodo molestie eros aliquet id. Donec blandit tellus et augue commodo, sit amet iaculis libero tristique.
-                  <br><br>
-                <button class="standard-button primary-button" onclick="window.location = 'mosquitos-detail.html'">Explore in
+                <b class="bold-text">Season length</b><br>
+                Duration of Aedes albopictus presence in weeks. This is also known as the mosquito season. Outside of this period mosquitoes die off or go into diapause.
+                <br><br>
+                <b class="bold-text">Suitability</b><br>
+                Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0 not suitable (no favourable conditions) and 100 totally suitable.
+                <br><br>
+                <button class="standard-button primary-button"
+                  onclick="window.location = 'mosquitos-detail.html'">Explore in
                   details</button>
               </div>
             </div>
