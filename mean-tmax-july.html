@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Indicators in Climate-ADAPT - health</title>
+  <title>Health - Mean Tmax in July</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
     .header {
@@ -428,7 +428,7 @@
 
   <link rel="stylesheet" type="text/css" media="screen" href="css/compiled-less.css" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style-maris.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style-maris.css?v=20200608T084400" />
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -895,7 +895,11 @@
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-3" dir="ltr">
-              <span id="breadcrumbs-current">Health</span>
+              <a href="health.html">Health</a>
+              <span class="breadcrumbSeparator"> /</span>
+            </span>
+            <span id="breadcrumbs-4" dir="ltr">
+              <span id="breadcrumbs-current">Mean Tmax in July</span>
             </span>
           </div>
         </div>
@@ -912,9 +916,13 @@
               <div class="column col-md-16 " data-panel="">
                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                   <div class="cover-richtext-tile tile-content">
-                    <h1>Health</h1>
+                    <h1>Mean Tmax in July</h1>
                     <div>
-                      Climate change will generate new health risks and amplify current health problems. Both direct and indirect effects on human, plant and animal health are expected from climate change. Direct effects results from changes in the intensity and frequency of extreme weather events like heatwaves and floods. Indirect effects can be felt through changes in the incidence of diseases transmitted by insects (i.e. vector born diseases caused by mosquitoes and ticks), rodents or changes in water, food and air quality.
+                      This dataset provides daily surface meteorological data for the period 1979-2018 as input for agro-ecological studies. This dataset is based on the hourly ECMWF ERA5 data at surface level and is referred to as AgERA5. Acquisition and pre-processing of the original ERA5 data is a complex and specialized job. By providing the AgERA5 dataset, users are freed from this work and can directly start with meaningful input for their analyses and modelling. To this end, the variables provided in this dataset match the input needs of most agro-ecological models.
+                      <br><br>
+                      Data were aggregated to daily time steps at the local time zone and corrected towards a finer topography at a 0.1&deg; spatial resolution. The correction to the 0.1&deg; grid was realized by applying grid and variable-specific regression equations to the ERA5 dataset interpolated at 0.1&deg; grid. The equations were trained on ECMWF's operational high-resolution atmospheric model (HRES) at a 0.1&deg; resolution. This way the data is tuned to the finer topography, finer land use pattern and finer land-sea delineation of the ECMWF HRES model.
+                      <br><br>
+                      The data was produced on behalf of the Copernicus Climate Change Service.
                     </div>
                   </div>
                 </div>
@@ -924,15 +932,49 @@
 
 
             <br /><br />
-            <div class="row">
-                <div class="column col-md-4">
-                    <ul>
-                        <li><a href="mosquitos.html">Climatic suitability of tiger mosquito</a></li>
-                        <li><a href="mean-tmax-july.html">Mean Tmax in July</a></li>
-                    </ul>
-                </div>
-            </div>
+            <!-- <div class="row">
+                          <div class="column col-md-16" data-panel="">width:100%</div>
+                      </div> -->
             <br /><br />
+            <div class="row">
+              <div class="column col-md-7" data-panel="">
+
+                <script type="text/javascript">
+                  window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
+                </script>
+                <div class="t-ct">
+
+
+                  <div id="toolbox-app">
+                    <div class="pre-app-loading">
+                      <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg" alt="Loading">
+                      <div>
+                        ...loading configuration...
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <script type="text/javascript"
+                  src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.9.1.js"></script>
+                <script type="text/javascript">
+                  (function () {
+                    document.addEventListener('DOMContentLoaded', function () {
+                      window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mean-tmax-in-july/master/configuration.json?configuration_version=3.0');
+                    }, false);
+                  })();
+                </script>
+              </div>
+              <div class="column col-md-5" data-panel="">
+                <b class="bold-text">2m temperature</b><br>
+                Air temperature at a height of 2 metres above the surface.
+                <br><br>
+                <!-- <button class="standard-button primary-button" -->
+                  <!-- onclick="window.location = 'mosquitos-detail.html'">Explore in -->
+                  <!-- details</button> -->
+              </div>
+            </div>
           </div>
 
 
