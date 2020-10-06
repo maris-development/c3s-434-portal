@@ -1,0 +1,93 @@
+{
+	"header": {
+		"project:": "C3S 434 dataset descriptors",
+		"json_compliation": "CEDA/RP/20200915"
+	},
+	"datasets": {
+		"dataset_title": "Agrometeorological indicators from 1979 to 2018 derived from reanalysis",
+		"dataset_details": {
+			"dataset_source_url": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agrometeorological-indicators?tab=overview",
+			"dataset_hist": "sis-agrometeorological-indicators",
+			"dataset_scen": "sis-agroclimatic-indicators",
+			"dataset_cds_overview": "This dataset provides daily surface meteorological data for the period 1979-2018 as input for agro-ecological studies.
+			This dataset is based on the hourly ECMWF ERA5 data at surface level and is referred to as AgERA5. Acquisition and pre-processing of the
+			original ERA5 data is a complex and specialized job. By providing the AgERA5 dataset, users are freed from this work and can directly
+			start with meaningful input for their analyses and modelling. To this end, the variables provided in this dataset match the input needs
+			of most agro-ecological models. Data were aggregated to daily time steps at the local time zone and corrected towards a finer topography
+			at a 0.1° spatial resolution. The correction to the 0.1° grid was realized by applying grid and variable-specific regression equations to
+			the ERA5 dataset interpolated at 0.1° grid. The equations were trained on ECMWF's operational high-resolution atmospheric model (HRES)
+			at a 0.1° resolution. This way the data is tuned to the finer topography, finer land use pattern and finer land-sea delineation of the
+			ECMWF HRES model. The data was produced on behalf of the Copernicus Climate Change Service. More details about the products are given in
+			the Documentation section.",
+			"dataset_eea_overview": "",
+			"dataset_description": {
+				"data_type": "Gridded",
+				"horizontal_coverage": "Global",
+				"horizontal_resolution": "0.1° x 0.1°",
+				"vertical_coverage": "Variables are provided on a single level which may differ among variables",
+				"temporal_coverage": "From 1979 to 2018",
+				"temporal_resolution": "Daily",
+				"file_format": "NetCDF-4",
+				"conventions": "Climate and Forecast (CF) Metadata Convention v1.7",
+				"update_frequency": "No updates expected"
+			},
+			"variables": {
+				"10m_wind_speed": {
+					"display_name": "10m wind speed",
+					"units": "m s-1",
+					"description": "Mean wind speed at a height of 10 metres above the surface over the period 00h-24h local time."
+				},
+				"2m_dewpoint_temperature": {
+					"display_name": "2m dewpoint temperature",
+					"units": "K",
+					"description": "Mean dewpoint temperature at a height of 2 metres above the surface over the period 00h-24h local time. The dew point is the temperature to which air must be cooled to become saturated with water vapor. In combination with the air temperature it is used to assess relative humidity."
+				},
+				"2m_temperature": {
+					"display_name": "2m temperature",
+					"units": "K",
+					"description": "Air temperature at a height of 2 metres above the surface."
+				},
+				"cloud_cover": {
+					"display_name": "Cloud cover",
+					"units": "Dimensionless",
+					"description": "The number of hours with clouds over the period 00h-24h local time divided by 24 hours."
+				},
+				"liquid_precipitation_duration_fraction": {
+					"display_name": "Liquid precipitation duration fraction",
+					"units": "Dimensionless",
+					"description": "The number of hours with precipitation over the period 00h-24h local time divided by 24 hours and per unit of area. Liquid precipitation is equivalent to the height of the layer of water that would have formed from precipitation had the water not penetrated the soil, run off, or evaporated."
+				},
+				"precipitation_flux": {
+					"display_name": "Precipitation flux",
+					"units": "mm day-1",
+					"description": "Total volume of liquid water (mm3) precipitated over the period 00h-24h local time per unit of area (mm2), per day."
+				},
+				"snow_thickness": {
+					"display_name": "Snow thickness",
+					"units": "cm",
+					"description": "Mean snow depth over the period 00h-24h local time measured as volume of snow (cm3) per unit area (cm2)."
+				},
+				"snow_thickness_lwe": {
+					"display_name": "Snow thickness LWE",
+					"units": "cm",
+					"description": "Mean snow depth liquid water equivalent (LWE) over the period 00h-24h local time measured as volume of snow (cm3) per unit area (cm2) if all the snow had melted and had not penetrated the soil, runoff, or evaporated."
+				},
+				"solar_radiation_flux": {
+					"display_name": "Solar radiation flux",
+					"units": "J m-2 day-1",
+					"description": "Total amount of energy provided by solar radiation at the surface over the period 00-24h local time per unit area and time."
+				},
+				"solid_precipitation_duration_fraction": {
+					"display_name": "Solid precipitation duration fraction",
+					"units": "Dimensionless",
+					"description": "The number of hours with solid precipitation (freezing rain, snow, wet snow, mixture of rain and snow, and ice pellets) over the period 00h-24h local time divided by 24 hours and per unit of area."
+				},
+				"vapour_pressure": {
+					"display_name": "Vapour pressure",
+					"units": "hPa",
+					"description": "Contribution to the total atmospheric pressure provided by the water vapour over the period 00-24h local time per unit of time."
+				}
+			}
+		}
+	}
+}

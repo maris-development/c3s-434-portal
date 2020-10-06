@@ -3,6 +3,7 @@
 
 <head>
     <title>Mosquitos</title>
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -24,12 +25,22 @@
 
 
     </div>
-    <script type="text/javascript" src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.9.1.js"></script>
+    <script type="text/javascript" src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.13.2.js"></script>
     <script type="text/javascript">
         (function () {
             document.addEventListener('DOMContentLoaded', function () {
                 console.log("gelkadlfkalskflskdf")
-                window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mosquito-map/d164bcef988abc99d406bc53379e15ecaadc1232/configuration.json?configuration_version=3.0');
+                // window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mosquito-map/master/configuration.json?configuration_version=3.0', {
+                //     workflowParams: {
+                //         "indicator": "Suitability"
+                //     }
+                // });
+                window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-climatic-suitability-of-tiger-mosquito/master/configuration.json?configuration_version=3.0', {
+                    workflowParams: {
+                        "indicator": "season_length",
+                        
+                    }
+                });
             }, false);
         })();
     </script>
