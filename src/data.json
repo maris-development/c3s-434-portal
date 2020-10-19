@@ -1,0 +1,28 @@
+{
+    "datasets": [
+        {
+            "theme": "Health",
+            "title": "climatic-suitability-of-tiger-mosquito",
+            "overview": "https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-mosquito-overview-web",
+            "detail": "https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-mosquito-detail-web",
+            "description": "This dataset contains climatic suitability indicators for the Aedes albopictus (tiger mosquito) for Europe produced within the C3S European Health service. The provided indicators are the climatic suitability for the presence of Aedes albopictus and the season length of presence of Aedes albopictus. This mosquito transmits vector-borne diseases, such as dengue and chikungunya. Environmental factors such as temperature and rainfall impact the survival chance and seasonal activity of Aedes albopictus. In Europe, the environmental conditions become more favorable for the establishment of Aedes albopictus, which is a serious threat for human health in Europe. The temperature statistics are calculated, either for the season winter and summer or for the whole year, based on a bias-adjusted EURO-CORDEX dataset. Then, the statistics are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a timeseries covering the period from 1986 to 2085. Finally, the timeseries are averaged for the model ensemble and the standard deviation to this ensemble mean is provided."
+        },
+        {
+            "theme": "Agriculture",
+            "title": "tmax",
+            "overview": "https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmax-overview-web",
+            "detail": "https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmax-detail-web",
+            "description": "todo"
+        }
+    ],
+    "themes": [
+        {
+            "title": "Health",
+            "description": "Climate change will generate new health risks and amplify current health problems. Both direct and indirect effects on human, plant and animal health are expected from climate change. Direct effects results from changes in the intensity and frequency of extreme weather events like heatwaves and floods. Indirect effects can be felt through changes in the incidence of diseases transmitted by insects (i.e. vector born diseases caused by mosquitoes and ticks), rodents or changes in water, food and air quality."
+        },
+        {
+            "title": "Agriculture",
+            "description": ""
+        }
+    ]
+}
