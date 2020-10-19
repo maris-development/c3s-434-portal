@@ -24,9 +24,10 @@ const metadata = JSON.parse(fs.readFileSync("./src/ClimateAdapt_434-dataset-meta
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir)
 
-createThemePages(data);
 
 createAppPages(data, metadata);
+
+createThemePages(data);
 
 ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
     if (err) throw (err);
@@ -45,21 +46,23 @@ function createAppPages(data, metadata) {
 
         metadata["datasets"].forEach(datasetMetadata => {
             if (dataset["dataset"] !== undefined && dataset["dataset"] == datasetMetadata["dataset_details"]["dataset_hist"]) {
-                console.log("found")
-                console.log(datasetMetadata)
+                // console.log("found")
+                // console.log(datasetMetadata)
                 dataset.description = datasetMetadata["dataset_details"]["dataset_cds_overview"];
             }
         });
 
         // theme directory
-        fs.mkdirSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)
+        if (!fs.existsSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)) {
+            fs.mkdirSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)
+        }
 
-        const overviewFile = `${dataset.title}.html`
-        const detailFile = `${dataset.title}-detail.html`
+        const overviewFile = `${(dataset.title).toLowerCase().replace(/\s/g, "-")}.html`
+        const detailFile = `${(dataset.title).toLowerCase().replace(/\s/g, "-")}-detail.html`
 
         dataset.overviewpage = overviewFile;
         dataset.detailpage = detailFile;
-        
+
         // overview page
         ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
             if (err) throw (err);
@@ -84,19 +87,21 @@ function createAppPages(data, metadata) {
 function createThemePages(data) {
     for (const index in data["themes"]) {
         const theme = data["themes"][index]
+        console.log(theme)
         theme.apps = []
 
         for (const indexApp in data["datasets"]) {
             const dataset = data["datasets"][indexApp]
-            if (theme.title.localeCompare(dataset.theme) && (dataset.exclude !== undefined && dataset.exclude)) {
+            if (theme.title.toLowerCase() == dataset.theme.toLowerCase() && !dataset.exclude) {
 
                 //TODO create correct url
                 theme.apps.push({
                     "title": dataset.title,
-                    "url": `${(theme.title).toLowerCase()}/todo.html`
+                    "url": `${(theme.title).toLowerCase()}/${dataset.overviewpage}`
                 })
             }
         }
+        console.log(theme.apps)
 
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
             if (err) throw (err);
