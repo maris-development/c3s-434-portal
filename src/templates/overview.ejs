@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title><%= title %></title>
+  <title><%= theme %> - <%= title %></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
     .header {
@@ -421,14 +421,14 @@
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="description" content="" />
-  <link rel="stylesheet" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="../css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/cca-search.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/compiled-less.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style-maris.css?v=20200608T084400" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=20200608T084400" />
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
@@ -444,7 +444,7 @@
       <div class="content-container"> </div>
     </div>
     <div class="header">
-        <%- include('./partials/nav', {'lang': 'nl'}) %>
+        <%- include('./partials/nav') %>
     </div>
   </div>
 
@@ -467,11 +467,11 @@
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-3" dir="ltr">
-              <a href="health.html">Health</a>
+              <a href="../<%= theme.toLowerCase() %>.html"><%= theme %></a>
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-4" dir="ltr">
-              <span id="breadcrumbs-current">Climatic suitability of tiger mosquito</span>
+              <span id="breadcrumbs-current"><%= title %></span>
             </span>
           </div>
         </div>
@@ -488,24 +488,9 @@
               <div class="column col-md-16 " data-panel="">
                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                   <div class="cover-richtext-tile tile-content">
-                    <h1>Climatic suitability of tiger mosquito</h1>
+                    <h1><%= title %></h1>
                     <div>
-                      This dataset contains climatic suitability indicators for the Aedes albopictus (tiger mosquito)
-                      for Europe produced within the C3S European Health service. The provided indicators are the
-                      climatic suitability for the presence of Aedes albopictus and the season length of presence of
-                      Aedes albopictus. This mosquito transmits vector-borne diseases, such as dengue and chikungunya.
-                      <br>
-                      <br>
-                      Environmental factors such as temperature and rainfall impact the survival chance and seasonal
-                      activity of Aedes albopictus. In Europe, the environmental conditions become more favorable for
-                      the establishment of Aedes albopictus, which is a serious threat for human health in Europe.
-                      <br>
-                      <br>
-                      The temperature statistics are calculated, either for the season winter and summer or for the
-                      whole year, based on a bias-adjusted EURO-CORDEX dataset. Then, the statistics are averaged for 30
-                      years as a smoothed average from 1971 to 2100. This results in a timeseries covering the period
-                      from 1986 to 2085. Finally, the timeseries are averaged for the model ensemble and the standard
-                      deviation to this ensemble mean is provided.
+                        <%= description %>
                     </div>
                   </div>
                 </div>
@@ -537,11 +522,11 @@
 
                 </div>
                 <script type="text/javascript"
-                  src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.9.1.js"></script>
+                  src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.15.2.js"></script>
                 <script type="text/javascript">
                   (function () {
                     document.addEventListener('DOMContentLoaded', function () {
-                      window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-climatic-suitability-of-tiger-mosquito/master/configuration.json?configuration_version=3.0');
+                      window.cds_toolbox.runApp('toolbox-app', '<%= overview %>');
                     }, false);
                   })();
                 </script>
@@ -554,7 +539,7 @@
                 Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0 not suitable (no favourable conditions) and 100 totally suitable.
                 <br><br>
                 <button class="standard-button primary-button"
-                  onclick="window.location = 'mosquitos-detail.html'">Explore in
+                  onclick="window.location = '<%= detailpage %>'">Explore in
                   details</button>
               </div>
             </div>
