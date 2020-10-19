@@ -13,8 +13,7 @@
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmax-overview-web",
-            "detail": "hidden-app-agriculture-tmax-detail-web",
-            "exclude": true
+            "detail": "hidden-app-agriculture-tmax-detail-web"
         },
         {
             "title": "Average minimum temperature",
@@ -22,6 +21,13 @@
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmin-overview-web",
             "detail": "hidden-app-agriculture-tmin-overview-web"
+        },
+        {
+            "title": "Heat waves and cold spells in Europe",
+            "theme": "Health",
+            "dataset": "sis-heat-and-cold-spells",
+            "overview": "hidden-app-health-heatwave-overview-web",
+            "detail": "hidden-app-health-heatwave-detail-web"
         }
     ],
     "themes": [
