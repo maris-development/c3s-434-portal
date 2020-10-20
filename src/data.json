@@ -1,6 +1,7 @@
 {
     "datasets": [
         {
+            "exclude": true,
             "title": "Climatic suitability of tiger mosquito",
             "theme": "Health",
             "dataset": "sis-health-vector",
@@ -25,7 +26,11 @@
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmax-overview-web",
             "detail": "hidden-app-agriculture-tmax-detail-web",
-            "variables": ["mean_of_daily_maximum_temperature", "maximum_of_daily_maximum_temperature", "minimum_of_daily_maximum_temperature"]
+            "variables": [
+                "mean_of_daily_maximum_temperature",
+                "maximum_of_daily_maximum_temperature",
+                "minimum_of_daily_maximum_temperature"
+            ]
         },
         {
             "title": "Average minimum temperature",
@@ -35,11 +40,27 @@
             "detail": "hidden-app-agriculture-tmin-overview-web"
         },
         {
+            "exclude": true,
+            "title": "Average mean temperature",
+            "theme": "Agriculture",
+            "dataset": "sis-agrometeorological-indicators",
+            "overview": "hidden-app-agriculture-tmean-overview-web",
+            "detail": "hidden-app-agriculture-tmean-detail-web"
+        },
+        {
             "title": "Heat waves and cold spells in Europe",
             "theme": "Health",
             "dataset": "sis-heat-and-cold-spells",
             "overview": "hidden-app-health-heatwave-overview-web",
             "detail": "hidden-app-health-heatwave-detail-web"
+        },
+        {
+            "exclude": true,
+            "title": "Thermal comfort indices",
+            "theme": "Health",
+            "dataset": "derived-utci-historical",
+            "overview": "hidden-app-thermal-comfort-indices-overview-web",
+            "detail": "hidden-app-thermal-comfort-indices-detail-month-web"
         }
     ],
     "themes": [

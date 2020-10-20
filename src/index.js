@@ -92,10 +92,15 @@ function slugify(string) {
 }
 
 function createHTMLfiles(dataset, indicator = null) {
+    dataset.overview_var = null
+    dataset.detail_var = null
     if (indicator) {
         dataset.overviewpage = overviewFileName(dataset, indicator.title);
         dataset.detailpage = detailFileName(dataset, indicator.title);
         dataset.pagetitle = dataset.title + " - " + indicator.title
+        dataset.overview_var = indicator.overview_var
+        dataset.detail_var = indicator.detail_var
+    
     } else {
         dataset.overviewpage = overviewFileName(dataset);
         dataset.detailpage = detailFileName(dataset);
@@ -149,6 +154,7 @@ function createThemePages(data) {
                 }
             }
         }
+        theme.apps.sort((a, b) => a.title.localeCompare(b.title));
         // console.log(theme.apps)
 
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {

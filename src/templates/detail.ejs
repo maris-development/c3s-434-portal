@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Expore indicator <%= title %></title>
+    <title>Expore indicator <%= pagetitle %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <%- include('./partials/style') %>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -17,9 +17,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css" />
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
 </head>
 
@@ -72,7 +72,7 @@
                             <div class="column col-md-16 " data-panel="">
                                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                                     <div class="cover-richtext-tile tile-content">
-                                        <h1>Expore indicator - Change in average mean temperature</h1>
+                                        <h1>Expore indicator - <%= pagetitle %></h1>
                                         <button class="standard-button primary-button"
                                             onclick="window.location = '<%= overviewpage %>'">Go back</button>
 
@@ -113,9 +113,18 @@
                                 <script type="text/javascript">
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
-                                            window.cds_toolbox.runApp('toolbox-app', '<%= detail %>');
-                                        }, false);
-                                    })();
+                                            window.cds_toolbox.runApp('toolbox-app', '<%= detail %>'
+                                                <%if (detail_var != null) { %>
+                        , {
+                                                        workflowParams: {
+                                                            "indicator": "<%= detail_var %>",
+
+                                                        }
+                                                    }
+                                                    <% } %>
+                                            );
+                                    }, false);
+                                    }) ();
                                 </script>
                             </div>
                             <!-- <div class="column col-md-4" data-panel="">

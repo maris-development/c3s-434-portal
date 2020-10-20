@@ -17,9 +17,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=20200608T084400" />
 
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-  <meta http-equiv="Pragma" content="no-cache"/>
-  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
 </head>
 
@@ -30,7 +30,7 @@
       <div class="content-container"> </div>
     </div>
     <div class="header">
-        <%- include('./partials/nav') %>
+      <%- include('./partials/nav') %>
     </div>
   </div>
 
@@ -76,7 +76,7 @@
                   <div class="cover-richtext-tile tile-content">
                     <h1><%= pagetitle %></h1>
                     <div>
-                        <%= description %>
+                      <%= description %>
                     </div>
                   </div>
                 </div>
@@ -112,20 +112,31 @@
                 <script type="text/javascript">
                   (function () {
                     document.addEventListener('DOMContentLoaded', function () {
-                      window.cds_toolbox.runApp('toolbox-app', '<%= overview %>');
-                    }, false);
-                  })();
+                      window.cds_toolbox.runApp('toolbox-app', '<%= overview %>'
+                        <%if (overview_var != null) { %>
+                        , {
+                            workflowParams: {
+                              "indicator": "<%= overview_var %>",
+
+                            }
+                          }
+                          <% } %>
+                      );
+                  }, false);
+                  }) ();
                 </script>
               </div>
               <div class="column col-md-5" data-panel="">
                 <b class="bold-text">Season length</b><br>
-                Duration of Aedes albopictus presence in weeks. This is also known as the mosquito season. Outside of this period mosquitoes die off or go into diapause.
+                Duration of Aedes albopictus presence in weeks. This is also known as the mosquito season. Outside of
+                this period mosquitoes die off or go into diapause.
                 <br><br>
                 <b class="bold-text">Suitability</b><br>
-                Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0 not suitable (no favourable conditions) and 100 totally suitable.
+                Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0
+                not suitable (no favourable conditions) and 100 totally suitable.
                 <br><br>
-                <button class="standard-button primary-button"
-                  onclick="window.location = '<%= detailpage %>'">Explore in
+                <button class="standard-button primary-button" onclick="window.location = '<%= detailpage %>'">Explore
+                  in
                   details</button>
               </div>
             </div>
