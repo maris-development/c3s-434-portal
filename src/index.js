@@ -43,11 +43,9 @@ function createAppPages(data, metadata) {
         const dataset = data["datasets"][index];
         dataset.overview = APP_URL.replace("%APP%", dataset.overview);
         dataset.detail = APP_URL.replace("%APP%", dataset.detail);
-        console.log(dataset["dataset"])
+
         metadata["datasets"].forEach(datasetMetadata => {
             if (dataset["dataset"] !== undefined && dataset["dataset"] == datasetMetadata["dataset_details"]["dataset_hist"]) {
-                // console.log("found")
-                // console.log(datasetMetadata)
                 dataset.description = datasetMetadata["dataset_details"]["dataset_cds_overview"];
                 dataset.metadata = datasetMetadata;
                 return;
@@ -59,51 +57,99 @@ function createAppPages(data, metadata) {
             fs.mkdirSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)
         }
 
-        const overviewFile = `${(dataset.title).toLowerCase().replace(/\s/g, "-")}.html`
-        const detailFile = `${(dataset.title).toLowerCase().replace(/\s/g, "-")}-detail.html`
+        // console.log(dataset.indicators)
 
-        dataset.overviewpage = overviewFile;
-        dataset.detailpage = detailFile;
-
-        // overview page
-        ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
-            if (err) throw (err);
-            fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${overviewFile}`, data, (err) => {
-                if (err) throw (err);
-                console.log(`${overviewFile} has been created.`);
-            })
-        })
-
-        // detail page
-        ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
-            if (err) throw (err);
-            fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${detailFile}`, data, (err) => {
-                if (err) throw (err);
-                console.log(`${detailFile} has been created.`);
-            })
-        })
+        if (dataset.indicators !== undefined) {
+            dataset.indicators.forEach(indicator => {
+                createHTMLfiles(dataset, indicator)
+            });
+        } else {
+            createHTMLfiles(dataset)
+        }
     }
+}
+
+function overviewFileName(dataset, indicator = null) {
+    let name = slugify(dataset.title)
+    if (indicator) {
+        name += `--${slugify(indicator)}`
+    }
+    name += ".html"
+    return name
+}
+
+function detailFileName(dataset, indicator = null) {
+    let name = slugify(dataset.title)
+    if (indicator) {
+        name += `--${slugify(indicator)}`
+    }
+    name += "-detail.html"
+    return name
+}
+
+function slugify(string) {
+    return string.toLowerCase().replace(/\s/g, "-").replace(/_/g, "-")
+}
+
+function createHTMLfiles(dataset, indicator = null) {
+    if (indicator) {
+        dataset.overviewpage = overviewFileName(dataset, indicator.title);
+        dataset.detailpage = detailFileName(dataset, indicator.title);
+        dataset.pagetitle = dataset.title + " - " + indicator.title
+    } else {
+        dataset.overviewpage = overviewFileName(dataset);
+        dataset.detailpage = detailFileName(dataset);
+        dataset.pagetitle = dataset.title
+
+    }
+
+
+    // overview page
+    ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
+        if (err) throw (err);
+        fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${dataset.overviewpage}`, data, (err) => {
+            if (err) throw (err);
+            console.log(`${dataset.overviewpage} has been created.`);
+        })
+    })
+
+    // detail page
+    ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
+        if (err) throw (err);
+        fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${dataset.detailpage}`, data, (err) => {
+            if (err) throw (err);
+            console.log(`${dataset.detailpage} has been created.`);
+        })
+    })
 }
 
 
 function createThemePages(data) {
     for (const index in data["themes"]) {
         const theme = data["themes"][index]
-        console.log(theme)
+        // console.log(theme)
         theme.apps = []
 
         for (const indexApp in data["datasets"]) {
             const dataset = data["datasets"][indexApp]
             if (theme.title.toLowerCase() == dataset.theme.toLowerCase() && !dataset.exclude) {
+                if (dataset.indicators !== undefined) {
+                    dataset.indicators.forEach(indicator => {
+                        theme.apps.push({
+                            "title": dataset.title + " - " + indicator.title,
+                            "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset, indicator.title)}`
+                        })
 
-                //TODO create correct url
-                theme.apps.push({
-                    "title": dataset.title,
-                    "url": `${(theme.title).toLowerCase()}/${dataset.overviewpage}`
-                })
+                    });
+                } else {
+                    theme.apps.push({
+                        "title": dataset.title,
+                        "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset)}`
+                    })
+                }
             }
         }
-        console.log(theme.apps)
+        // console.log(theme.apps)
 
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
             if (err) throw (err);

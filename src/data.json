@@ -6,7 +6,18 @@
             "dataset": "sis-health-vector",
             "overview": "hidden-app-health-mosquito-overview-web",
             "detail": "hidden-app-health-mosquito-detail-web",
-            "indicators": ["suitability", "season_length"]
+            "indicators": [
+                {
+                    "title": "Suitability",
+                    "overview_var": "suitability",
+                    "detail_var": "Suitability"
+                },
+                {
+                    "title": "Season length",
+                    "overview_var": "season_length",
+                    "detail_var": "Length of season"
+                }
+            ]
         },
         {
             "title": "Average maximum temperature",
