@@ -11,12 +11,24 @@
                 {
                     "title": "Suitability",
                     "overview_var": "suitability",
-                    "detail_var": "Suitability"
+                    "detail_var": "Suitability",
+                    "sidebar_description": [
+                        {
+                            "name": "Suitability",
+                            "desc": "Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0 not suitable (no favourable conditions) and 100 totally suitable."
+                        }
+                    ]
                 },
                 {
                     "title": "Season length",
                     "overview_var": "season_length",
-                    "detail_var": "Length of season"
+                    "detail_var": "Length of season",
+                    "sidebar_description": [
+                        {
+                            "name": "Season length",
+                            "desc": "Duration of Aedes albopictus presence in weeks. This is also known as the mosquito season. Outside of this period mosquitoes die off or go into diapause."
+                        }
+                    ]
                 }
             ]
         },

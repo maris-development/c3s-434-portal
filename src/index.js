@@ -92,7 +92,7 @@ function slugify(string) {
 }
 
 function createHTMLfiles(dataset, indicator = null) {
-    if (dataset.sidebar_description === undefined){
+    if (dataset.sidebar_description === undefined) {
         dataset.sidebar_description = []
     }
 
@@ -104,7 +104,10 @@ function createHTMLfiles(dataset, indicator = null) {
         dataset.pagetitle = dataset.title + " - " + indicator.title
         dataset.overview_var = indicator.overview_var
         dataset.detail_var = indicator.detail_var
-    
+        if (indicator.sidebar_description !== undefined) {
+            dataset.sidebar_description = indicator.sidebar_description
+        }
+
     } else {
         dataset.overviewpage = overviewFileName(dataset);
         dataset.detailpage = detailFileName(dataset);
