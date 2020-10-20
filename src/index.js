@@ -92,6 +92,10 @@ function slugify(string) {
 }
 
 function createHTMLfiles(dataset, indicator = null) {
+    if (dataset.sidebar_description === undefined){
+        dataset.sidebar_description = []
+    }
+
     dataset.overview_var = null
     dataset.detail_var = null
     if (indicator) {
@@ -154,8 +158,8 @@ function createThemePages(data) {
                 }
             }
         }
+        // sort apps by title
         theme.apps.sort((a, b) => a.title.localeCompare(b.title));
-        // console.log(theme.apps)
 
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
             if (err) throw (err);

@@ -30,6 +30,12 @@
                 "mean_of_daily_maximum_temperature",
                 "maximum_of_daily_maximum_temperature",
                 "minimum_of_daily_maximum_temperature"
+            ],
+            "sidebar_description": [
+                {
+                    "name": "Mean of daily maximum temperature",
+                    "desc": "Mean value of TX over 10 days, where TX is the daily maximum temperature. This indicator provides information on long-term climate variability and change."
+                }
             ]
         },
         {
@@ -37,7 +43,13 @@
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmin-overview-web",
-            "detail": "hidden-app-agriculture-tmin-overview-web"
+            "detail": "hidden-app-agriculture-tmin-overview-web",
+            "sidebar_description": [
+                {
+                    "name": "Mean of daily minimum temperature",
+                    "desc": "Mean value of TN over 10 days, where TN is the daily minimum temperature. This indicator provides information on long-term climate variability and change."
+                }
+            ]
         },
         {
             "exclude": true,
@@ -45,14 +57,26 @@
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmean-overview-web",
-            "detail": "hidden-app-agriculture-tmean-detail-web"
+            "detail": "hidden-app-agriculture-tmean-detail-web",
+            "sidebar_description": [
+                {
+                    "name": "Mean of daily mean temperature",
+                    "desc": "Mean value of TG over 10 days, where TG is the daily mean temperature. This indicator provides information on long-term climate variability and change."
+                }
+            ]
         },
         {
             "title": "Heat waves and cold spells in Europe",
             "theme": "Health",
             "dataset": "sis-heat-and-cold-spells",
             "overview": "hidden-app-health-heatwave-overview-web",
-            "detail": "hidden-app-health-heatwave-detail-web"
+            "detail": "hidden-app-health-heatwave-detail-web",
+            "sidebar_description": [
+                {
+                    "name": "Heat wave days",
+                    "desc": "Number of hot days in a year using specific definitions."
+                }
+            ]
         },
         {
             "exclude": true,

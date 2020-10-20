@@ -127,14 +127,13 @@
                 </script>
               </div>
               <div class="column col-md-5" data-panel="">
-                <b class="bold-text">Season length</b><br>
-                Duration of Aedes albopictus presence in weeks. This is also known as the mosquito season. Outside of
-                this period mosquitoes die off or go into diapause.
-                <br><br>
-                <b class="bold-text">Suitability</b><br>
-                Likelihood that the area has favourable environmental conditions for Aedes albopictus presence with 0
-                not suitable (no favourable conditions) and 100 totally suitable.
-                <br><br>
+
+                <% for(var i=0; i < sidebar_description.length; i++) { %>
+
+                  <b class="bold-text"><%= sidebar_description[i].name %></b><br>
+                  <%= sidebar_description[i].desc %>
+                  <br><br>
+                <% } %>
                 <button class="standard-button primary-button" onclick="window.location = '<%= detailpage %>'">Explore
                   in
                   details</button>

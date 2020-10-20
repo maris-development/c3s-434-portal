@@ -135,7 +135,7 @@
 					"maximum_number_of_consecutive_dry_days": {
 						"display_name": "Maximum number of consecutive dry days",
 						"units": "day",
-						"description": " Longest period of consecutive days when RR < 1mm, where RR is the daily precipitation sum. This indicator is used for drought monitoring."
+						"description": "Longest period of consecutive days when RR < 1mm, where RR is the daily precipitation sum. This indicator is used for drought monitoring."
 					},
 					"maximum_number_of_consecutive_frost_days": {
 						"display_name": "Maximum number of consecutive frost days",
@@ -153,7 +153,7 @@
 						"description": "Longest period of consecutive days when RR > 1mm, where RR is the daily precipitation sum. This indicator provides information on drought, oxygen stress and crop growth (i.e. less radiation interception during rainy days)."
 					},
 					"maximum_of_daily_maximum_temperature": {
-						"display_name": "Maximum of daily maximum temperature ",
+						"display_name": "Maximum of daily maximum temperature",
 						"units": "K",
 						"description": "Maximum value of TX over 10 days, where TX is the daily maximum temperature. This indicator provides information on long-term climate variability and change."
 					},
@@ -163,12 +163,12 @@
 						"description": "Maximum value of TN over 10 days, where TN is the daily minimum temperature. This indicator provides information on long-term climate variability and change."
 					},
 					"mean_of_daily_maximum_temperature": {
-						"display_name": "Mean of daily maximum temperature ",
+						"display_name": "Mean of daily maximum temperature",
 						"units": "",
-						"description": " Mean value of TX over 10 days, where TX is the daily maximum temperature. This indicator provides information on long-term climate variability and change."
+						"description": "Mean value of TX over 10 days, where TX is the daily maximum temperature. This indicator provides information on long-term climate variability and change."
 					},
 					"mean_of_daily_mean_temperature": {
-						"display_name": "Mean of daily mean temperature ",
+						"display_name": "Mean of daily mean temperature",
 						"units": "K",
 						"description": "Mean value of TG over 10 days, where TG is the daily mean temperature. This indicator provides information on long-term climate variability and change."
 					},
@@ -178,12 +178,12 @@
 						"description": "Mean value of TN over 10 days, where TN is the daily minimum temperature. This indicator provides information on long-term climate variability and change."
 					},
 					"mean_of_diurnal_temperature_range": {
-						"display_name": "Mean of diurnal temperature range ",
+						"display_name": "Mean of diurnal temperature range",
 						"units": "K",
 						"description": "Mean value of the daily difference between TX and TN (TX-TN) over 10 days, where TX and TN are daily maximum and minimum temperature respectively. This indicator provides information on climate variability and change. It also serves as a proxy for information on the clarity (transmittance) of the atmosphere."
 					},
 					"minimum_of_daily_maximum_temperature": {
-						"display_name": "Minimum of daily maximum temperature ",
+						"display_name": "Minimum of daily maximum temperature",
 						"units": "K",
 						"description": "Minimum value of TX over 10 days, where TX is the daily maximum temperature. This indicator provides information on long-term climate variability and change."
 					},
@@ -251,7 +251,7 @@
 					"temporal_coverage": "From 1986 to 2085",
 					"temporal_resolution": "Year (season average)",
 					"file_format": "NetCDF-4",
-					"conventions": " Climate and Forecast (CF) Metadata Convention v1.6, Attribute Convention for Dataset Discovery (ACDD) v1.3",
+					"conventions": "Climate and Forecast (CF) Metadata Convention v1.6, Attribute Convention for Dataset Discovery (ACDD) v1.3",
 					"update_frequency": "No updates expected"
 				},
 				"variables": {
@@ -610,7 +610,7 @@
 					"wetness_1": {
 						"display_name": "Wetness 1",
 						"units": "mm day-1",
-						"description": " Precipitation minus potential evapotranspiration. Potential evapotranspiration is the modelled evapotranspiration when there is abundant water."
+						"description": "Precipitation minus potential evapotranspiration. Potential evapotranspiration is the modelled evapotranspiration when there is abundant water."
 					},
 					"wetness_2": {
 						"display_name": "Wetness 2",
@@ -757,17 +757,17 @@
 					},
 					"surface_solar_radiation_downwards": {
 						"display_name": "Surface solar radiation downwards",
-						"units": "W m-2 ",
+						"units": "W m-2",
 						"description": "The downward shortwave radiative flux of energy per unit area. The data represents the mean over the aggregation period at the surface."
 					},
 					"surface_thermal_radiation_downward": {
 						"display_name": "Surface thermal radiation downward",
-						"units": "W m-2 ",
+						"units": "W m-2",
 						"description": "Radiative longwave flux of energy incinding on the surface from the above per unit area."
 					},
 					"surface_upwelling_shortwave_radiation": {
 						"display_name": "Surface upwelling shortwave radiation",
-						"units": "W m-2 ",
+						"units": "W m-2",
 						"description": "Short wave radiative flux of energy from the surface per unit area."
 					},
 					"total_cloud_cover": {
