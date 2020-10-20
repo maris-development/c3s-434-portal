@@ -13,7 +13,8 @@
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmax-overview-web",
-            "detail": "hidden-app-agriculture-tmax-detail-web"
+            "detail": "hidden-app-agriculture-tmax-detail-web",
+            "variables": ["mean_of_daily_maximum_temperature", "maximum_of_daily_maximum_temperature", "minimum_of_daily_maximum_temperature"]
         },
         {
             "title": "Average minimum temperature",

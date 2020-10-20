@@ -43,12 +43,14 @@ function createAppPages(data, metadata) {
         const dataset = data["datasets"][index];
         dataset.overview = APP_URL.replace("%APP%", dataset.overview);
         dataset.detail = APP_URL.replace("%APP%", dataset.detail);
-
+        console.log(dataset["dataset"])
         metadata["datasets"].forEach(datasetMetadata => {
             if (dataset["dataset"] !== undefined && dataset["dataset"] == datasetMetadata["dataset_details"]["dataset_hist"]) {
                 // console.log("found")
                 // console.log(datasetMetadata)
                 dataset.description = datasetMetadata["dataset_details"]["dataset_cds_overview"];
+                dataset.metadata = datasetMetadata;
+                return;
             }
         });
 
