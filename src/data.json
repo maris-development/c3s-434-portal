@@ -1,7 +1,7 @@
 {
     "datasets": [
         {
-            "exclude": true,
+            "exclude": false,
             "title": "Climatic suitability of tiger mosquito",
             "theme": "Health",
             "dataset": "sis-health-vector",
@@ -91,12 +91,49 @@
             ]
         },
         {
-            "exclude": true,
+            "exclude": false,
             "title": "Thermal comfort indices",
             "theme": "Health",
             "dataset": "derived-utci-historical",
             "overview": "hidden-app-thermal-comfort-indices-overview-web",
-            "detail": "hidden-app-thermal-comfort-indices-detail-month-web"
+            "detail": "hidden-app-thermal-comfort-indices-detail-month-web",
+            "indicators": [
+                {
+                    "title": "Mean radiant temperature",
+                    "overview_var": "Mean radiant temperature",
+                    "detail_var": "Mean radiant temperature",
+                    "sidebar_description": [
+                        {
+                            "name": "Mean radiant temperature",
+                            "desc": "The mean radiant temperature, in relation to a given person placed in a given environment, in a given body posture and clothing, is defined as that uniform temperature of a fictive black-body radiation enclosure (emission coefficient ε = 1) which would result in the same net radiation energy exchange with the subject as the actual, more complex radiation environment."
+                        }
+                    ]
+                },
+                {
+                    "title": "Universal thermal climate index",
+                    "overview_var": "Universal thermal climate index",
+                    "detail_var": "Universal thermal climate index",
+                    "sidebar_description": [
+                        {
+                            "name": "Universal thermal climate index",
+                            "desc": "For any combination of air temperature, wind, radiation and humidity, the Universal thermal climate index is defined as the air temperature of a reference outdoor environment that would elicit in the human body the same physiological model’s response (sweat production, shivering, skin wettedness, skin blood flow and rectal, mean skin and face temperatures) as the actual environment."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Fire danger indices",
+            "theme": "Forestry",
+            "dataset": "cems-fire-historical",
+            "overview": "hidden-app-forestry-fireindex-overview-web",
+            "detail": "hidden-app-forestry-fireindex-detail-web",
+            "sidebar_description": [
+                {
+                    "name": "Fire danger index",
+                    "desc": "The Fire danger index is a metric related to the chances of a fire starting, its rate of spread, its intensity, and its difficulty of suppression. It is open ended however a value of 50 and above is considered extreme in most vegetation."
+                }
+            ]
         }
     ],
     "themes": [
@@ -106,6 +143,10 @@
         },
         {
             "title": "Agriculture",
+            "description": ""
+        },
+        {
+            "title": "Forestry",
             "description": ""
         }
     ]
