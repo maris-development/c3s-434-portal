@@ -29,6 +29,8 @@ createAppPages(data, metadata);
 
 createThemePages(data);
 
+createIndicatorOverview(data);
+
 ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
     if (err) throw (err);
     fs.writeFile(`${outputDir}/index.html`, data, (err) => {
@@ -117,7 +119,12 @@ function createHTMLfiles(dataset, indicator = null) {
 
 
     // overview page
-    ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
+    let overviewFile = `${srcPath}/templates/overview.ejs`
+    if (dataset.version == 2){
+        overviewFile = `${srcPath}/templates/overview-v2.ejs`
+    }
+    console.log(dataset.version)
+    ejs.renderFile(overviewFile, dataset, (err, data) => {
         if (err) throw (err);
         fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${dataset.overviewpage}`, data, (err) => {
             if (err) throw (err);
@@ -173,4 +180,38 @@ function createThemePages(data) {
             })
         })
     }
+}
+
+function createIndicatorOverview(data) {
+    let overviewData = {"title": "Overview", "description": "", "apps": []}
+    for (const indexApp in data["datasets"]) {
+        const dataset = data["datasets"][indexApp]
+        if (!dataset.exclude) {
+            if (dataset.indicators !== undefined) {
+                dataset.indicators.forEach(indicator => {
+                    overviewData.apps.push({
+                        "title": dataset.title + " - " + indicator.title,
+                        "url": `${(dataset.theme).toLowerCase()}/${overviewFileName(dataset, indicator.title)}`
+                    })
+
+                });
+            } else {
+                overviewData.apps.push({
+                    "title": dataset.title,
+                    "url": `${(dataset.theme).toLowerCase()}/${overviewFileName(dataset)}`
+                })
+            }
+        }
+    }
+    // sort apps by title
+    overviewData.apps.sort((a, b) => a.title.localeCompare(b.title));
+
+    ejs.renderFile(`${srcPath}/templates/theme.ejs`, overviewData, (err, data) => {
+        if (err) throw (err);
+        const outputFile = `indicator-overview.html`
+        fs.writeFile(`${outputDir}/${outputFile}`, data, (err) => {
+            if (err) throw (err);
+            console.log(`${outputFile} has been created.`);
+        })
+    })
 }

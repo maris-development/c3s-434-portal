@@ -38,6 +38,7 @@
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmax-overview-web",
             "detail": "hidden-app-agriculture-tmax-detail-web",
+            "version": 2,
             "variables": [
                 "mean_of_daily_maximum_temperature",
                 "maximum_of_daily_maximum_temperature",
