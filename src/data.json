@@ -56,7 +56,8 @@
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmin-overview-web",
-            "detail": "hidden-app-agriculture-tmin-overview-web",
+            "detail": "hidden-app-agriculture-tmin-detail-web",
+            "version": 2,
             "sidebar_description": [
                 {
                     "name": "Mean of daily minimum temperature",
@@ -65,12 +66,12 @@
             ]
         },
         {
-            "exclude": true,
             "title": "Average mean temperature",
             "theme": "Agriculture",
             "dataset": "sis-agrometeorological-indicators",
             "overview": "hidden-app-agriculture-tmean-overview-web",
             "detail": "hidden-app-agriculture-tmean-detail-web",
+            "version": 2,
             "sidebar_description": [
                 {
                     "name": "Mean of daily mean temperature",
@@ -129,6 +130,7 @@
             "dataset": "cems-fire-historical",
             "overview": "hidden-app-forestry-fireindex-overview-web",
             "detail": "hidden-app-forestry-fireindex-detail-web",
+            "version": 2,
             "sidebar_description": [
                 {
                     "name": "Fire danger index",
