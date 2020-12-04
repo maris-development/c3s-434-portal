@@ -1,52 +1,122 @@
 .container-themes {
     display: flex;
     justify-content: space-around;
-    
 }
 
 .container-themes .column {
-    border-radius:20px;
-    position:relative;
-    height:300px;
-    margin-bottom:50px;
+    border-radius: 20px;
+    position: relative;
+    height: 300px;
+    margin-bottom: 50px;
 }
 
 .container-themes .column h3 {
-    color:#fff;
-    position:absolute;
-    bottom:5px;
-    text-align:center;
-    left:0;
-    right:0;
-    font-weight:bold;
-    font-size:1.5em;
-    padding:0px 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0px 10px;
 }
 
-.container-themes .img-health                               { background: url(/grfx/img-health.jpg) no-repeat; background-size:cover; background-position: center; }
-.container-themes .img-agriculture                          { background: url(/grfx/img-agriculture.jpg) no-repeat; background-size:cover; background-position: center;}
-.container-themes .img-forestry                             { background: url(/grfx/img-forestry.jpg) no-repeat; background-size:cover; background-position: center;} 
-.container-themes .img-energy                               { background: url(/grfx/img-energy.jpg) no-repeat; background-size:cover; background-position: center;} 
-.container-themes .img-insurance-and-disaster-risk-reduction{ background: url(/grfx/img-insurance.jpg) no-repeat; background-size:cover; background-position: center;} 
-.container-themes .img-physical-climate-extremes            { background: url(/grfx/img-climate-extremes.jpg) no-repeat; background-size:cover; background-position: center;}  
+.container-themes .img-health {
+    background: url(/grfx/img-health.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-.container-themes .column:hover, .not-active-yet
-{
-    opacity:0.5;
-    cursor:pointer;
+.container-themes .img-agriculture {
+    background: url(/grfx/img-agriculture.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-themes .img-forestry {
+    background: url(/grfx/img-forestry.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-themes .img-energy {
+    background: url(/grfx/img-energy.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-themes .img-insurance-and-disaster-risk-reduction {
+    background: url(/grfx/img-insurance.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-themes .img-physical-climate-extremes {
+    background: url(/grfx/img-climate-extremes.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-themes .column:hover,
+.not-active-yet {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.secundary-button {
+    background: #8A9C3A;
+    border: none;
+    color: #fff;
+    font-weight: 600;
 }
 
 .bold-text {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 992px) {
-    .container-themes .column { width:30%; margin-bottom:20px; }
+button>a,
+button>a:focus,
+button>a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
+.right {
+    float: right;
+}
+
+hr {
+    background: #005C96;
+    height: 4px;
+}
+
+.app-title {
+    display: none;
+}
+
+.__react_component_tooltip p {
+    color: white;
+}
+
+
+.fkJcKE {
+    max-width: 100% !important;
+}
+
+@media only screen and (max-width: 992px) {
+    .container-themes .column {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+}
 
 @media only screen and (max-width: 600px) {
-    .container-themes .column   { width:100%; }
-    .container-themes           { display:block; margin:20px;}
+    .container-themes .column {
+        width: 100%;
+    }
+    .container-themes {
+        display: block;
+        margin: 20px;
+    }
 }
-

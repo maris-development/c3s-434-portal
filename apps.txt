@@ -1,0 +1,21 @@
+
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-thermal-comfort-indices-overview-web (wrong)
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-thermal-comfort-indices-detail-month-web
+
+embedded:
+
+# health
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-mosquito-overview-web (wrong)
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-mosquito-detail-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-heatwave-detail-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-health-heatwave-overview-web
+
+
+# agriculture
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmin-detail-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmin-overview-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmax-detail-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmax-overview-web
+
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmean-detail-web
+https://cds.climate.copernicus.eu/cdsapp#!/software/hidden-app-agriculture-tmean-overview-web

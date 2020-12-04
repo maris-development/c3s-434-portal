@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Expore indicator Average minimum temperature</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+    .header {
+        position: absolute;
+        width: 100%;
+        z-index: 99
+    }
+
+    .logo {
+        margin-top: 8px
+    }
+
+    .sticky-header {
+        position: fixed !important;
+        top: 0
+    }
+
+    .top-page-area .header {
+        position: relative
+    }
+
+    .top-menu {
+        background-color: rgba(255, 255, 255, 0.9);
+        height: 65px;
+        position: relative;
+        z-index: 99
+    }
+
+    .top-menu .fa-bars {
+        color: #005C96;
+        font-size: 28px
+    }
+
+    .top-menu-right-section {
+        margin-top: 20px
+    }
+
+    .top-menu-wrapper {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .top-menu-right-section a,
+    .personal-menu-action {
+        color: #3a3a3a
+    }
+
+    .action-selected,
+    .action-selected a {
+        color: #0170B7
+    }
+
+    .top-menu-nav {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2px
+    }
+
+    .top-menu-nav-item {
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        cursor: pointer
+    }
+
+    .help-menu {
+        margin-right: 10px
+    }
+
+    .login-container,
+    .help-container {
+        display: none
+    }
+
+    .top-menu-nav-item:hover .login>.login-container,
+    .help-menu:hover>.help-container {
+        display: block
+    }
+
+    .top-menu-nav-item:hover #user-name,
+    .top-menu-nav-item:hover>.login #personal-menu .personal-menu-action,
+    .top-menu-nav-item:hover>.help-link,
+    .top-menu-right-section a:hover {
+        color: #0170B7
+    }
+
+    .top-menu-nav-item:hover .help-link>.angle-down-icon,
+    .top-menu-nav-item:hover .personal-menu-action>.angle-down-icon {
+        border-top: 4px solid #0170B7
+    }
+
+    #portal-personaltools,
+    #help-items {
+        width: 100%;
+        min-width: 230px;
+        background-color: #F7F7F7;
+        border-bottom: 5px solid #005C96;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        padding: 10px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)
+    }
+
+    #portal-personaltools li,
+    #help-items li {
+        display: block
+    }
+
+    #portal-personaltools li:not(:last-child),
+    #help-items li:not(:last-child) {
+        padding-bottom: .3em
+    }
+
+    .help-main-nav-link {
+        padding-bottom: .3em;
+        display: block
+    }
+
+    #portal-personaltools a:hover {
+        color: #0170B7
+    }
+
+    .angle-down-icon {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #fff;
+        margin-bottom: 2px
+    }
+
+    .top-menu-nav-item .angle-down-icon {
+        border-top: 4px solid #3a3a3a
+    }
+
+    .mobile-menu {
+        display: none
+    }
+
+    .mobile-menu .fa-times {
+        color: #005C96;
+        font-size: 28px
+    }
+
+    .search-box {
+        display: inline-block;
+        position: relative;
+        right: 20px
+    }
+
+    .search-box:after {
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        content: '';
+        background-color: #3a3a3a;
+        position: absolute;
+        right: -7px;
+        top: 50%;
+        height: 80%;
+        width: 2px
+    }
+
+    .search-box .line {
+        -webkit-transition: .3s width ease-in-out;
+        -moz-transition: .3s width ease-in-out;
+        -o-transition: .3s width ease-in-out;
+        transition: .3s width ease-in-out;
+        background-color: darkgrey;
+        bottom: -5px;
+        display: block;
+        height: 2px;
+        position: absolute;
+        width: 0
+    }
+
+    .search-box input {
+        -webkit-transition: width .4s ease-in-out;
+        -moz-transition: width .4s ease-in-out;
+        -o-transition: width .4s ease-in-out;
+        transition: width .4s ease-in-out;
+        background-color: transparent;
+        border: none;
+        height: 25px;
+        width: 50%
+    }
+
+    .search-box input:focus {
+        width: 80%
+    }
+
+    .search-box input:focus+.line {
+        background-color: #005C96;
+        width: 100%
+    }
+
+    .search-submit {
+        background-color: transparent;
+        border: none
+    }
+
+    .search-box .search-submit i {
+        font-size: 18px
+    }
+
+    .search-box .search-submit i:hover {
+        color: #005C96
+    }
+
+    ::-webkit-input-placeholder {
+        color: #3a3a3a;
+        font-style: italic
+    }
+
+    :-moz-placeholder {
+        color: #3a3a3a;
+        font-style: italic
+    }
+
+    ::-moz-placeholder {
+        color: #3a3a3a;
+        font-style: italic
+    }
+
+    :-ms-input-placeholder {
+        color: #3a3a3a;
+        font-style: italic
+    }
+
+    .header ul {
+        list-style: none
+    }
+
+    .header a {
+        text-decoration: none
+    }
+
+    .header a:hover {
+        text-decoration: none
+    }
+
+    .header .main-nav-menu {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -moz-box;
+        display: flex;
+        position: relative;
+        background-color: #005C96;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.4)
+    }
+
+    .header .main-nav-menu .fa-database {
+        display: inline;
+        margin-right: 5px;
+        line-height: 18px;
+        color: #005C96
+    }
+
+    .header .main-nav-item {
+        flex-grow: 1;
+        position: relative;
+        text-align: center
+    }
+
+    .header .main-nav-item>span {
+        display: block
+    }
+
+    .header .main-nav-item:hover>span {
+        background: #8A9C3A
+    }
+
+    .header .main-nav-item:not(:last-child) {
+        border-right: 1px solid #014673
+    }
+
+    .header .main-nav-link {
+        display: inline-block;
+        padding: 15px 0;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        cursor: pointer
+    }
+
+    .header .sub-menu {
+        min-width: 200px;
+        text-align: left
+    }
+
+    .header .main-nav-item:hover>.sub-menu-wrapper {
+        display: block
+    }
+
+    .header .sub-menu-wrapper {
+        position: absolute;
+        left: 0;
+        height: auto;
+        background-color: #fff;
+        z-index: 10;
+        padding: 15px;
+        border-bottom: 5px solid #8A9C3A;
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+        display: none
+    }
+
+    .header .sub-menu-item {
+        padding: 13px 0
+    }
+
+    .header .sub-menu-item:first-of-type {
+        padding-top: 0
+    }
+
+    .header .sub-menu-item:last-of-type {
+        padding-bottom: 0
+    }
+
+    .header .sub-menu-item:not(:last-of-type) {
+        border-bottom: 1px solid #ddd
+    }
+
+    .header .sub-menu-link {
+        color: #005C96;
+        font-size: 14px;
+        text-transform: uppercase
+    }
+
+    .header .sub-sub-menu-item {
+        display: block;
+        padding-top: 8px
+    }
+
+    .header .sub-sub-menu-link {
+        color: #3a3a3a;
+        font-family: OpenSansR;
+        font-size: 13px;
+        display: block
+    }
+
+    .header .sub-menu-link:hover,
+    .header .sub-sub-menu-link:hover {
+        color: #6B7427
+    }
+
+    .header .toggle-down {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        display: inline-block
+    }
+
+    .header #main-nav-item-1 .sub-menu-wrapper {
+        min-width: 480px
+    }
+
+    .header #main-nav-item-1 .sub-menu-wrapper,
+    .header #main-nav-item-2 .sub-menu-wrapper {
+        column-count: auto !important
+    }
+
+    .header #main-nav-item-1 .sub-menu>.sub-menu-item:first-child>ul,
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:first-child>ul,
+    .header #main-nav-item-1 .sub-menu>.sub-menu-item:nth-child(2)>ul,
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:nth-child(2)>ul {
+        column-count: 2
+    }
+
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:nth-child(2) {
+        padding-top: 0;
+        border-left: 1px solid #ddd;
+        padding-left: 4%;
+        float: left;
+        width: 48%
+    }
+
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:first-child {
+        float: left;
+        width: 48%
+    }
+
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:last-of-type {
+        clear: both
+    }
+
+    .header #main-nav-item-2 .sub-menu>.sub-menu-item:last-of-type ul {
+        column-count: 2
+    }
+
+    .header .mobile-clearfix {
+        display: none
+    }
+
+    .header #main-nav-item-3 .sub-menu-wrapper {
+        column-count: auto !important;
+        min-width: 500px
+    }
+
+    .header #main-nav-item-3 .sub-menu {
+        float: left;
+        width: 50%
+    }
+
+    .header #main-nav-item-3 .sub-menu:first-child {
+        border-right: 1px solid #ddd
+    }
+
+    .header #main-nav-item-3 .sub-menu:last-child>.sub-menu-item {
+        padding-left: 15px
+    }
+</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+</head>
+
+<body dir="ltr"
+    class="cover-layout-empty-layout template-view portaltype-collective-cover-content site-cca section-knowledge subsection-c-a-indicators subsection-c-a-indicators-c-a-indicators icons-on userrole-anonymous">
+    <div class="top-page-area">
+        <div class="edit-bar-wrapper">
+            <div class="content-container"> </div>
+        </div>
+        <div class="header">
+            <div class="top-menu nav-down">
+                <div class="content-container top-menu-wrapper">
+                    <div class="logo"><a href="/index.html"><img
+                                src="https://climate-adapt.eea.europa.eu/++theme++climateadaptv2/static/images/climate-adapt-logo.svg"
+                                alt="Climate-ADAPT Logo"> </a></div>
+                    <!-- <div class="top-menu-right-section">
+                <div class="top-menu-content">
+                    <div class="search-box">
+                        <form action="https://climate-adapt.eea.europa.eu/data-and-downloads">
+                            <input type="text" name="SearchableText" placeholder="Search all site ...">
+                            <div class="line"></div>
+                            <button class="search-submit" aria-label="Search on Climate-ADAPT">
+                            <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container site-container">
+        <div id="portal-columns">
+            <div id="portal-column-content" class="cell width-full position-0">
+                <div class="">
+                    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+                        <dt>Info</dt>
+                        <dd></dd>
+                    </dl>
+
+
+
+                    <div id="content">
+                        <div class="row">
+                            <div class="column col-md-16 " data-panel="">
+                                <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
+                                    <div class="cover-richtext-tile tile-content">
+                                        <h1>Explore indicator - Monthly statistics for daily minimum temperature</h1>
+                                        <button class="standard-button primary-button"
+                                            onclick="window.location = 'average-minimum-temperature.html'">Go back</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- <br /><br /> -->
+                        <!-- <div class="row">
+                          <div class="column col-md-16" data-panel="">width:100%</div>
+                      </div> -->
+                        <br /><br />
+                        <div class="row">
+                            <div class="column col-md-12" data-panel="">
+                                <script type="text/javascript">
+                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
+                                </script>
+                                <div class="t-ct">
+
+
+                                    <div id="toolbox-app">
+                                        <div class="pre-app-loading">
+                                            <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
+                                                alt="Loading">
+                                            <div>
+                                                ...loading configuration...
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
+                                <script type="text/javascript">
+                                    (function () {
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmin-detail-web/master/configuration.json?configuration_version=3.0'
+                                                
+                                            );
+                                    }, false);
+                                    }) ();
+                                </script>
+                            </div>
+                            <!-- <div class="column col-md-4" data-panel="">
+                          You can provide information about the tool on the left.
+                          <a href="detail.html">Details</a>
+                        </div> -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+
+        <div class="content-container">
+    <div class="row footer-content">
+        <div class="col-md-6 col-xs-12">
+            <p class="site-info">The European Climate Adaptation Platform Climate-ADAPT is a partnership between the <a
+                    href="https://ec.europa.eu/" target="_blank">European Commission</a> and the <a
+                    href="https://www.eea.europa.eu/" target="_blank">European Environment Agency.</a></p>
+            <div class="footer-logos-wrapper">
+                <a href="https://ec.europa.eu/" rel="noopener" target="_blank">
+                    <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/ec_logo.png"
+                        alt="European Commission Logo" title="European Commission" class=" lazyloaded"
+                        src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/ec_logo.png">
+                </a>
+                <a href="https://www.eea.europa.eu/" rel="noopener" target="_blank">
+                    <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/eea_mini.png"
+                        alt="EEA Logo" title="European Environment Agency" class=" lazyloaded"
+                        src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/eea_mini.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="eu-systems col-md-6 col-xs-12">
+            <div class="eu-systems-wrapper">
+                <p>Other European <br> Information Systems:</p>
+                <ul class="footer-logos">
+                    <li class="footer-logo-item">
+                        <a href="https://biodiversity.europa.eu/" rel="noopener" target="_blank">
+                            <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/bise-logo.png"
+                                alt="BISE Logo" title="Biodiversity Information System for Europe" class=" lazyloaded"
+                                src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/bise-logo.png">
+                        </a>
+                    </li>
+                    <li class="footer-logo-item">
+                        <a href="https://water.europa.eu/" rel="noopener" target="_blank">
+                            <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/wise-logo.png"
+                                alt="WISE Logo" title="Water Information System for Europe" class=" lazyloaded"
+                                src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/wise-logo.png">
+                        </a>
+                    </li>
+                    <li class="footer-logo-item">
+                        <a href="https://climate.copernicus.eu/" rel="noopener" target="_blank">
+                            <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/c3s-logo.png"
+                                alt="Copernicus Climate Logo" title="Climate Change Service" class=" lazyloaded"
+                                src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/c3s-logo.png">
+                        </a>
+                    </li>
+                    <li class="footer-logo-item">
+                        <a href="https://drmkc.jrc.ec.europa.eu/" rel="noopener" target="_blank">
+                            <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/drmkc-logo.png"
+                                alt="DRMKC Logo" title="Disaster Risk Management Knowledge Centre" class=" lazyloaded"
+                                src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/drmkc-logo.png">
+                        </a>
+                    </li>
+                    <li class="footer-logo-item">
+                        <a href="https://forest.eea.europa.eu/" rel="noopener" target="_blank">
+                            <img data-src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/forest.svg"
+                                alt="FISE Logo" title="Forest Information System for Europe" style="height:36px"
+                                class=" lazyloaded"
+                                src="https://climate-adapt.eea.europa.eu/cca/++theme++climateadaptv2/static/images/forest.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
