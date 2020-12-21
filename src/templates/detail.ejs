@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Expore indicator <%= pagetitle %></title>
+    <title>Explore indicator <%= pagetitle %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <%- include('./partials/style') %>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -80,6 +80,18 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <%if (description_detail !== null) { %>
+                            <div class="row">
+                                <div class="column col-md-16 " data-panel="">
+                                    <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
+                                        <div class="cover-richtext-tile tile-content">
+                                            <%- description_detail %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
 
 
 

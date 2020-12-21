@@ -88,7 +88,7 @@
             <br /><br />
             <br /><br />
             <div class="row">
-              <div class="column col-md-8" data-panel="">
+              <div class="column col-md-12" data-panel="">
 
                 <script type="text/javascript">
                   window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
@@ -125,18 +125,6 @@
                   }, false);
                   }) ();
                 </script>
-              </div>
-              <div class="column col-md-4" data-panel="">
-
-                <% for(var i=0; i < sidebar_description.length; i++) { %>
-
-                  <b class="bold-text"><%= sidebar_description[i].name %></b><br>
-                  <%= sidebar_description[i].desc %>
-                  <br><br>
-                <% } %>
-                <button class="standard-button primary-button" onclick="window.location = '<%= detailpage %>'">Explore
-                  in
-                  details</button>
               </div>
             </div>
           </div>

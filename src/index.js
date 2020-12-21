@@ -19,7 +19,7 @@ const srcPath = './src'
 const outputDir = config.dev.outdir;
 
 const data = JSON.parse(fs.readFileSync("./src/data.json", "utf-8"));
-const metadata = JSON.parse(fs.readFileSync("./src/ClimateAdapt_434-dataset-metadata.json", "utf-8"))
+const metadata = {}
 
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir)
@@ -29,7 +29,14 @@ createAppPages(data, metadata);
 
 createThemePages(data);
 
-createIndicatorOverview(data);
+ejs.renderFile(`${srcPath}/templates/overview-list.ejs`, data['overview'], (err, data) => {
+    if (err) throw (err);
+    fs.writeFile(`${outputDir}/overview-list.html`, data, (err) => {
+        if (err) throw (err);
+        console.log(`overview-list.html has been created.`);
+    })
+})
+
 
 ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
     if (err) throw (err);
@@ -46,20 +53,10 @@ function createAppPages(data, metadata) {
         dataset.overview = APP_URL.replace("%APP%", dataset.overview);
         dataset.detail = APP_URL.replace("%APP%", dataset.detail);
 
-        metadata["datasets"].forEach(datasetMetadata => {
-            if (dataset["dataset"] !== undefined && dataset["dataset"] == datasetMetadata["dataset_details"]["dataset_hist"]) {
-                dataset.description = datasetMetadata["dataset_details"]["dataset_cds_overview"];
-                dataset.metadata = datasetMetadata;
-                return;
-            }
-        });
-
         // theme directory
         if (!fs.existsSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)) {
             fs.mkdirSync(`${outputDir}/${(dataset.theme).toLowerCase()}/`)
         }
-
-        // console.log(dataset.indicators)
 
         if (dataset.indicators !== undefined) {
             dataset.indicators.forEach(indicator => {
@@ -72,7 +69,15 @@ function createAppPages(data, metadata) {
 }
 
 function overviewFileName(dataset, indicator = null) {
-    let name = slugify(dataset.title)
+    let name = null
+
+    // URL override
+    if (dataset.page_url) {
+        name = dataset.page_url
+    } else {
+        name = slugify(dataset.title)
+    }
+
     if (indicator) {
         name += `--${slugify(indicator)}`
     }
@@ -81,7 +86,15 @@ function overviewFileName(dataset, indicator = null) {
 }
 
 function detailFileName(dataset, indicator = null) {
-    let name = slugify(dataset.title)
+    let name = null
+
+    // URL override
+    if (dataset.page_url) {
+        name = dataset.page_url
+    } else {
+        name = slugify(dataset.title)
+    }
+
     if (indicator) {
         name += `--${slugify(indicator)}`
     }
@@ -94,21 +107,18 @@ function slugify(string) {
 }
 
 function createHTMLfiles(dataset, indicator = null) {
-    if (dataset.sidebar_description === undefined) {
-        dataset.sidebar_description = []
-    }
-
     dataset.overview_var = null
     dataset.detail_var = null
     if (indicator) {
-        dataset.overviewpage = overviewFileName(dataset, indicator.title);
-        dataset.detailpage = detailFileName(dataset, indicator.title);
-        dataset.pagetitle = dataset.title + " - " + indicator.title
+        dataset.overviewpage = overviewFileName(dataset, indicator.name);
+        dataset.detailpage = detailFileName(dataset, indicator.name);
+        dataset.description_detail = indicator.description_detail
+        dataset.page_title = indicator.page_title
+        dataset.title = indicator.title
+        dataset.pagetitle = indicator.title
+        dataset.description = indicator.description
         dataset.overview_var = indicator.overview_var
         dataset.detail_var = indicator.detail_var
-        if (indicator.sidebar_description !== undefined) {
-            dataset.sidebar_description = indicator.sidebar_description
-        }
 
     } else {
         dataset.overviewpage = overviewFileName(dataset);
@@ -117,13 +127,12 @@ function createHTMLfiles(dataset, indicator = null) {
 
     }
 
-
     // overview page
     let overviewFile = `${srcPath}/templates/overview.ejs`
-    if (dataset.version == 2){
+    if (dataset.version == 2) {
         overviewFile = `${srcPath}/templates/overview-v2.ejs`
     }
-    console.log(dataset.version)
+
     ejs.renderFile(overviewFile, dataset, (err, data) => {
         if (err) throw (err);
         fs.writeFile(`${outputDir}/${(dataset.theme).toLowerCase()}/${dataset.overviewpage}`, data, (err) => {
@@ -146,7 +155,6 @@ function createHTMLfiles(dataset, indicator = null) {
 function createThemePages(data) {
     for (const index in data["themes"]) {
         const theme = data["themes"][index]
-        // console.log(theme)
         theme.apps = []
 
         for (const indexApp in data["datasets"]) {
@@ -155,14 +163,14 @@ function createThemePages(data) {
                 if (dataset.indicators !== undefined) {
                     dataset.indicators.forEach(indicator => {
                         theme.apps.push({
-                            "title": dataset.title + " - " + indicator.title,
-                            "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset, indicator.title)}`
+                            "title": indicator.title,
+                            "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset, indicator.name)}`
                         })
 
                     });
                 } else {
                     theme.apps.push({
-                        "title": dataset.title,
+                        "title": dataset.page_title,
                         "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset)}`
                     })
                 }
@@ -180,38 +188,4 @@ function createThemePages(data) {
             })
         })
     }
-}
-
-function createIndicatorOverview(data) {
-    let overviewData = {"title": "Overview", "description": "", "apps": []}
-    for (const indexApp in data["datasets"]) {
-        const dataset = data["datasets"][indexApp]
-        if (!dataset.exclude) {
-            if (dataset.indicators !== undefined) {
-                dataset.indicators.forEach(indicator => {
-                    overviewData.apps.push({
-                        "title": dataset.title + " - " + indicator.title,
-                        "url": `${(dataset.theme).toLowerCase()}/${overviewFileName(dataset, indicator.title)}`
-                    })
-
-                });
-            } else {
-                overviewData.apps.push({
-                    "title": dataset.title,
-                    "url": `${(dataset.theme).toLowerCase()}/${overviewFileName(dataset)}`
-                })
-            }
-        }
-    }
-    // sort apps by title
-    overviewData.apps.sort((a, b) => a.title.localeCompare(b.title));
-
-    ejs.renderFile(`${srcPath}/templates/theme.ejs`, overviewData, (err, data) => {
-        if (err) throw (err);
-        const outputFile = `indicator-overview.html`
-        fs.writeFile(`${outputDir}/${outputFile}`, data, (err) => {
-            if (err) throw (err);
-            console.log(`${outputFile} has been created.`);
-        })
-    })
 }
