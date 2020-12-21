@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Expore indicator Universal Thermal Climate Index</title>
+    <title>Expore indicator Climate Anomaly in 10-day Precipitation Sum</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
     .header {
@@ -486,9 +486,9 @@
                             <div class="column col-md-16 " data-panel="">
                                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                                     <div class="cover-richtext-tile tile-content">
-                                        <h1>Explore indicator - Universal Thermal Climate Index</h1>
+                                        <h1>Explore indicator - Climate Anomaly in 10-day Precipitation Sum</h1>
                                         <button class="standard-button primary-button"
-                                            onclick="window.location = 'thermal-comfort-indices--universal-thermal-climate-index.html'">Go back</button>
+                                            onclick="window.location = 'mean-precipitation.html'">Go back</button>
 
                                     </div>
                                 </div>
@@ -500,7 +500,7 @@
                                 <div class="column col-md-16 " data-panel="">
                                     <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                                         <div class="cover-richtext-tile tile-content">
-                                            The universal thermal climate index (UTCI) (&deg;C) is an equivalent temperature (&deg;C), it is a measure of the human physiological response to the thermal environment. The universal thermal climate index (UTCI) describes the synergistic heat exchanges between the thermal environment and the human body, namely its energy budget, physiology and clothing.<br><br>The universal thermal climate index (UTCI) is computed using data from the ECMWF ERA5 reanalysis and is part of the ERA5-HEAT (Human thErmAl comforT) dataset. <br><br>There are 10 UTCI thermal stress categories that correspond to specific human physiological responses to the thermal environment. The categories relate to UTCI values as follows:<br>above +46: extreme heat stress; +38 to +46: very strong heat stress; +32 to +38: strong heat stress; +26 to +32: moderate heat stress; +9 to +26: no thermal stress; +9 to 0: slight cold stress; 0 to -13: moderate cold stress; -13 to -27: strong cold stress; -27 to -40: very strong cold stress; below -40: extreme cold stress.<br><br>The universal thermal climate index (UTCI) for each month and year from 1979 to 2019 is plotted on a map showing the European NUTS regions. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, and NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean UTCI for the chosen NUTS region for each month of the chosen year. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview">Climate Data Store</a>.
+                                            The climate anomalies of the sum of monthly precipitation and annual precipitation (mm) are calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates more precipitation than the reference period while a negative anomaly indicates less precipitation than the reference period.<br><br>The climate anomalies of the sum of monthly precipitation and annual precipitation for the chosen scenario and time period are plotted as area means for each European NUTS region.  The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. The time series plot shows the range of precipitation responses to the scenario conditions across an ensemble of 5 climate models. Hover the mouse over the plot to view the time series data values. This indicator is expressed as an anomaly from a reference period so a reference climatology is also provided.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview">Climate Data Store</a>.
                                         </div>
                                     </div>
                                 </div>
@@ -539,15 +539,8 @@
                                 <script type="text/javascript">
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
-                                            window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-thermal-comfort-indices-detail-month-web/master/configuration.json?configuration_version=3.0'
+                                            window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-precip-detail-web/master/configuration.json?configuration_version=3.0'
                                                 
-                        , {
-                                                        workflowParams: {
-                                                            "indicator": "Universal thermal climate index",
-
-                                                        }
-                                                    }
-                                                    
                                             );
                                     }, false);
                                     }) ();
