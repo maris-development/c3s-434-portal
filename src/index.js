@@ -129,9 +129,6 @@ function createHTMLfiles(dataset, indicator = null) {
 
     // overview page
     let overviewFile = `${srcPath}/templates/overview.ejs`
-    if (dataset.version == 2) {
-        overviewFile = `${srcPath}/templates/overview-v2.ejs`
-    }
 
     ejs.renderFile(overviewFile, dataset, (err, data) => {
         if (err) throw (err);

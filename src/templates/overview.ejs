@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title><%= theme %> - <%= pagetitle %></title>
+  <title><%= theme %> - <%= page_title %></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%- include('./partials/style') %>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -57,7 +57,7 @@
               <span class="breadcrumbSeparator"> /</span>
             </span>
             <span id="breadcrumbs-4" dir="ltr">
-              <span id="breadcrumbs-current"><%= pagetitle %></span>
+              <span id="breadcrumbs-current"><%= page_title %></span>
             </span>
           </div>
         </div>
@@ -74,19 +74,34 @@
               <div class="column col-md-16 " data-panel="">
                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                   <div class="cover-richtext-tile tile-content">
-                    <h1><%= pagetitle %></h1>
+                    <h1><%= page_title %></h1>
                     <div>
-                      <%= description %>
+                      <%- description %>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-
-
             <br /><br />
             <br /><br />
+
+            <div class="row">
+                <div class="column col-md-12" data-panel="">
+                    <h2 style="float: left; position: relative;"><%= title %></h2>
+                    <button class="standard-button primary-button"
+                        onclick="window.location = '<%= detailpage %>'"
+                        style="float: right; position: relative;" ;>Explore
+                        in
+                        details</button>
+                </div>
+                <div class="column col-md-12" data-panel="">
+                    <hr>
+                </div>
+            </div>
+
+
+
             <div class="row">
               <div class="column col-md-12" data-panel="">
 
