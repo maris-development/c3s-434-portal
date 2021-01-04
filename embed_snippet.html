@@ -13,11 +13,18 @@
     </div>
 </div>
 
-<script type="text/javascript" src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.9.1.js"></script>
+<script type="text/javascript" src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
 <script type="text/javascript">
     (function () {
         document.addEventListener('DOMContentLoaded', function () {
-            window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-mosquito-map-detailed/master/configuration.json?configuration_version=3.0');
+            window.cds_toolbox.runApp('toolbox-app', 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-detail-web/master/configuration.json?configuration_version=3.0'
+                , {
+                    workflowParams: {
+                        "indicator": "Length of season",
+
+                    }
+                }
+            );
         }, false);
     })();
 </script>
