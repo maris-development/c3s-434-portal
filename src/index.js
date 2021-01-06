@@ -119,11 +119,17 @@ function createHTMLfiles(dataset, indicator = null) {
         dataset.description = indicator.description
         dataset.overview_var = indicator.overview_var
         dataset.detail_var = indicator.detail_var
+        if (!indicator.bookmark_enabled){
+            dataset.bookmark_enabled = null;
+        }
 
     } else {
         dataset.overviewpage = overviewFileName(dataset);
         dataset.detailpage = detailFileName(dataset);
         dataset.pagetitle = dataset.title
+        if (!dataset.bookmark_enabled){
+            dataset.bookmark_enabled = null;
+        }
 
     }
 
