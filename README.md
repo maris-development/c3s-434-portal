@@ -1,10 +1,15 @@
 **Dev**  
+Requirements:  
+- NodeJS (min v12)
+- Yarn  
+  
 `yarn install` om dependencies te installeren  
 `yarn dev` autogenerate pagina's bij update  
   
 `src` bevat templates, data en generator script
   
 **Prod**   
+`yarn build` om prod versie te maken (*Note*: alleen nodig als `yarn dev` niet is uitgevoerd)   
 Kopieer inhoud van `public` naar gewenste plaats
 
 Useful links:       
@@ -14,4 +19,6 @@ Useful links:
 
 
 **Submit apps**  
-https://jira.ecmwf.int/servicedesk/customer/portal/8/CDSAPP-119
+https://jira.ecmwf.int/servicedesk/customer/portal/8/CDSAPP-119  
+
+Alle apps worden gedeeld met user 136 en 13784
