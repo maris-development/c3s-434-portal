@@ -1,5 +1,5 @@
 **Dev (apps)**  
-Toolbox: https://cds.climate.copernicus.eu/toolbox-editor/40366
+Toolbox: https://cds.climate.copernicus.eu/toolbox-editor/40366 (gegevens in address.txt)  
 
 **Dev (website)**  
 Requirements:  
@@ -22,6 +22,6 @@ Useful links:
 
 
 **Submit apps**  
-https://jira.ecmwf.int/servicedesk/customer/portal/8/CDSAPP-119  
+https://jira.ecmwf.int/servicedesk/customer/portal/8/CDSAPP-119 (gegevens in address.txt)  
 
 Alle apps worden gedeeld met user 136 en 13784
