@@ -146,7 +146,7 @@
         },
         {
             "page_title": "Frost days",
-            "title": "Frost days",
+            "title": "Climate Anomaly in the Number of Frost Days",
             "theme": "Agriculture",
             "overview": "hidden-app-agriculture-frostdays-overview-web",
             "detail": "hidden-app-agriculture-frostdays-detail-web",
