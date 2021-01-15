@@ -63,6 +63,7 @@
             ]
         },
         {
+            "exclude": true,
             "theme": "Forestry",
             "overview": "hidden-app-forestry-fireindex-overview-web",
             "detail": "hidden-app-forestry-fireindex-detail-web",
@@ -75,6 +76,7 @@
             "description_detail": "The fire danger index is a metric related to the chances of a fire starting, its rate of spread, its intensity, and its difficulty of suppression. The fire danger index is calculated using the Australian McArthur (Mark 5) rating system. <br><br>It is customary to quote a danger class as well as an index number. The fire danger index relates to 6 classes of danger as follows: <br>0 to 11: low to moderate; 12 to 25: high; 25 to 49: very high.<br>Thereafter the danger class depends on the type of vegetation, forest or grassland. <br>Forest danger classes are: 50 to 75: severe; 75 to 99: extreme; greater than 100: catastrophic.<br>Grassland danger classes are: 50 to 99: severe; 100 to 149: extreme; greater than 150: catastrophic.<br><br>The annual mean fire danger index for each year from 1979 to 2019 is plotted on a map showing the European NUTS regions. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean fire danger index for the chosen NUTS region for each month of the chosen year. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>."
         },
         {
+            "exclude": true,
             "theme": "Forestry",
             "overview": "hidden-app-fireweatherindex-overview-web",
             "detail": "hidden-app-fireweatherindex-detail-web",
@@ -97,6 +99,7 @@
             "description_detail": "The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085.  Finally, the time series are averaged over the model ensemble.<br>The heat wave statistics are calculated using bias-adjusted EURO-CORDEX data for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions).<br><br>The map shows the 30-year smoothed average of the number of heat wave days centred at a given year for the chosen heat wave definition and scenario plotted as area means for each European NUTS region. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. The time series plot shows the range of heat wave responses to the chosen scenario conditions across the EURO-CORDEX model ensemble. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>."
         },
         {
+            "exclude": true,
             "page_title": "Heat waves in Europe",
             "title": "Number of Heat Wave Days",
             "theme": "Energy",
