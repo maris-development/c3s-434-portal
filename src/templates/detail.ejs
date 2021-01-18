@@ -78,7 +78,20 @@
                                     </div>
                                 </div>
                             </div>
+                            <br /><br />
                             <% } %>
+                                <div class="row">
+                                    <div class="column col-md-16 " data-panel="">
+                                        <div class="tile tile-default">
+                                            <div class="cover-richtext-tile tile-content">
+                                                <div class="alert warning">
+                                                    Optimization in progress. NUTS level 0 and 1 will work smoothly, NUTS level 2 and 3 might take up to 30 seconds to load timeseries.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
 
 
 
@@ -113,7 +126,7 @@
                                                         , {
                                                             workflowParams: {
                                                             <%if(detail_var != null) { %>
-                                                                "indicator": "<%= detail_var %>",
+                                                        "indicator": "<%= detail_var %>",
                                                             <% } %>
 
                                                         }
