@@ -104,6 +104,19 @@ hr {
     max-width: 100% !important;
 }
 
+.alert.warning {
+    background-color: #ff9800;
+    border-radius: 5px;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 0.83;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 992px) {
     .container-themes .column {
         width: 30%;
