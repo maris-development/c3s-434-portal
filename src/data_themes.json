@@ -1,0 +1,20 @@
+{
+  "themes": [
+    {
+      "theme_title": "Health",
+      "description": "Climate change will generate new health risks and amplify current health problems. Climate change brings changes in the intensity and frequency of extreme weather events like heat waves and floods which have a direct impact on human health. There will also be indirect effects through the spread of disease bearing insects and changes in water, food and air quality."
+    },
+    {
+      "theme_title": "Agriculture",
+      "description": "Food supply will be affected by many aspects of climate change, not only through the direct effect of changing weather patterns on plant growth but also indirectly through impacts on pests and disease outbreaks. Agriculture is also a significant source of greenhouse gas emissions now and a potential contributor to negative emissions in the future. Consequently, both mitigation and adaptation are important in the agriculture sector. The Copernicus Climate Change Service will provide indicators of both the impacts of climate change on the agricultural sector and of the emissions associated with the agricultural sector. Our initial range of indicators relates to weather events which are likely to have an impact on crop yields."
+    },
+    {
+      "theme_title": "Forestry",
+      "description": "European forests provide vital ecosystems as well as valuable recreational and economic resources. They provide a versatile and renewable source of raw materials which play a central role in plans for a more sustainable future, and can also contribute to the removal of carbon dioxide from the atmosphere. Bur forests are also at risk from the effects of climate change. Rising temperatures and changing rainfall patterns can increase the risk of forest fires or make the trees vulnerable to pests and diseases. <br><br>Two indicators related to the risk of forest fire are available. The \"fire weather index\" defined by the Canadian Forest Service Fire Weather Index rating system which has been adopted by the <a href=\"https://effis.jrc.ec.europa.eu/\">European Forest Fire Information System (EFFIS)</a>. We also provide, for comparison, a \"fire danger index\" defined by the Australian Mark5 rating system."
+    },
+    {
+      "theme_title": "Energy",
+      "description": "Climate change is expected to affect both the supply and demand of energy. As the energy sector is increasingly relying on renewable sources, the relevance of climate variability and change also increases. It is vital that energy providers and policy makers have the climate information they need to make informed choices on the future energy mix."
+    }
+  ]
+}

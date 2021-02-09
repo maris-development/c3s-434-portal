@@ -2,14 +2,17 @@ const fs = require("fs");
 const fse = require("fs-extra");
 const config = require("./config");
 const ejs = require('ejs')
+const rimraf = require('rimraf');
 
 const APP_URL = "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0";
 
 // create output dir or empty output dir
 if (!fs.existsSync(config.dev.outdir)) {
     fs.mkdirSync(config.dev.outdir);
+
 } else {
-    fs.rmdirSync(config.dev.outdir, { recursive: true });
+    rimraf.sync(config.dev.outdir);
+
     if (!fs.existsSync(config.dev.outdir)) {
         fs.mkdirSync(config.dev.outdir);
     }
@@ -18,36 +21,44 @@ if (!fs.existsSync(config.dev.outdir)) {
 const srcPath = './src'
 const outputDir = config.dev.outdir;
 
-const data = JSON.parse(fs.readFileSync("./src/data.json", "utf-8"));
-const metadata = {}
+const data_apps = JSON.parse(fs.readFileSync("./src/data_apps.json", "utf-8"));
+const data_themes = JSON.parse(fs.readFileSync("./src/data_themes.json", "utf-8"));
+const data_overview = JSON.parse(fs.readFileSync("./src/data_overview.json", "utf-8"));
+
+Object.assign(data_themes, data_apps); 
 
 // copy assets to output dir
-fse.copy(`${srcPath}/assets`, outputDir)
+fse.copy(`${srcPath}/assets`, outputDir);
 
+createAppPages(data_apps);
 
-createAppPages(data, metadata);
+createThemePages(data_themes);
 
-createThemePages(data);
+createOverviewPages(data_overview);
 
-ejs.renderFile(`${srcPath}/templates/overview-list.ejs`, data['overview'], (err, data) => {
-    if (err) throw (err);
-    fs.writeFile(`${outputDir}/overview-list.html`, data, (err) => {
+createIndexPage();
+
+function createIndexPage(){
+    ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
         if (err) throw (err);
-        console.log(`overview-list.html has been created.`);
-    })
-})
+        fs.writeFile(`${outputDir}/index.html`, data, (err) => {
+            if (err) throw (err);
+            console.log(`index.html has been created.`);
+        })
+    });
+}
 
-
-ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
-    if (err) throw (err);
-    fs.writeFile(`${outputDir}/index.html`, data, (err) => {
+function createOverviewPages(overview_data){
+    ejs.renderFile(`${srcPath}/templates/overview-list.ejs`, overview_data, (err, data) => {
         if (err) throw (err);
-        console.log(`index.html has been created.`);
+        fs.writeFile(`${outputDir}/overview-list.html`, data, (err) => {
+            if (err) throw (err);
+            console.log(`overview-list.html has been created.`);
+        })
     })
-})
+}
 
-function createAppPages(data, metadata) {
-
+function createAppPages(data) {
     for (const index in data["datasets"]) {
         const dataset = data["datasets"][index];
         dataset.overview = APP_URL.replace("%APP%", dataset.overview);
@@ -75,7 +86,7 @@ function overviewFileName(dataset, indicator = null) {
     if (dataset.page_url) {
         name = dataset.page_url
     } else {
-        name = slugify(dataset.title)
+        name = slugify(dataset.indicator_title)
     }
 
     if (indicator) {
@@ -92,7 +103,7 @@ function detailFileName(dataset, indicator = null) {
     if (dataset.page_url) {
         name = dataset.page_url
     } else {
-        name = slugify(dataset.title)
+        name = slugify(dataset.indicator_title)
     }
 
     if (indicator) {
@@ -111,30 +122,27 @@ function createHTMLfiles(dataset, indicator = null) {
         dataset.overview_var = null
     }
     
-    dataset.detail_var = null
+    if (!dataset.detail_var){
+        dataset.detail_var = null;
+    }
 
     if (indicator) {
+
         dataset.overviewpage = overviewFileName(dataset, indicator.name);
         dataset.detailpage = detailFileName(dataset, indicator.name);
         dataset.description_detail = indicator.description_detail
         dataset.page_title = indicator.page_title
-        dataset.title = indicator.title
-        dataset.pagetitle = indicator.title
+        dataset.indicator_title = indicator.indicator_title
         dataset.description = indicator.description
         dataset.overview_var = indicator.overview_var
         dataset.detail_var = indicator.detail_var
-        if (!indicator.bookmark_enabled){
-            dataset.bookmark_enabled = null;
-        }
 
     } else {
+        
         dataset.overviewpage = overviewFileName(dataset);
         dataset.detailpage = detailFileName(dataset);
-        dataset.pagetitle = dataset.title
-        if (!dataset.bookmark_enabled){
-            dataset.bookmark_enabled = null;
-        }
-
+        dataset.indicator_title = dataset.indicator_title
+        
     }
 
     // overview page
@@ -166,29 +174,30 @@ function createThemePages(data) {
 
         for (const indexApp in data["datasets"]) {
             const dataset = data["datasets"][indexApp]
-            if (theme.title.toLowerCase() == dataset.theme.toLowerCase() && !dataset.exclude) {
+            if (theme.theme_title.toLowerCase() == dataset.theme.toLowerCase() && !dataset.exclude) {
                 if (dataset.indicators !== undefined) {
                     dataset.indicators.forEach(indicator => {
                         theme.apps.push({
-                            "title": indicator.title,
-                            "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset, indicator.name)}`
+                            "title": indicator.indicator_title,
+                            "url": `${(theme.theme_title).toLowerCase()}/${overviewFileName(dataset, indicator.name)}`
                         })
 
                     });
                 } else {
                     theme.apps.push({
                         "title": dataset.page_title,
-                        "url": `${(theme.title).toLowerCase()}/${overviewFileName(dataset)}`
+                        "url": `${(theme.theme_title).toLowerCase()}/${overviewFileName(dataset)}`
                     })
                 }
             }
         }
+
         // sort apps by title
         theme.apps.sort((a, b) => a.title.localeCompare(b.title));
 
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
             if (err) throw (err);
-            const outputFile = `${(theme.title).toLowerCase()}.html`
+            const outputFile = `${(theme.theme_title).toLowerCase()}.html`
             fs.writeFile(`${outputDir}/${outputFile}`, data, (err) => {
                 if (err) throw (err);
                 console.log(`${outputFile} has been created.`);
