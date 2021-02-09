@@ -110,7 +110,9 @@ function createHTMLfiles(dataset, indicator = null) {
     if (!dataset.overview_var){
         dataset.overview_var = null
     }
+    
     dataset.detail_var = null
+
     if (indicator) {
         dataset.overviewpage = overviewFileName(dataset, indicator.name);
         dataset.detailpage = detailFileName(dataset, indicator.name);

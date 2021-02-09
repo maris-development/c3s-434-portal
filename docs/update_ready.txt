@@ -1,0 +1,75 @@
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/climatic-suitability-of-tiger-mosquito--suitability-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_mosquito_detail_web
+Goal:               Change height of timeseries to match map height
+Result:             FAILED
+Remarks:            Toolbox error (javascript): Cannot create property 'widgetType' on string '<p>Click on a region to display a time series graph</p>'
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/frost-days-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_frostdays_detail_web
+Goal:               Change height of plots and child app to eliminate double scroll bars
+Result:             FAILED (Couldn't test, loads indefinitely)
+Remarks:            Changed childs app min_height from 1200 to 1300, changed both plot heights to 500 pixels
+                    1. Map error: 'One or more layers has not been loaded properly' (Error disappeared by now)
+                    2. Cannot create property 'widgetType' on string '<p><a href="?rcp=RCP8.5&amp;smon=Annual&amp;nuts_level:float=0&amp;speriod=2071-2099" rel="noreferrer noopener">&#8618;Permalink to this configuration</a></p>'
+
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/thermal-comfort-indices--universal-thermal-climate-index-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_thermal-comfort-indices_detail_month_web
+Goal:               Change height of timeseries to match map height
+Result:             Success
+Remarks:            Changed plot height to 500 pixels.
+Revision:           22785d8e
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/thermal-comfort-indices--mean-radiant-temperature-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_meanradianttemperature_detail_web
+Goal:               Change height of timeseries to match map height
+Result:             Succes
+Remarks:            Changed plot height to 500 pixels.
+Revision:           4ab48cd6
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/heat-waves-and-cold-spells-in-europe-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_heatwave_detail_web
+Goal:               Change height of timeseries to match map height
+Result:             Succes
+Remarks:            Changed plot height to 450 pixels. Changed child app min_height to 550 pixels
+Revision:           90f6fb0f
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/thermal-comfort-indices--universal-thermal-climate-index-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_universalthermalclimateindex_detail_web
+Goal:               Change height of timeseries to match map height
+Result:             Success
+Remarks:            Changed plot height to 500 pixels
+Revision:           f1b4bae0
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/biologically-effective-degree-days-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_bedd_detail
+Goal:               Change height of child app to eliminate double scroll bars
+Result:             Success
+Remarks:            Changed child app min_height from 1200 to 1300 pixels
+Revision:           4a9f579f
+
+    
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/mean-precipitation-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_precip_detail_web
+Goal:               Change height of plots and child app
+Result:             Success
+Remarks:            Changed height of plots to 500 and child app min_height to 1300
+Revision:           ee4439aa

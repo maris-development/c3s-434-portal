@@ -2,27 +2,25 @@
 <html lang="en">
 
 <head>
-    <title>Explore indicator <%= pagetitle %>
-    </title>
+    <title><%= theme %> - <%= page_title %> - Explore indicator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <%- include('./partials/style') %>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="description" content="" />
-        <link rel="stylesheet" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-            as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
 
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
 
-        <link rel="stylesheet" type="text/css" media="screen"
-            href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>"" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>"" />
 
     <link rel=" shortcut icon" type="image/x-icon" href="/favicon.ico">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
 
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 
 <body dir="ltr"
@@ -32,22 +30,43 @@
             <div class="content-container"> </div>
         </div>
         <div class="header">
-            <div class="top-menu nav-down">
-
-                <div class="content-container top-menu-wrapper">
-                    <div class="logo"><a href="/index.html"><img
-                                src="https://climate-adapt.eea.europa.eu/++theme++climateadaptv2/static/images/climate-adapt-logo.svg"
-                                class="not-active-yet" alt="Climate-ADAPT Logo"> </a>
-                        <div class="text">Beta</div>
-                    </div>
-                </div>
-            </div>
+            <%- include('./partials/nav') %>
         </div>
     </div>
 
     <div class="content-container site-container">
         <div id="portal-columns">
             <div id="portal-column-content" class="cell width-full position-0">
+                        
+                <div id="viewlet-above-content">
+                    <div id="portal-breadcrumbs">
+                        <span id="breadcrumbs-you-are-here">You are here:</span>
+                        <span id="breadcrumbs-home">
+                            <a href="/">Home</a>
+                            <span class="breadcrumbSeparator">/</span>
+                        </span>
+                        <span id="breadcrumbs-1" dir="ltr">
+                            <a href="#">Knowledge</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-2" dir="ltr">
+                            <a href="../index.html">European Climate Data Explorer</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-3" dir="ltr">
+                            <a href="../<%= theme.toLowerCase() %>.html"><%= theme %></a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-4" dir="ltr">
+                            <a href="../<%= theme.toLowerCase() %>/<%= overviewpage %>"><%= page_title %></a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-4" dir="ltr">
+                            <span id="breadcrumbs-current">Explore indicator</span>
+                        </span>
+                    </div>
+                </div>
+  
                 <div class="">
                     <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
                         <dt>Info</dt>
@@ -61,16 +80,13 @@
                             <div class="column col-md-16 " data-panel="">
                                 <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
                                     <div class="cover-richtext-tile tile-content">
-                                        <h1>Explore indicator - <%= pagetitle %>
-                                        </h1>
-                                        <button class="standard-button primary-button"
-                                            onclick="window.location = '<%= overviewpage %>'">Go back</button>
-
+                                        <h1><%= page_title %> - Explore Indicator</h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <br>
+
                         <%if (description_detail !==null) { %>
                             <div class="row">
                                 <div class="column col-md-16 " data-panel="">
@@ -82,7 +98,7 @@
                                 </div>
                             </div>
                             <br /><br />
-                            <% } %>
+                        <% } %>
                                 <div class="row">
                                     <div class="column col-md-16 " data-panel="">
                                         <div class="tile tile-default">
@@ -97,9 +113,22 @@
 
                                 </div>
 
-
-
                                 <br /><br />
+
+                                <div class="row">
+                                    <div class="column col-md-12" data-panel="">
+                                        <h2 style="float: left; position: relative;"><%= title %>  - Explore Indicator</h2>
+                                        <button class="standard-button primary-button"
+                                            onclick="window.location = '<%= overviewpage %>'"
+                                            style="float: right; position: relative;" ;>
+                                            Go back
+                                        </button>
+                                    </div>
+                                    <div class="column col-md-12" data-panel="">
+                                        <hr>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="column col-md-12" data-panel="">
                                         <script type="text/javascript">

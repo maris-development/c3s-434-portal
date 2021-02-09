@@ -4,19 +4,20 @@
 <head>
   <title><%= theme %> - <%= page_title %></title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <%- include('./partials/style') %>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="description" content="" />
+
   <link rel="stylesheet" href="../css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
-
   <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
-
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>" />
-
+  
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -37,6 +38,7 @@
   <div class="content-container site-container">
     <div id="portal-columns">
       <div id="portal-column-content" class="cell width-full position-0">
+        
         <div id="viewlet-above-content">
           <div id="portal-breadcrumbs">
             <span id="breadcrumbs-you-are-here">You are here:</span>
@@ -61,6 +63,7 @@
             </span>
           </div>
         </div>
+
         <div class="">
           <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
             <dt>Info</dt>
@@ -91,9 +94,9 @@
                     <h2 style="float: left; position: relative;"><%= title %></h2>
                     <button class="standard-button primary-button"
                         onclick="window.location = '<%= detailpage %>'"
-                        style="float: right; position: relative;" ;>Explore
-                        in
-                        details</button>
+                        style="float: right; position: relative;" ;>
+                        Explore in details
+                    </button>
                 </div>
                 <div class="column col-md-12" data-panel="">
                     <hr>
