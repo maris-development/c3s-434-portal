@@ -45,7 +45,7 @@
             "name": "season length",
             "overview": "hidden-app-health-mosquito-overview-web",
             "overview_var": "season_length",
-            "page_title": "Climatic suitability of tiger mosquito - season length",
+            "page_title": "Climatic suitability for the tiger mosquito - season length",
             "page_url": "climatic-suitability-of-tiger-mosquito--season-length",
             "theme": "Health"
         },
@@ -58,7 +58,7 @@
             "name": "suitability",
             "overview": "hidden-app-health-mosquito-overview-web",
             "overview_var": "suitability",
-            "page_title": "Climatic suitability of tiger mosquito - suitability",
+            "page_title": "Climatic suitability for the tiger mosquito - suitability index",
             "page_url": "climatic-suitability-of-tiger-mosquito--suitability",
             "theme": "Health"
         },
@@ -155,7 +155,7 @@
             "detail": "hidden-app-agriculture-frostdays-detail-web",
             "indicator_title": "Climate Anomaly in the Number of Frost Days",
             "overview": "hidden-app-agriculture-frostdays-overview-web",
-            "page_title": "Frost days",
+            "page_title": "Frost Days",
             "page_url": "frost-days",
             "theme": "Agriculture"
         },
@@ -167,7 +167,7 @@
             "detail": "hidden-app-agriculture-tropicalnights-detail-web",
             "indicator_title": "Climate Anomaly in the Number of Tropical Nights",
             "overview": "hidden-app-agriculture-tropicalnights-overview-web",
-            "page_title": "Tropical nights",
+            "page_title": "Tropical Nights",
             "page_url": "tropical-nights",
             "theme": "Agriculture"
         },
@@ -180,6 +180,7 @@
             "indicator_title": "Climate Anomaly in Biologically Effective Degree Days",
             "overview": "hidden-app-agriculture-bedd-overview-web",
             "page_title": "Biologically effective degree days",
+            "page_title_github": "Biologially effective degree days",
             "page_url": "biologically-effective-degree-days",
             "theme": "Agriculture"
         }

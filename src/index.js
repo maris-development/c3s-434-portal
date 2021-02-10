@@ -3,9 +3,16 @@ const fse = require("fs-extra");
 const config = require("./config");
 const ejs = require("ejs");
 const rimraf = require("rimraf");
+const sync_request = require("sync-request");
+const { StringDecoder } = require('string_decoder');
+const marked = require('marked')
+
+const decoder = new StringDecoder('utf8')
 
 const APP_URL =
   "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0";
+
+const GIT_TEXT_URL = "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/markdown/consolidated/%TITLE%.md";
 
 // create output dir or empty output dir
 if (!fs.existsSync(config.dev.outdir)) {
@@ -81,7 +88,7 @@ function createAppPages(data) {
   }
 }
 
-function overviewFileName(dataset, indicator = null) {
+function overviewFileName(dataset) {
   let name = null;
 
   // URL override
@@ -91,9 +98,6 @@ function overviewFileName(dataset, indicator = null) {
     name = slugify(dataset.indicator_title);
   }
 
-  if (indicator) {
-    name += `--${slugify(indicator)}`;
-  }
   name += ".html";
   return name;
 }
@@ -115,8 +119,12 @@ function detailFileName(dataset, indicator = null) {
   return name;
 }
 
-function slugify(string) {
-  return string.toLowerCase().replace(/\s/g, "-").replace(/_/g, "-");
+function slugify(string, lowercase = true, separator = '-') {
+  if(lowercase){
+    return string.toLowerCase().replace(/\s/g, separator).replace(/_/g, separator);
+  } else {
+    return string.replace(/\s/g, separator).replace(/_/g, separator);
+  }
 }
 
 function createHTMLfiles(dataset) {
@@ -129,9 +137,34 @@ function createHTMLfiles(dataset) {
     dataset.detail_var = null;
   }
 
+  // Gather github markdown texts by title. Convert them to HTML, and separate the different parts.
+  let github_page_title = dataset.page_title_github ? dataset.page_title_github : dataset.page_title;
+  let url = GIT_TEXT_URL.replace('%TITLE%', slugify(github_page_title, false, '_'));
+  let result = sync_request('GET', url);
+
+  if(result.statusCode === 200){
+    let git_body_text = marked(decoder.write(result.body)).split(/\r?\n/);
+
+    let main = git_body_text.findIndex((line) => line.includes('<h2 id="main">Main</h2>'));
+    let main_end = git_body_text.findIndex((line, index) => index > main && line.includes('<table>'));
+
+    let explore = git_body_text.findIndex((line) => line.includes('<h2 id="explore">Explore</h2>'));
+    let explore_end = git_body_text.findIndex((line,index) => index > explore && (line.includes('<h3')|| line.includes('<table>')));
+
+    if(explore_end < 0) explore_end = git_body_text.length;
+
+    //set the overview and detail description.
+    dataset.description = git_body_text.slice(main + 1, main_end).join('\n').trim();
+    dataset.description_detail = git_body_text.slice(explore + 1, explore_end).join('\n').trim();
+
+    // dataset.description += '<br><br><i>(github text)</i>'
+    // console.log(url, main_text, explore_text);
+  } else {
+    console.error('Text not found:', url);
+  }
+
   dataset.overviewpage = overviewFileName(dataset);
   dataset.detailpage = detailFileName(dataset);
-  dataset.indicator_title = dataset.indicator_title;
 
   // overview page
   let overviewFile = `${srcPath}/templates/overview.ejs`;
