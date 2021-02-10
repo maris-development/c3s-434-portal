@@ -86,9 +86,6 @@
               </div>
             </div>
 
-            <br /><br />
-            <br /><br />
-
             <div class="row">
                 <div class="column col-md-12" data-panel="">
                     <h2 style="float: left; position: relative;"><%= indicator_title %></h2>
@@ -127,31 +124,25 @@
                 </div>
                 <script type="text/javascript"
                   src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
+                
+                <script>
+                  const OVERVIEW = '<%= overview %>';
+                  const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
+                </script>
+                    
                 <script type="text/javascript">
                   (function () {
                     document.addEventListener('DOMContentLoaded', function () {
-                      window.cds_toolbox.runApp('toolbox-app', '<%= overview %>'
-                        <%if (overview_var != null) { %>
-                        , {
-                            workflowParams: {
-                              "indicator": "<%= overview_var %>",
-
-                            }
-                          }
-                          <% } %>
-                      );
-                  }, false);
+                      window.cds_toolbox.runApp(
+                        'toolbox-app', OVERVIEW, {
+                          workflowParams: WORKFLOWPARAMS,
+                        });
+                    }, false);
                   }) ();
                 </script>
               </div>
             </div>
           </div>
-
-
-
-
-
-
         </div>
       </div>
     </div>
