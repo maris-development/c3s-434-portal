@@ -28,7 +28,9 @@ if (!fs.existsSync(config.dev.outdir)) {
 const srcPath = "./src";
 const outputDir = config.dev.outdir;
 
-const data_apps = JSON.parse(fs.readFileSync("./src/data_apps.json", "utf-8"));
+const data_apps = JSON.parse(
+  fs.readFileSync("./src/data_apps.json", "utf-8")
+);
 const data_themes = JSON.parse(
   fs.readFileSync("./src/data_themes.json", "utf-8")
 );
@@ -37,6 +39,7 @@ const data_overview = JSON.parse(
 );
 
 Object.assign(data_themes, data_apps);
+Object.assign(data_overview, data_apps);
 
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir);
@@ -45,7 +48,7 @@ createAppPages(data_apps);
 
 createThemePages(data_themes);
 
-createOverviewPages(data_overview);
+createOverviewPage(data_overview);
 
 createIndexPage();
 
@@ -59,7 +62,34 @@ function createIndexPage() {
   });
 }
 
-function createOverviewPages(overview_data) {
+function createOverviewPage(overview_data) {
+  let hazard_list = {};
+  
+  for (const index in overview_data["datasets"]) {
+    const dataset = overview_data["datasets"][index];
+    
+    if(dataset["exclude"]) continue;
+
+    if(!hazard_list.hasOwnProperty(dataset["hazard_category"])){
+      hazard_list[dataset["hazard_category"]] = {};
+    }
+    
+    for(const index in dataset["hazards"]){
+      const hazard = dataset["hazards"][index];
+
+      if(!hazard_list[dataset["hazard_category"]].hasOwnProperty(hazard)){
+        hazard_list[dataset["hazard_category"]][hazard] = [];
+      }
+
+      hazard_list[dataset["hazard_category"]][hazard].push({
+        "title": dataset.page_title,
+        "url": dataset.theme.toLowerCase() + '/' + overviewFileName(dataset)
+      });
+    } 
+  }
+
+  overview_data.hazard_list = hazard_list;
+
   ejs.renderFile(
     `${srcPath}/templates/overview-list.ejs`,
     overview_data,
@@ -157,7 +187,6 @@ function createHTMLfiles(dataset) {
     dataset.description = git_body_text.slice(main + 1, main_end).join('\n').trim();
     dataset.description_detail = git_body_text.slice(explore + 1, explore_end).join('\n').trim();
 
-    // dataset.description += '<br><br><i>(github text)</i>'
     // console.log(url, main_text, explore_text);
   } else {
     console.error('Text not found:', url);

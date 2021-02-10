@@ -127,9 +127,16 @@
                 
                 <script>
                   const OVERVIEW = '<%= overview %>';
-                  const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
                 </script>
-                    
+                <%if (overview_var != null) { %>
+                  <script>
+                    const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
+                  </script>
+                <% } else { %>
+                  <script>
+                    const WORKFLOWPARAMS = {};
+                  </script>
+                <% } %>
                 <script type="text/javascript">
                   (function () {
                     document.addEventListener('DOMContentLoaded', function () {
