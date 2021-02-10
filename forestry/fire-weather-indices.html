@@ -428,7 +428,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1612873567" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1612957755" />
   
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -575,9 +575,22 @@
                   <div class="cover-richtext-tile tile-content">
                     <h1>Fire Weather Index</h1>
                     <div>
-                      Fire danger metrics are part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href="https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/">European Forest fire Information System (EFFIS)</a>. The fire weather index is used to assess the fire danger level in a harmonized way throughout Europe.<br><br>The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). <br><br>The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF). The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography. <br><br>The fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis. Fire indices based on the ERA5 Reanalysis Short Model data are at 0.25&deg;x0.25&deg; resolution.<br><br>It is customary to quote a danger class as well as an index number. The fire weather index relates to 6 classes of danger as follows: <br>less than 5.2: very low; 5.2 to 11.2: low; 11.2 to 21.3: moderate; 21.3 to 38.0: high; 38.0 to 50.0: very high; greater than 50: extreme.<br><br>The fire weather index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.  <br><br>Historical fire weather index statistics are also available as national and sub-national area-means for NUTS levels 0, 1 and 2 via the 
-Explore in Detail
- button.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview">Climate Data Store</a>.
+                      <p>Fire danger metrics are part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href="https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/">European Forest fire Information System (EFFIS)</a>. The fire weather index is used to assess the fire danger level in a harmonized way throughout Europe.</p>
+<p>The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF).  The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography.</p>
+<p>The fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis.  The horizontal resolution of the data is 0.25°x0.25°. </p>
+<p>It is customary to quote a danger class as well as an index number. The fire weather index can be categorised into 6 classes of danger as follows:
+less than 5.2: very low; 5.2 to 11.2: low; 11.2 to 21.3: moderate; 21.3 to 38.0: high; 38.0 to 50.0: very high; greater than 50: extreme.</p>
+<p>The fire weather index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.</p>
+<p>Historical fire weather index statistics are also available via the &quot;Explore in Detail&quot; button as national and sub-national area-means for which time series data can be plotted.</p>
+<p>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview">Climate Data Store</a>.</p>
+<h2 id="explore">Explore</h2>
+<p>The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed.  The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF).  The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography.</p>
+<p>The fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis.  It is customary to quote a danger class as well as an index number. The fire weather index can be categorised into 6 classes of danger as follows:</p>
+<p>The annual mean fire weather index for each year from 1979 to 2019 is plotted on a map showing the European NUTS regions.  The EUROSTAT NUTS classification (<a href="https://ec.europa.eu/eurostat/web/nuts/background">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions and NUTS-2: basic regions.</p>
+<p>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view its name or click on a region to request a time series plot.</p>
+<p>The time series plot shows the area mean fire weather index for the chosen NUTS region for each month of the chosen year. </p>
+<p>Hover the mouse over the time series plot to view the data values.  Click on the plot to reveal the action buttons for features such as “zoom” and “download plot as a png”.</p>
+<p>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview">Climate Data Store</a>.</p>
                     </div>
                   </div>
                 </div>
@@ -592,9 +605,9 @@ Explore in Detail
                     <h2 style="float: left; position: relative;">Fire Weather Index</h2>
                     <button class="standard-button primary-button"
                         onclick="window.location = 'fire-weather-indices-detail.html'"
-                        style="float: right; position: relative;" ;>Explore
-                        in
-                        details</button>
+                        style="float: right; position: relative;" ;>
+                        Explore in details
+                    </button>
                 </div>
                 <div class="column col-md-12" data-panel="">
                     <hr>
