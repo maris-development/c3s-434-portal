@@ -4,6 +4,7 @@
 import cdstoolbox as ct
 
 ##### Default options ----------------------------------
+
 dataset_hist = 'sis-agrometeorological-indicators'
 var_hist = ['2m_temperature','24_hour_minimum']
 
@@ -45,11 +46,12 @@ based on ERA5 reanalysis data. Hover over the graph to see the values.
 '''
 
 # text for drop-down menus
-filter_desc = {'speriod': "Choose a time period",
-               'smon': "Choose a month",
-               'rcp': "Choose a scenario",
-               'nuts_level':"Choose a NUTS level",
-              }
+filter_desc = {
+    'speriod': "Choose a time period",
+    'smon': "Choose a month",
+    'rcp': "Choose a scenario",
+    'nuts_level':"Choose a NUTS level",
+}
 filter_help = {'speriod': "Choose a 30-year period average",
                'smon': "Choose a month or annual anomaly",
                'rcp': "Choose a scenario with low (RCP2.6) or high (RCP8.5) greenhouse gas emissions",

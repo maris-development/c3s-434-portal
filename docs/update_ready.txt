@@ -1,7 +1,11 @@
 2021-02-23:
-https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_frostdays_detail_web timeseries height + nuts mask + uk mask
-https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_meanradianttemperature_detail_web uk mask
-https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_heatwave_detail_web uk mask
+The following apps are missing the NON-NUTS regions (Kosovo & Bosnia and Herzegovina) except the first one.
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_frostdays_detail_web         UK mask + timeseries height + nuts mask 
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_meanradianttemperature_detail_web        UK mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_heatwave_detail_web               UK mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_universalthermalclimateindex_detail_web  UK mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_bedd_detail                  UK mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_precip_detail_web            UK mask + timeseries height + legend placement
 
 
 UNSUBMITTED:
