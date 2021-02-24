@@ -1,4 +1,68 @@
+2021-02-23:
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_frostdays_detail_web timeseries height + nuts mask + uk mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_meanradianttemperature_detail_web uk mask
+https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_heatwave_detail_web uk mask
 
+
+UNSUBMITTED:
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/health/climatic-suitability-of-tiger-mosquito--season-length-detail.html
+                    https://c3s.maris.nl/health/climatic-suitability-of-tiger-mosquito--suitability-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_health_mosquito_detail_web 
+Goal:               Adjust time series height.
+Result:             UNTESTED (doesn't load)
+Remarks:            Timeseries height to 500px and Child app min_height to 700 (+50)
+Revision:           baa32041
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/average-mean-temperature-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_tmean_detail_web
+Goal:               Adjust time series height.
+Result:             UNTESTED
+Remarks:            Changed childs app min_height from 1200 to 1300, changed both plot heights to 500 pixel
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/average-maximum-temperature-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_tmax_detail_web
+Goal:               Adjust time series height
+Result:             SUCCESS
+Remarks:            Changed childs app min_height from 1200 to 1300, changed both plot heights to 500 pixel
+Revision:           0eeeef33
+
+==============
+
+Subject c3s beta:   https://c3s.maris.nl/agriculture/average-minimum-temperature-detail.html
+Subject toolbox:    https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_tmin_detail_web
+Goal:               Adjust time series height
+Result:               
+Remarks:            Changed childs app min_height from 1200 to 1300, changed both plot heights to 500 pixel
+Revision: 
+          
+==============
+
+Subject c3s beta:  https://c3s.maris.nl/agriculture/tropical-nights-detail.html
+Subject toolbox:   https://cds.climate.copernicus.eu/toolbox-editor/40366/c3s_434_agriculture_tropicalnights_detail_web
+Goal:              Adjust time series height
+Result:            SUCCESS
+Remarks:           Changed childs app min_height from 1200 to 1300, changed both plot heights to 500 pixel
+Revision:          3ef581a3
+          
+==============
+
+Subject c3s beta:  
+Subject toolbox:   
+Goal:              
+Result:            
+Remarks:           
+Revision: 
+          
+==============
+
+
+FAILED:
 ==============
 
 Subject c3s beta:   https://c3s.maris.nl/health/climatic-suitability-of-tiger-mosquito--suitability-detail.html
@@ -17,7 +81,7 @@ Remarks:            Changed childs app min_height from 1200 to 1300, changed bot
                     1. Map error: 'One or more layers has not been loaded properly' (Error disappeared by now)
                     2. Cannot create property 'widgetType' on string '<p><a href="?rcp=RCP8.5&amp;smon=Annual&amp;nuts_level:float=0&amp;speriod=2071-2099" rel="noreferrer noopener">&#8618;Permalink to this configuration</a></p>'
 
-
+UNPUBLISHED:
 ==============
 
 Subject c3s beta:   https://c3s.maris.nl/health/thermal-comfort-indices--universal-thermal-climate-index-detail.html
@@ -27,6 +91,7 @@ Result:             Success
 Remarks:            Changed plot height to 500 pixels.
 Revision:           22785d8e
 
+DONE:
 ==============
 
 Subject c3s beta:   https://c3s.maris.nl/health/thermal-comfort-indices--mean-radiant-temperature-detail.html
