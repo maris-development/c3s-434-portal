@@ -2,166 +2,180 @@
 <html>
 
 <head>
-  <title><%= theme %> - <%= page_title %></title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <%= theme %> - <%= page_title %>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <%- include('./partials/style') %>
+    <%- include('./partials/style') %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
 
-  <link rel="stylesheet" href="../css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>" />
-  
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+            as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+        <link rel="stylesheet" type="text/css" media="screen"
+            href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>" />
 
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
 
 </head>
 
 <body dir="ltr"
-  class="cover-layout-empty-layout template-view portaltype-collective-cover-content site-cca section-knowledge subsection-c-a-indicators subsection-c-a-indicators-c-a-indicators icons-on userrole-anonymous">
-  <div class="top-page-area">
-    <div class="edit-bar-wrapper">
-      <div class="content-container"> </div>
-    </div>
-    <div class="header">
-      <%- include('./partials/nav') %>
-    </div>
-  </div>
-
-  <div class="content-container site-container">
-    <div id="portal-columns">
-      <div id="portal-column-content" class="cell width-full position-0">
-        
-        <div id="viewlet-above-content">
-          <div id="portal-breadcrumbs">
-            <span id="breadcrumbs-you-are-here">You are here:</span>
-            <span id="breadcrumbs-home">
-              <a href="/">Home</a>
-              <span class="breadcrumbSeparator">/</span>
-            </span>
-            <span id="breadcrumbs-1" dir="ltr">
-              <a href="#">Knowledge</a>
-              <span class="breadcrumbSeparator"> /</span>
-            </span>
-            <span id="breadcrumbs-2" dir="ltr">
-              <a href="../index.html">European Climate Data Explorer</a>
-              <span class="breadcrumbSeparator"> /</span>
-            </span>
-            <span id="breadcrumbs-3" dir="ltr">
-              <a href="../<%= theme.toLowerCase() %>.html"><%= theme %></a>
-              <span class="breadcrumbSeparator"> /</span>
-            </span>
-            <span id="breadcrumbs-4" dir="ltr">
-              <span id="breadcrumbs-current"><%= page_title %></span>
-            </span>
-          </div>
+    class="cover-layout-empty-layout template-view portaltype-collective-cover-content site-cca section-knowledge subsection-c-a-indicators subsection-c-a-indicators-c-a-indicators icons-on userrole-anonymous">
+    <div class="top-page-area">
+        <div class="edit-bar-wrapper">
+            <div class="content-container"> </div>
         </div>
-
-        <div class="">
-          <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
-            <dt>Info</dt>
-            <dd></dd>
-          </dl>
-
-
-
-          <div id="content">
-            <div class="row">
-              <div class="column col-md-16 " data-panel="">
-                <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
-                  <div class="cover-richtext-tile tile-content">
-                    <h1><%= page_title %></h1>
-                    <div>
-                      <%- description %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-                <div class="column col-md-12" data-panel="">
-                    <h2 style="float: left; position: relative;"><%= indicator_title %></h2>
-                    <button class="standard-button primary-button"
-                        onclick="window.location = '<%= detailpage %>'"
-                        style="float: right; position: relative;" ;>
-                        Explore in details
-                    </button>
-                </div>
-                <div class="column col-md-12" data-panel="">
-                    <hr>
-                </div>
-            </div>
-
-
-
-            <div class="row">
-              <div class="column col-md-12" data-panel="">
-
-                <script type="text/javascript">
-                  window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                </script>
-                <div class="t-ct">
-
-
-                  <div id="toolbox-app">
-                    <div class="pre-app-loading">
-                      <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg" alt="Loading">
-                      <div>
-                        ...loading configuration...
-                      </div>
-                    </div>
-                  </div>
-
-
-                </div>
-                <script type="text/javascript"
-                  src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
-                
-                <script>
-                  const OVERVIEW = '<%= overview %>';
-                </script>
-                <%if (overview_var != null) { %>
-                  <script>
-                    const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
-                  </script>
-                <% } else { %>
-                  <script>
-                    const WORKFLOWPARAMS = {};
-                  </script>
-                <% } %>
-                <script type="text/javascript">
-                  (function () {
-                    document.addEventListener('DOMContentLoaded', function () {
-                      window.cds_toolbox.runApp(
-                        'toolbox-app', OVERVIEW, {
-                          workflowParams: WORKFLOWPARAMS,
-                        });
-                    }, false);
-                  }) ();
-                </script>
-              </div>
-            </div>
-          </div>
+        <div class="header">
+            <%- include('./partials/nav') %>
         </div>
-      </div>
     </div>
-  </div>
 
-  <footer>
+    <div class="content-container site-container">
+        <div id="portal-columns">
+            <div id="portal-column-content" class="cell width-full position-0">
 
-    <%- include('./partials/footer-nav') %>
+                <div id="viewlet-above-content">
+                    <div id="portal-breadcrumbs">
+                        <span id="breadcrumbs-you-are-here">You are here:</span>
+                        <span id="breadcrumbs-home">
+                            <a href="/">Home</a>
+                            <span class="breadcrumbSeparator">/</span>
+                        </span>
+                        <span id="breadcrumbs-1" dir="ltr">
+                            <a href="#">Knowledge</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-2" dir="ltr">
+                            <a href="../index.html">European Climate Data Explorer</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-3" dir="ltr">
+                            <a href="../<%= theme.toLowerCase() %>.html">
+                                <%= theme %>
+                            </a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-4" dir="ltr">
+                            <span id="breadcrumbs-current">
+                                <%= page_title %>
+                            </span>
+                        </span>
+                    </div>
+                </div>
 
-    <%- include('./partials/footer') %>
+                <div class="">
+                    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+                        <dt>Info</dt>
+                        <dd></dd>
+                    </dl>
 
-  </footer>
+
+
+                    <div id="content">
+                        <div class="row">
+                            <div class="column col-md-16 " data-panel="">
+                                <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
+                                    <div class="cover-richtext-tile tile-content">
+                                        <h1>
+                                            <%= page_title %>
+                                        </h1>
+                                        <div>
+                                            <%- description %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column col-md-12" data-panel="">
+                                <h2 style="float: left; position: relative;">
+                                    <%= indicator_title %>
+                                </h2>
+                                <button class="standard-button primary-button"
+                                    onclick="window.location = '<%= detailpage %>'"
+                                    style="float: right; position: relative;" ;>
+                                    Explore in details
+                                </button>
+                            </div>
+                            <div class="column col-md-12" data-panel="">
+                                <hr>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="column col-md-12" data-panel="">
+
+                                <script type="text/javascript">
+                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
+                                </script>
+                                <div class="t-ct">
+
+
+                                    <div id="toolbox-app">
+                                        <div class="pre-app-loading">
+                                            <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
+                                                alt="Loading">
+                                            <div>
+                                                Loading indicator...
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
+
+                                <script>
+                                    const OVERVIEW = '<%= overview %>';
+                                </script>
+                                <%if (overview_var !=null) { %>
+                                    <script>
+                                        const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
+                                    </script>
+                                <% } else { %>
+                                    <script>
+                                        const WORKFLOWPARAMS = {};
+                                    </script>
+                                <% } %>
+                                <script type="text/javascript">
+                                    (function () {
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            window.cds_toolbox.runApp(
+                                                'toolbox-app', OVERVIEW, {
+                                                workflowParams: WORKFLOWPARAMS,
+                                            });
+                                        }, false);
+                                    })();
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <%- include('./partials/footer-nav') %>
+
+            <%- include('./partials/footer') %>
+
+    </footer>
 
 
 
