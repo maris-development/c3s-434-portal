@@ -9,41 +9,53 @@ const marked = require('marked')
 
 const decoder = new StringDecoder('utf8')
 
-const APP_URL =
-  "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0";
-
-const GIT_TEXT_URL = "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/markdown/consolidated/%TITLE%.md";
-
 // create output dir or empty output dir
-if (!fs.existsSync(config.dev.outdir)) {
-  fs.mkdirSync(config.dev.outdir);
-} else {
-  rimraf.sync(config.dev.outdir);
-
+try{
   if (!fs.existsSync(config.dev.outdir)) {
     fs.mkdirSync(config.dev.outdir);
+  } else {
+    rimraf.sync(config.dev.outdir);
+
+    if (!fs.existsSync(config.dev.outdir)) {
+      fs.mkdirSync(config.dev.outdir);
+    }
   }
+} catch (error) {
+  console.error("Outdir prep error:", error);
 }
 
-const srcPath = "./src";
+const srcPath = config.dev.source;
 const outputDir = config.dev.outdir;
 
+//load data files.
 const data_apps = JSON.parse(
-  fs.readFileSync("./src/data_apps.json", "utf-8")
+  fs.readFileSync(config.dev.data_apps, "utf-8")
 );
 const data_themes = JSON.parse(
-  fs.readFileSync("./src/data_themes.json", "utf-8")
+  fs.readFileSync(config.dev.data_themes, "utf-8")
 );
 const data_overview = JSON.parse(
-  fs.readFileSync("./src/data_overview.json", "utf-8")
+  fs.readFileSync(config.dev.data_overview, "utf-8")
 );
 
+
+let data_git_json;
+let git_json_result = sync_request('GET', config.url.git_json);
+
+if(git_json_result.statusCode === 200){
+  data_git_json = JSON.parse(decoder.write(git_json_result.body));
+  fs.writeFileSync("./data/git_data.json", JSON.stringify(data_git_json, null, 2));
+}
+
+
+// Add data_apps to data_themes & data_overview
 Object.assign(data_themes, data_apps);
 Object.assign(data_overview, data_apps);
 
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir);
 
+//generate all pages
 createAppPages(data_apps);
 
 createThemePages(data_themes);
@@ -51,6 +63,7 @@ createThemePages(data_themes);
 createOverviewPage(data_overview);
 
 createIndexPage();
+
 
 function createIndexPage() {
   ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
@@ -106,8 +119,9 @@ function createOverviewPage(overview_data) {
 function createAppPages(data) {
   for (const index in data["datasets"]) {
     const dataset = data["datasets"][index];
-    dataset.overview = APP_URL.replace("%APP%", dataset.overview);
-    dataset.detail = APP_URL.replace("%APP%", dataset.detail);
+
+    dataset.overview = config.url.toolbox_app.replace("%APP%", dataset.overview);
+    dataset.detail = config.url.toolbox_app.replace("%APP%", dataset.detail);
 
     // theme directory
     if (!fs.existsSync(`${outputDir}/${dataset.theme.toLowerCase()}/`)) {
@@ -169,7 +183,7 @@ function createHTMLfiles(dataset) {
 
   // Gather github markdown texts by title. Convert them to HTML, and separate the different parts.
   let github_page_title = dataset.page_title_github ? dataset.page_title_github : dataset.page_title;
-  let url = GIT_TEXT_URL.replace('%TITLE%', slugify(github_page_title, false, '_'));
+  let url = config.url.git_md.replace('%TITLE%', slugify(github_page_title, false, '_'));
   let result = sync_request('GET', url);
 
   if(result.statusCode === 200){
