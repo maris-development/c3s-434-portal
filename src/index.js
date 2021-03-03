@@ -39,6 +39,7 @@ const data_overview = JSON.parse(
 );
 
 
+//retrieve indicator texts from github.
 let data_git_json;
 let git_json_result = sync_request('GET', config.url.git_json);
 
