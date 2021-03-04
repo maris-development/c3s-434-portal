@@ -182,33 +182,53 @@ function createHTMLfiles(dataset) {
     dataset.detail_var = null;
   }
 
-  // Gather github markdown texts by title. Convert them to HTML, and separate the different parts.
-  let github_page_title = dataset.page_title_github ? dataset.page_title_github : dataset.page_title;
-  let url = config.url.git_md.replace('%TITLE%', slugify(github_page_title, false, '_'));
-  let result = sync_request('GET', url);
-
-  if(result.statusCode === 200){
-    let git_body_text = marked(decoder.write(result.body)).split(/\r?\n/);
-
-    let main = git_body_text.findIndex((line) => line.includes('<h2 id="main">Main</h2>'));
-    let main_end = git_body_text.findIndex((line, index) => index > main && line.includes('<table>'));
-
-    let explore = git_body_text.findIndex((line) => line.includes('<h2 id="explore">Explore</h2>'));
-    let explore_end = git_body_text.findIndex((line,index) => index > explore && (line.includes('<h3')|| line.includes('<table>')));
-
-    if(explore_end < 0) explore_end = git_body_text.length;
-
-    //set the overview and detail description.
-    dataset.description = git_body_text.slice(main + 1, main_end).join('\n').trim();
-    dataset.description_detail = git_body_text.slice(explore + 1, explore_end).join('\n').trim();
-
-    // console.log(url, main_text, explore_text);
-  } else {
-    console.error('Text not found:', url);
-  }
-
+  //maak filenames voor dat we de git detail laden.
   dataset.overviewpage = overviewFileName(dataset);
   dataset.detailpage = detailFileName(dataset);
+
+
+  if(config.usage.markdown_texts){
+    // Gather github markdown texts by title. Convert them to HTML, and separate the different parts.
+    let github_page_title = dataset.page_title_github ? dataset.page_title_github : dataset.page_title;
+    let url = config.url.git_md.replace('%TITLE%', slugify(github_page_title, false, '_'));
+    let result = sync_request('GET', url);
+
+    if(result.statusCode === 200){
+      let git_body_text = marked(decoder.write(result.body)).split(/\r?\n/);
+
+      let main = git_body_text.findIndex((line) => line.includes('<h2 id="main">Main</h2>'));
+      let main_end = git_body_text.findIndex((line, index) => index > main && line.includes('<table>'));
+
+      let explore = git_body_text.findIndex((line) => line.includes('<h2 id="explore">Explore</h2>'));
+      let explore_end = git_body_text.findIndex((line,index) => index > explore && (line.includes('<h3')|| line.includes('<table>')));
+
+      if(explore_end < 0) explore_end = git_body_text.length;
+
+      //set the overview and detail description.
+      dataset.description = git_body_text.slice(main + 1, main_end).join('\n').trim();
+      dataset.description_detail = git_body_text.slice(explore + 1, explore_end).join('\n').trim();
+
+      // console.log(url, main_text, explore_text);
+    } else {
+      console.error('Text not found:', url);
+    }
+  } else if(data_git_json){
+    let git_consolidated_data = false;
+    try{
+      git_consolidated_data = data_git_json.find(element => element.hasOwnProperty(dataset.identifier))[dataset.identifier];
+    } catch (error) {
+      console.error(error);
+    }
+
+    if(git_consolidated_data){
+      dataset.page_title = git_consolidated_data.PageTitle;
+      dataset.description = marked(git_consolidated_data.ConsolidatedText_Main);
+      dataset.description_detail = marked(git_consolidated_data.ConsolidatedText_Explore);
+      dataset.indicator_title = git_consolidated_data.Indicator;
+      dataset.units = git_consolidated_data.Units;
+    }
+
+  }
 
   // overview page
   let overviewFile = `${srcPath}/templates/overview.ejs`;

@@ -3,12 +3,13 @@
         {
             "description": "The daily maximum temperature indicator provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.<br><br>The climate anomaly in monthly average of daily maximum air temperature at a height of 2m above the surface (&deg;C) is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates a warmer temperature than the reference period while a negative anomaly indicates a cooler temperature than the reference period. The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>Monthly average daily maximum temperature anomalies are presented as 30-year means for each month of the year for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for average daily maximum temperature, maximum daily maximum temperature and minimum daily maximum temperature statistics are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
             "description_detail": "The climate anomaly in monthly average of daily maximum air temperature at a height of 2m above the surface (&deg;C) is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates a warmer temperature than the reference period while a negative anomaly indicates a cooler temperature than the reference period.<br><br>The daily maximum temperature anomaly statistics for the chosen scenario and time period are plotted as area means for each European NUTS region. The EUROSTAT NUTS classification (<a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. <br><br>The time series plot shows the ensemble mean and range of temperature responses to the scenario conditions across an ensemble of 5 CMIP5 climate models. Hover the mouse over the plot to view the time series data values. Click on the plot to reveal the action buttons for features such as \"zoom\" and \"download plot as a png\".<br><br>This indicator is expressed as an anomaly from a reference period so a reference climatology is also provided which displays the mean climatology, the standard deviation from the mean, and the 5th and 95th percentiles.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
-            "detail": "hidden-app-agriculture-tmax-detail-web",
             "indicator_title": "Climate Anomaly in Monthly Average of Daily Maximum Temperature",
-            "overview": "hidden-app-agriculture-tmax-overview-web",
             "page_title": "Monthly statistics for daily maximum temperature",
-            "page_url": "average-maximum-temperature",
             "theme": "Agriculture",
+            "identifier": "C3S_434_013",
+            "detail": "hidden-app-agriculture-tmax-detail-web",
+            "overview": "hidden-app-agriculture-tmax-overview-web",
+            "page_url": "average-maximum-temperature",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat", "Frost", "Mean temperature"]
         },
@@ -20,9 +21,10 @@
             "overview": "hidden-app-agriculture-tmin-overview-web",
             "page_title": "Monthly statistics for daily minimum temperature",
             "page_url": "average-minimum-temperature",
+            "identifier": "C3S_434_014",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
-            "hazards": ["Frost","Extreme heat", "Mean temperature"]
+            "hazards": ["Frost", "Extreme heat", "Mean temperature"]
         },
         {
             "description": "The daily mean temperature indicator provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.<br><br>The climate anomaly in monthly average of daily mean air temperature at a height of 2m above the surface (K) is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates a warmer temperature than the reference period while a negative anomaly indicates a cooler temperature than the reference period. The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>Monthly average daily mean temperature anomalies are presented as 30-year means for each month of the year for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for average daily mean temperature are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
@@ -34,6 +36,7 @@
             "page_url": "average-mean-temperature",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
+            "identifier": "C3S_434_015",
             "hazards": ["Mean temperature"]
         },
         {
@@ -45,6 +48,7 @@
             "name": "season length",
             "overview": "hidden-app-health-mosquito-overview-web",
             "overview_var": "season_length",
+            "identifier": "C3S_434_002",
             "page_title": "Climatic suitability for the tiger mosquito - season length",
             "page_url": "climatic-suitability-of-tiger-mosquito--season-length",
             "theme": "Health",
@@ -60,6 +64,7 @@
             "name": "suitability",
             "overview": "hidden-app-health-mosquito-overview-web",
             "overview_var": "suitability",
+            "identifier": "C3S_434_003",
             "page_title": "Climatic suitability for the tiger mosquito - suitability index",
             "page_url": "climatic-suitability-of-tiger-mosquito--suitability",
             "theme": "Health",
@@ -71,24 +76,30 @@
             "description": "Fire danger metrics are part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href=\"https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/\">European Forest fire Information System (EFFIS)</a>. The fire danger index allows the EFFIS to be compared with the Australian Mark5 rating system.<br><br>The fire danger index is a metric related to the chances of a fire starting, its rate of spread, its intensity, and its difficulty of suppression. The fire danger index is calculated using the Australian McArthur (Mark 5) rating system.<br><br>The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF). The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography.<br><br>The fire danger index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis. Fire indices based on the ERA5 Reanalysis Short Model data are at 0.25&deg;x0.25&deg; resolution. <br><br>It is customary to quote a danger class as well as an index number. The fire danger index relates to 6 classes of danger as follows: <br>0 to 11: low to moderate; 12 to 25: high; 25 to 49: very high.<br>Thereafter the danger class depends on the type of vegetation, forest or grassland. <br>Forest danger classes are: 50 to 75: severe; 75 to 99: extreme; greater than 100: catastrophic.<br>Grassland danger classes are: 50 to 99: severe; 100 to 149: extreme; greater than 150: catastrophic.<br><br>The fire danger index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.<br><br>Historical fire danger index statistics are also available for each year as national and sub-national area-means for NUTS levels 0, 1 and 2 via the \"Explore in Detail\" button.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>.",
             "description_detail": "The fire danger index is a metric related to the chances of a fire starting, its rate of spread, its intensity, and its difficulty of suppression. The fire danger index is calculated using the Australian McArthur (Mark 5) rating system. <br><br>It is customary to quote a danger class as well as an index number. The fire danger index relates to 6 classes of danger as follows: <br>0 to 11: low to moderate; 12 to 25: high; 25 to 49: very high.<br>Thereafter the danger class depends on the type of vegetation, forest or grassland. <br>Forest danger classes are: 50 to 75: severe; 75 to 99: extreme; greater than 100: catastrophic.<br>Grassland danger classes are: 50 to 99: severe; 100 to 149: extreme; greater than 150: catastrophic.<br><br>The annual mean fire danger index for each year from 1979 to 2019 is plotted on a map showing the European NUTS regions. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean fire danger index for the chosen NUTS region for each month of the chosen year. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>.",
             "detail": "hidden-app-forestry-fireindex-detail-web",
-            "exclude": true,
+            "exclude": false,
+            "identifier": "C3S_434_005",
             "indicator_title": "Fire Danger Index",
             "overview": "hidden-app-forestry-fireindex-overview-web",
             "page_title": "Fire Danger Index",
             "page_url": "fire-danger-indices",
-            "theme": "Forestry"
+            "theme": "Forestry",
+            "hazard_category": "Heat and cold",
+            "hazards": ["Wild fire", "Extreme heat"]
         },
         {
             "climate_hazard": "wet-and-dry/wild-fire",
             "description": "Fire danger metrics are part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href=\"https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/\">European Forest fire Information System (EFFIS)</a>. The fire weather index is used to assess the fire danger level in a harmonized way throughout Europe.<br><br>The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). <br><br>The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF). The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography. <br><br>The fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis. Fire indices based on the ERA5 Reanalysis Short Model data are at 0.25&deg;x0.25&deg; resolution.<br><br>It is customary to quote a danger class as well as an index number. The fire weather index relates to 6 classes of danger as follows: <br>less than 5.2: very low; 5.2 to 11.2: low; 11.2 to 21.3: moderate; 21.3 to 38.0: high; 38.0 to 50.0: very high; greater than 50: extreme.<br><br>The fire weather index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.  <br><br>Historical fire weather index statistics are also available as national and sub-national area-means for NUTS levels 0, 1 and 2 via the \nExplore in Detail\n button.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>.",
             "description_detail": "The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI).<br><br>It is customary to quote a danger class as well as an index number. The fire weather index relates to 6 classes of danger as follows: <br>less than 5.2: very low; 5.2 to 11.2: low; 11.2 to 21.3: moderate; 21.3 to 38.0: high; 38.0 to 50.0: very high; greater than 50: extreme.<br><br>The annual mean fire weather index for each year from 1979 to 2019 is plotted on a map showing the European NUTS regions.  The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean fire weather index for the chosen NUTS region for each month of the chosen year. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>.",
             "detail": "hidden-app-fireweatherindex-detail-web",
-            "exclude": true,
+            "exclude": false,
+            "identifier": "C3S_434_004",
             "indicator_title": "Fire Weather Index",
             "overview": "hidden-app-fireweatherindex-overview-web",
             "page_title": "Fire Weather Index",
             "page_url": "fire-weather-indices",
-            "theme": "Forestry"
+            "theme": "Forestry",
+            "hazard_category": "Heat and cold",
+            "hazards": ["Wild fire", "Extreme heat"]
         },
         {
             "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>A climate heat wave is considered to be a period of at least 3 consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season for the control period of 1971 to 2000.<br><br>Health heat waves are calculated for the summer period between June and August. Health heat waves are days in which the maximal apparent temperature (Tappmax) exceeds the 90th percentile of Tappmax for each month and the minimum temperature (Tmin) exceeds the 90th percentile of Tmin for each month for at least 2 days.  The apparent temperature is a measure of relative discomfort due to combined heat and high humidity.<br><br>The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085. Finally, the time series are averaged over the model ensemble.<br><br>The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>30-year smoothed averages of the number of heat wave days are presented as 10-year means for either the climatological or heath definition of heat waves for 2 CMIP5 scenarios; RCP4.5 with medium greenhouse gas emissions or RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of heat wave days are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
@@ -98,6 +109,7 @@
             "overview": "hidden-app-health-heatwave-overview-web",
             "page_title": "Heat waves in Europe",
             "page_url": "heat-waves-and-cold-spells-in-europe",
+            "identifier": "C3S_434_006",
             "theme": "Health",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat"]
@@ -112,6 +124,7 @@
             "page_title": "Heat waves in Europe",
             "page_url": "heat-waves-and-cold-spells-in-europe",
             "theme": "Energy",
+            "identifier": "C3S_434_006",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat"]
         },
@@ -124,6 +137,7 @@
             "overview": "hidden-app-universalthermalclimateindex-overview-web",
             "page_title": "Thermal comfort indices - Universal thermal climate index",
             "page_url": "thermal-comfort-indices--universal-thermal-climate-index",
+            "identifier": "C3S_434_007",
             "theme": "Health",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat"]
@@ -135,6 +149,7 @@
             "indicator_title": "Mean radiant temperature",
             "name": "mean radiant temperature",
             "overview": "hidden-app-meanradianttemperature-overview-web",
+            "identifier": "C3S_434_008",
             "page_title": "Thermal comfort indices - Mean radiant temperature",
             "page_url": "thermal-comfort-indices--mean-radiant-temperature",
             "theme": "Health",
@@ -149,8 +164,9 @@
             "overview": "hidden-app-agriculture-precip-overview-web",
             "page_title": "Precipitation Sum",
             "theme": "Agriculture",
+            "identifier": "C3S_434_012",
             "hazard_category": "Wet and dry",
-            "hazards": ["Mean precipation"]
+            "hazards": ["Mean precipitation"]
         },
         {
             "description": "The number of frost days provides information on frost damage.<br><br>A frost day is when the daily minimum temperature is less than 0&deg;C. The climate anomaly in the number of frost days is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>A positive anomaly indicates more frost days than the reference period while a negative anomaly indicates fewer frost days than the reference period.<br><br>Monthly and annual anomalies of the number of frost days are presented as 30-year means for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of frost days are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted. <br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.",
@@ -159,6 +175,7 @@
             "indicator_title": "Climate Anomaly in the Number of Frost Days",
             "overview": "hidden-app-agriculture-frostdays-overview-web",
             "page_title": "Frost Days",
+            "identifier": "C3S_434_010",
             "page_url": "frost-days",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
@@ -171,6 +188,7 @@
             "indicator_title": "Climate Anomaly in the Number of Tropical Nights",
             "overview": "hidden-app-agriculture-tropicalnights-overview-web",
             "page_title": "Tropical Nights",
+            "identifier": "C3S_434_011",
             "page_url": "tropical-nights",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
@@ -185,6 +203,7 @@
             "page_title": "Biologically effective degree days",
             "page_url": "biologically-effective-degree-days",
             "theme": "Agriculture",
+            "identifier": "C3S_434_009",
             "hazard_category": "Heat and cold",
             "hazards": ["Frost", "Mean temperature"]
         }
