@@ -230,10 +230,9 @@ function createHTMLfiles(dataset) {
 
   }
 
-  // overview page
-  let overviewFile = `${srcPath}/templates/overview.ejs`;
+  dataset.vars = dataset.vars || { "detail": {}, "overview": {} };
 
-  ejs.renderFile(overviewFile, dataset, (err, data) => {
+  ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
     if (err) throw err;
     fs.writeFile(
       `${outputDir}/${dataset.theme.toLowerCase()}/${dataset.overviewpage}`,

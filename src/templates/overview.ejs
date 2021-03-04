@@ -83,8 +83,8 @@
 
                     <div id="content">
                         <div class="row">
-                            <div class="column col-md-16 " data-panel="">
-                                <div class="tile tile-default" id="b48b97e5-278f-4474-a61b-b73734177559">
+                            <div class="column col-md-12" data-panel="">
+                                <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <h1>
                                             <%= page_title %>
@@ -108,12 +108,9 @@
                                     Explore in details
                                 </button>
                             </div>
-                            <div class="column col-md-12" data-panel="">
-                                <hr>
-                            </div>
                         </div>
-
-
+                        
+                        <hr>
 
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
@@ -142,15 +139,11 @@
                                 <script>
                                     const OVERVIEW = '<%= overview %>';
                                 </script>
-                                <%if (overview_var !=null) { %>
-                                    <script>
-                                        const WORKFLOWPARAMS = { "indicator": "<%= overview_var %>" };
-                                    </script>
-                                <% } else { %>
-                                    <script>
-                                        const WORKFLOWPARAMS = {};
-                                    </script>
-                                <% } %>
+
+                                <script>
+                                    const WORKFLOWPARAMS = <%- JSON.stringify(vars.overview) %>;
+                                </script>
+                                
                                 <script type="text/javascript">
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
@@ -173,12 +166,11 @@
 
         <%- include('./partials/footer-nav') %>
 
-            <%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>
 
     </footer>
 
-
-
+    
 
 </body>
 
