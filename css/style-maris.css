@@ -143,3 +143,10 @@ hr {
         margin: 20px;
     }
 }
+
+/* App loading icon centered */
+.pre-app-loading {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
