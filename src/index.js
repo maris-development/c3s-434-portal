@@ -65,6 +65,8 @@ createOverviewPage(data_overview);
 
 createIndexPage();
 
+fs.writeFileSync("./data/data_apps_output.json", JSON.stringify(data_apps, null, 2));
+
 
 function createIndexPage() {
   ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
