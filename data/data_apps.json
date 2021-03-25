@@ -11,7 +11,7 @@
             "overview": "hidden-app-agriculture-tmax-overview-web",
             "page_url": "average-maximum-temperature",
             "hazard_category": "Heat and cold",
-            "hazards": ["Extreme heat", "Frost", "Mean temperature"]
+            "hazards": ["Extreme heat"]
         },
         {
             "description": "The daily minimum temperature indicator provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.<br><br>The climate anomaly in monthly average of daily minimum air temperature at a height of 2m above the surface (&deg;C) is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates a warmer temperature than the reference period while a negative anomaly indicates a cooler temperature than the reference period. The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>Monthly average daily minimum temperature anomalies are presented as 30-year means for each month of the year for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for average daily minimum temperature, maximum daily minimum temperature and minimum daily minimum temperature are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
@@ -24,7 +24,7 @@
             "identifier": "C3S_434_014",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
-            "hazards": ["Frost", "Extreme heat", "Mean temperature"]
+            "hazards": ["Cold spells and frost"]
         },
         {
             "description": "The daily mean temperature indicator provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.<br><br>The climate anomaly in monthly average of daily mean air temperature at a height of 2m above the surface (K) is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). <br><br>A positive anomaly indicates a warmer temperature than the reference period while a negative anomaly indicates a cooler temperature than the reference period. The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>Monthly average daily mean temperature anomalies are presented as 30-year means for each month of the year for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for average daily mean temperature are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
@@ -50,7 +50,7 @@
             "page_title": "Climatic suitability for the tiger mosquito - season length",
             "page_url": "climatic-suitability-of-tiger-mosquito--season-length",
             "theme": "Health",
-            "hazard_category": "Heat and cold",
+            "hazard_category": "Other",
             "hazards": ["Other"],
             "vars": {
                 "detail": {
@@ -72,7 +72,7 @@
             "page_title": "Climatic suitability for the tiger mosquito - suitability index",
             "page_url": "climatic-suitability-of-tiger-mosquito--suitability",
             "theme": "Health",
-            "hazard_category": "Heat and cold",
+            "hazard_category": "Other",
             "hazards": ["Other"],
             "vars": {
                 "detail": {
@@ -95,8 +95,8 @@
             "page_title": "Fire Danger Index",
             "page_url": "fire-danger-indices",
             "theme": "Forestry",
-            "hazard_category": "Heat and cold",
-            "hazards": ["Wild fire", "Extreme heat"]
+            "hazard_category": "Wet and dry",
+            "hazards": ["Wildfire"]
         },
         {
             "climate_hazard": "wet-and-dry/wild-fire",
@@ -110,8 +110,8 @@
             "page_title": "Fire Weather Index",
             "page_url": "fire-weather-indices",
             "theme": "Forestry",
-            "hazard_category": "Heat and cold",
-            "hazards": ["Wild fire", "Extreme heat"]
+            "hazard_category": "Wet and dry",
+            "hazards": ["Wildfire"]
         },
         {
             "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>A climate heat wave is considered to be a period of at least 3 consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season for the control period of 1971 to 2000.<br><br>Health heat waves are calculated for the summer period between June and August. Health heat waves are days in which the maximal apparent temperature (Tappmax) exceeds the 90th percentile of Tappmax for each month and the minimum temperature (Tmin) exceeds the 90th percentile of Tmin for each month for at least 2 days.  The apparent temperature is a measure of relative discomfort due to combined heat and high humidity.<br><br>The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085. Finally, the time series are averaged over the model ensemble.<br><br>The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>30-year smoothed averages of the number of heat wave days are presented as 10-year means for either the climatological or heath definition of heat waves for 2 CMIP5 scenarios; RCP4.5 with medium greenhouse gas emissions or RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of heat wave days are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
@@ -120,8 +120,8 @@
             "indicator_title": "Number of Heat Wave Days",
             "overview": "hidden-app-health-heatwave-overview-web",
             "page_title": "Heat waves in Europe",
-            "page_url": "heat-waves-and-cold-spells-in-europe",
-            "identifier": "C3S_434_006",
+            "page_url": "health-heat-waves-in-europe",
+            "identifier": "C3S_434_016",
             "theme": "Health",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat"],
@@ -138,15 +138,23 @@
             "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>The climatological definition of a heat wave relies on the results of the EURO-CORDEX project. A climatological heat wave is considered to be a period of at least three consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season of the control period of 1971 to 2000. The health-related definition of a heat wave relies on the results of the EURO-heat project. For the summer period of June to August a health heat wave is defined as days in which the maximal apparent temperature (Tappmax) exceeds the threshold (90th percentile of Tappmax for each month) and the minimum temperature (Tmin) exceeds its threshold(90th percentile of Tmin for each month) for at least two days. The apparent temperature is a measure of relative discomfort due to combined heat and high humidity and is calculated as a combination of air and dew point temperature. The statistics are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a timeseries covering the period from 1986 to 2085. Finally, the timeseries are averaged for the model ensemble. The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset. The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>A climatological definition and a heath definition of the number of heat wave days is presented for 2 CMIP5 scenarios; RCP4.5 and RCP8.5.<br><br>Annual statistics for the number of heat wave days are also available for CMIP5 scenarios RCP4.5 and RCP8.5 as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 via the \"Explore in Detail\" button.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
             "description_detail": "",
             "detail": "hidden-app-health-heatwave-detail-web",
-            "exclude": true,
+            "exclude": false,
             "indicator_title": "Number of Heat Wave Days",
             "overview": "hidden-app-health-heatwave-overview-web",
             "page_title": "Heat waves in Europe",
-            "page_url": "heat-waves-and-cold-spells-in-europe",
+            "page_url": "climatological-heat-waves-in-europe",
             "theme": "Energy",
-            "identifier": "C3S_434_006",
+            "identifier": "C3S_434_017",
             "hazard_category": "Heat and cold",
-            "hazards": ["Extreme heat"]
+            "hazards": ["Extreme heat"],
+            "vars": {
+                "detail": {
+                    "hdef": "climatological_related"
+                },
+                "overview": {
+                    "hdef": "climatological_related"
+                }
+            }
         },
         {
             "description": "The mean radiant temperature (MRT) and the Universal Thermal Climate Index (UTCI) are widely used as human biometeorology parameters to assess the linkages between outdoor environment and human well?being. These thermal comfort indices describe how the human body experiences atmospheric conditions, specifically air temperature, humidity, wind and radiation.<br><br>The universal thermal climate index (UTCI) (&deg;C) is an equivalent temperature (&deg;C), it is a measure of the human physiological response to the thermal environment. The universal thermal climate index (UTCI) describes the synergistic heat exchanges between the thermal environment and the human body, namely its energy budget, physiology and clothing. UTCI takes into consideration the clothing adaptation of the population in response to actual environmental temperature. There are four variables required to calculate the UTCI: 2m air temperature, 2m dew point temperature (or relative humidity), wind speed at 10m above ground level and mean radiant temperature (MRT).<br><br>The universal thermal climate index (UTCI) is computed using data from the ECMWF ERA5 reanalysis and is part of the ERA5-HEAT (Human thErmAl comforT) dataset. The horizontal resolution of the data is 0.25&deg;x0.25&deg;. <br><br>There are 10 UTCI thermal stress categories that correspond to specific human physiological responses to the thermal environment. The categories relate to UTCI values as follows:<br>above +46: extreme heat stress; +38 to +46: very strong heat stress; +32 to +38: strong heat stress; +26 to +32: moderate heat stress; +9 to +26: no thermal stress; +9 to 0: slight cold stress; 0 to -13: moderate cold stress; -13 to -27: strong cold stress; -27 to -40: very strong cold stress; below -40: extreme cold stress.<br><br>The universal thermal climate index (UTCI) based on the ERA5-HEAT dataset is presented for each month and year from 1979-2019. UTCI statistics are also available via the \"Explore in Detail\" button for each month and year from 1979-2019 as national and sub-national area-means for NUTS levels 0, 1 and 2 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview\">Climate Data Store</a>.",
@@ -157,7 +165,7 @@
             "overview": "hidden-app-universalthermalclimateindex-overview-web",
             "page_title": "Thermal comfort indices - Universal thermal climate index",
             "page_url": "thermal-comfort-indices--universal-thermal-climate-index",
-            "identifier": "C3S_434_007",
+            "identifier": "C3S_434_008",
             "theme": "Health",
             "hazard_category": "Heat and cold",
             "hazards": ["Extreme heat"]
@@ -169,12 +177,12 @@
             "indicator_title": "Mean radiant temperature",
             "name": "mean radiant temperature",
             "overview": "hidden-app-meanradianttemperature-overview-web",
-            "identifier": "C3S_434_008",
+            "identifier": "C3S_434_007",
             "page_title": "Thermal comfort indices - Mean radiant temperature",
             "page_url": "thermal-comfort-indices--mean-radiant-temperature",
             "theme": "Health",
             "hazard_category": "Heat and cold",
-            "hazards": ["Extreme heat"]
+            "hazards": ["Mean temperature"]
         },
         {
             "description": "The precipitation sum provides information on possible water shortage or excess. <br><br>The climate anomalies of the sum of monthly precipitation and annual precipitation (%) are calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>A positive anomaly indicates more precipitation than the reference period while a negative anomaly indicates less precipitation than the reference period.<br><br>Monthly and annual anomalies of the precipitation sum are presented as 30 year means for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. <br><br>Statistics for the precipitation sum are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.",
@@ -199,7 +207,7 @@
             "page_url": "frost-days",
             "theme": "Agriculture",
             "hazard_category": "Heat and cold",
-            "hazards": ["Frost", "Extreme heat"]
+            "hazards": ["Cold spells and frost"]
         },
         {
             "description": "The number of tropical nights provides an indication of the occurrence of various pests.<br><br>On a tropical night the minimum temperature remains above 20&deg;C. The climate anomaly in the number of tropical nights is calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>A positive anomaly indicates more tropical nights than the reference period while a negative anomaly indicates fewer tropical nights than the reference period.<br><br>Monthly and annual anomalies of the number of tropical nights are presented as 30-year means for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of tropical nights are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted. <br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.",
@@ -225,7 +233,7 @@
             "theme": "Agriculture",
             "identifier": "C3S_434_009",
             "hazard_category": "Heat and cold",
-            "hazards": ["Frost", "Mean temperature"]
+            "hazards": ["Mean temperature"]
         }
     ]
 }

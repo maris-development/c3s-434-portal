@@ -85,29 +85,67 @@
 
                         <div class="row">
                             <!-- For each category of hazards -->
-                            <% for(const category in hazard_list) { if(hazard_list.hasOwnProperty(category)){ %>
+                            <% for(const category in hazard_list) { 
+                                if(hazard_list.hasOwnProperty(category)){ 
+                                    if(category === "Other") continue;
+                                    %>
+                                    <div class="column col-md-6">
+                                        <h2>
+                                            <%= category %>
+                                        </h2>
+                                        <!-- For each hazard in the category -->
+                                        <% for(const hazard in hazard_list[category]) {
+                                            if(hazard_list[category].hasOwnProperty(hazard)){ %>
+                                            <h3>
+                                                <%= hazard %>
+                                            </h3>
+                                            <ul>
+                                                <!--  for each indicator in the hazard. -->
+                                                <% for(const appindex in hazard_list[category][hazard]) { %>
+                                                    <% const app = hazard_list[category][hazard][appindex] %>
+                                                    <li><a href="<%= app.url %>">
+                                                            <%= app.title %>
+                                                        </a></li>
+                                                    <% } %>
+                                            </ul>
+                                            <% } } %>
+                                    </div>
+                                <% } 
+                            } 
+
+                            // Special occasion for "Other" category", always last, and don't print "Other" subcat.
+                            if(hazard_list.hasOwnProperty("Other")){
+                            %>
+
                                 <div class="column col-md-6">
-                                    <h2>
-                                        <%= category %>
-                                    </h2>
-                                    <!-- For each hazard in the category -->
-                                    <% for(const hazard in hazard_list[category]) {
-                                        if(hazard_list[category].hasOwnProperty(hazard)){ %>
-                                        <h3>
-                                            <%= hazard %>
-                                        </h3>
-                                        <ul>
-                                            <!--  for each indicator in the hazard. -->
-                                            <% for(const appindex in hazard_list[category][hazard]) { %>
-                                                <% const app = hazard_list[category][hazard][appindex] %>
-                                                <li><a href="<%= app.url %>">
-                                                        <%= app.title %>
-                                                    </a></li>
-                                                <% } %>
-                                        </ul>
-                                        <% } } %>
+                                    <h2>Other</h2>
+
+                                    <% for(const hazard in hazard_list["Other"]) {
+                                        if(hazard_list["Other"].hasOwnProperty(hazard)){ 
+                                            if(hazard !== "Other") {
+                                            %>
+
+                                                <h3>
+                                                    <%= hazard %>
+                                                </h3>
+
+                                            <%
+                                            }
+                                            %>
+                                            
+                                            <ul>
+                                                <% for(const appindex in hazard_list["Other"][hazard]) { %>
+                                                    <% const app = hazard_list["Other"][hazard][appindex] %>
+                                                    <li><a href="<%= app.url %>"><%= app.title %></a></li>
+                                                <% 
+                                                } %>
+                                            </ul>
+                                    <%  } 
+                                    } %>
                                 </div>
-                                <% } } %>
+                            <% 
+                            }
+                            %>
                         </div>
                     </div>
                 </div>

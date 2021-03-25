@@ -1,5 +1,5 @@
 # UK mask
-uk_mask = ct.shapes.catalogue.nuts(nuts_id='UK')
+uk_nuts = ct.shapes.catalogue.nuts(nuts_id='UK')
 uk_mask_style = {
     'fillColor': '#ffffff',
     'fillOpacity': 1,
@@ -7,7 +7,7 @@ uk_mask_style = {
     'weight': 1,
 }
 uk_mask = {
-    'data': ct.shapes.get_geojson(uk_mask),
+    'data': ct.shapes.get_geojson(uk_nuts),
     'style': uk_mask_style,
     'style_selected': uk_mask_style,
     'label_template': ' ',
@@ -123,19 +123,7 @@ def plot_shapes():
         },
     ]
 
-    uk_mask = ct.shapes.catalogue.nuts(nuts_id='UK')
-    uk_mask_style = {
-        'fillColor': '#ffffff',
-        'fillOpacity': 1,
-        'color': '#000000',
-        'weight': 1,
-    }
-    uk_mask = {
-        'data': ct.shapes.get_geojson(uk_mask),
-        'style': uk_mask_style,
-        'style_selected': uk_mask_style,
-        'label_template': ' ',
-    }
+
 
     fig = ct.livemap.plot(livemap_data+[uk_mask, legend_data], show_legend=True,  # _enable_geoserver=True,
                           date_format='yyyy', crs='EPSG3857', min_zoom=3, zoom=3,)

@@ -101,6 +101,8 @@ function createOverviewPage(overview_data) {
       });
     } 
   }
+  // console.log(hazard_list);
+  // process.exit();
 
   overview_data.hazard_list = hazard_list;
 
