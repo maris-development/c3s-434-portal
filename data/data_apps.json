@@ -44,7 +44,6 @@
             "description_detail": "The season length, in weeks, of the climatic suitability for the presence of the tiger mosquito (Aedes albopictus) is determined by temperature statistics that are calculated either for the season (winter and summer) or for the whole year.  The statistics are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085. Finally, the time series are averaged for the model ensemble.<br><br>The season length for tiger mosquito suitability is calculated using bias-adjusted EURO-CORDEX data for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). The duration of tiger mosquito presence is also known as the mosquito season. Outside of this period mosquitoes die off or go into diapause.<br><br>The map shows the 30-year smoothed average of the season length of the climatic suitability for the tiger mosquito centred at a given year for the chosen scenario plotted as area means for each European NUTS region. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. The time series plot shows the range of climatic suitability responses for the tiger mosquito to the chosen scenario conditions across the EURO-CORDEX model ensemble. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-health-vector?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
             "detail": "hidden-app-health-mosquito-detail-web",
             "indicator_title": "Climatic suitability for the tiger mosquito - season length",
-            "name": "season length",
             "overview": "hidden-app-health-mosquito-overview-web",
             "identifier": "C3S_434_002",
             "page_title": "Climatic suitability for the tiger mosquito - season length",
@@ -66,7 +65,6 @@
             "description_detail": "The climatic suitability index for the presence of the tiger mosquito (Aedes albopictus) is determined by temperature statistics that are calculated either for the season (winter and summer) or for the whole year.  The data covers the period 1971 to 2099 and statistics are averaged for 30 years in overlapping time periods set 10 years apart. Finally, the time series are averaged for the model ensemble.<br><br>The tiger mosquito suitability statistics are calculated using bias-adjusted EURO-CORDEX data for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). A suitability index of 0 indicates that an area is not suitable (has no favourable environmental conditions) for tiger mosquito presence whereas an area with an index of 100 is totally suitable.<br><br>The map shows a 30-year average of the climatic suitability index for the tiger mosquito for the chosen scenario plotted as area means for each European NUTS region. The EUROSTAT NUTS classification (<a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. <br><br>The time series plot shows the ensemble mean and standard deviation (SD) of the suitability index of the climatic suitability responses for the tiger mosquito to the chosen scenario conditions across the EURO-CORDEX regional climate model ensemble. The values represent the centres of a 30-year running average from 1971 to 2100 which results in a time series covering the period from 1986 to 2085.<br><br>Hover the mouse over the plot to view the time series data values. Click on the plot to reveal the action buttons for features such as \"zoom\" and \"download plot as a png\".<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-health-vector?tab=overview\" target=\"_blank\">Climate Data Store</a>.",
             "detail": "hidden-app-health-mosquito-detail-web",
             "indicator_title": "Climatic suitability for the tiger mosquito - suitability",
-            "name": "suitability",
             "overview": "hidden-app-health-mosquito-overview-web",
             "identifier": "C3S_434_003",
             "page_title": "Climatic suitability for the tiger mosquito - suitability index",
@@ -161,7 +159,6 @@
             "description_detail": "The universal thermal climate index (UTCI) (&deg;C) is an equivalent temperature (&deg;C), it is a measure of the human physiological response to the thermal environment. The universal thermal climate index (UTCI) describes the synergistic heat exchanges between the thermal environment and the human body, namely its energy budget, physiology and clothing.<br><br>The universal thermal climate index (UTCI) is computed using data from the ECMWF ERA5 reanalysis and is part of the ERA5-HEAT (Human thErmAl comforT) dataset. <br><br>There are 10 UTCI thermal stress categories that correspond to specific human physiological responses to the thermal environment. The categories relate to UTCI values as follows:<br>above +46: extreme heat stress; +38 to +46: very strong heat stress; +32 to +38: strong heat stress; +26 to +32: moderate heat stress; +9 to +26: no thermal stress; +9 to 0: slight cold stress; 0 to -13: moderate cold stress; -13 to -27: strong cold stress; -27 to -40: very strong cold stress; below -40: extreme cold stress.<br><br>The universal thermal climate index (UTCI) for each month and year from 1979 to 2019 is plotted on a map showing the European NUTS regions. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, and NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean UTCI for the chosen NUTS region for each month of the chosen year. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview\">Climate Data Store</a>.",
             "detail": "hidden-app-universalthermalclimateindex-detail-web",
             "indicator_title": "Universal Thermal Climate Index",
-            "name": "universal thermal climate index",
             "overview": "hidden-app-universalthermalclimateindex-overview-web",
             "page_title": "Thermal comfort indices - Universal thermal climate index",
             "page_url": "thermal-comfort-indices--universal-thermal-climate-index",
@@ -175,7 +172,6 @@
             "description_detail": "The mean radiant temperature (&deg;C) is a numerical representation of how human beings experience radiation. The mean radiant temperature (MRT) applies to a person in an outdoor environment and is a function of the direct, diffuse and reflected thermal and solar radiation they experience. <br><br>The mean radiant temperature (MRT) is computed using solar and thermal data from the ECMWF ERA5 reanalysis and is part of the ERA5-HEAT (Human thErmAl comforT) dataset. <br><br>The mean radiant temperature for each month and year from 1979 to 2019 is plotted on a map showing the European NUTS regions. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, and NUTS-2: basic regions.<br><br>The NUTS regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view its name. Click on a region to request a time series plot. The time series plot shows the area mean MRT for the chosen NUTS region. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview\">Climate Data Store</a>.",
             "detail": "hidden-app-meanradianttemperature-detail-web",
             "indicator_title": "Mean radiant temperature",
-            "name": "mean radiant temperature",
             "overview": "hidden-app-meanradianttemperature-overview-web",
             "identifier": "C3S_434_007",
             "page_title": "Thermal comfort indices - Mean radiant temperature",
@@ -234,6 +230,48 @@
             "identifier": "C3S_434_009",
             "hazard_category": "Heat and cold",
             "hazards": ["Mean temperature"]
+        },
+        {
+            "description": "Annual highest high water level overview - Description not available yet.",
+            "description_detail": "Annual highest high water level detail - Description not available yet.",
+            "detail": "hidden-app-marine-sealevel-detail-web",
+            "indicator_title": "Annual highest high water level",
+            "overview": "hidden-app-marine-sealevel-overview-web",
+            "page_title": "Marine Sea Level - Annual highest high water level",
+            "page_url": "marine-sea-level--annual-highest-high-water-level",
+            "identifier": "C3S_434_",
+            "theme": "Energy",
+            "hazard_category": "Coastal",
+            "hazards": ["Coastal flooding"],
+            "vars": {
+                "detail": {
+                    "hdef": "annual_highest_high_water_level"
+                },
+                "overview": {
+                    "hdef": "annual_highest_high_water_level"
+                }
+            }
+        },
+        {
+            "description": "Mean sea level overview - Description not available yet.",
+            "description_detail": "Mean sea level detail - Description not available yet.",
+            "detail": "hidden-app-marine-sealevel-detail-web",
+            "indicator_title": "Mean sea level",
+            "overview": "hidden-app-marine-sealevel-overview-web",
+            "page_title": "Marine Sea Level - Mean sea level",
+            "page_url": "marine-sea-level--mean-sea-level",
+            "identifier": "C3S_434_",
+            "theme": "Energy",
+            "hazard_category": "Coastal",
+            "hazards": ["Relative sea level"],
+            "vars": {
+                "detail": {
+                    "hdef": "mean_sea_level"
+                },
+                "overview": {
+                    "hdef": "mean_sea_level"
+                }
+            }
         }
     ]
 }
