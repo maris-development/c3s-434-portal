@@ -15,6 +15,14 @@
     {
       "theme_title": "Energy",
       "description": "Climate change is expected to affect both the supply and demand of energy. As the energy sector is increasingly relying on renewable sources, the relevance of climate variability and change also increases. It is vital that energy providers and policy makers have the climate information they need to make informed choices on the future energy mix."
+    },
+    {
+      "theme_title": "Tourism",
+      "description": "Tourism description."
+    },
+    {
+      "theme_title": "Coastal",
+      "description": "Coastal description."
     }
   ]
 }

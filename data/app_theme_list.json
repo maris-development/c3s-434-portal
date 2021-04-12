@@ -1,0 +1,124 @@
+{
+  "Agriculture": [
+    {
+      "id": "C3S_434_013",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmax-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmax-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Monthly statistics for daily maximum temperature, 2011-2099"
+    },
+    {
+      "id": "C3S_434_014",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmin-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmin-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Monthly statistics for daily minimum temperature, 2011-2099"
+    },
+    {
+      "id": "C3S_434_015",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmean-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmean-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Monthly statistics for daily mean temperature, 2011-2099"
+    },
+    {
+      "id": "C3S_434_012",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-precip-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-precip-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Precipitation Sum, 2011-2099"
+    },
+    {
+      "id": "C3S_434_010",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-frostdays-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-frostdays-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Frost Days, 2011-2099"
+    },
+    {
+      "id": "C3S_434_011",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tropicalnights-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tropicalnights-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Tropical Nights, 2011-2099"
+    },
+    {
+      "id": "C3S_434_009",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-bedd-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-bedd-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Biologically Effective Degree Days, 2011-2099"
+    }
+  ],
+  "Health": [
+    {
+      "id": "C3S_434_002",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Climatic suitability for the tiger mosquito - season length, 1971-2099"
+    },
+    {
+      "id": "C3S_434_003",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Climatic suitability for the tiger mosquito - suitability index, 1971-2099"
+    },
+    {
+      "id": "C3S_434_016",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Health Heatwave (High Temperature and Humidity), 1971-2099"
+    },
+    {
+      "id": "C3S_434_008",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-universalthermalclimateindex-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-universalthermalclimateindex-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Thermal comfort indices - Universal thermal climate index, 1979-2019"
+    },
+    {
+      "id": "C3S_434_007",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-meanradianttemperature-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-meanradianttemperature-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Thermal comfort indices - Mean radiant temperature, 1979-2019"
+    }
+  ],
+  "Forestry": [
+    {
+      "id": "C3S_434_005",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-forestry-fireindex-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-forestry-fireindex-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Fire Danger Index - for comparison with the Australian Mark5 rating system, 1979-2019"
+    },
+    {
+      "id": "C3S_434_004",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019"
+    }
+  ],
+  "Energy": [
+    {
+      "id": "C3S_434_017",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Climatological Heatwave (High Temperature), 1971-2099"
+    },
+    {
+      "id": "C3S_434_018",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Annual Highest High Water, 1977-2100"
+    },
+    {
+      "id": "C3S_434_019",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Mean Sea Level, 1977-2100"
+    }
+  ],
+  "Tourism": [
+    {
+      "id": "C3S_434_0",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0"
+    },
+    {
+      "id": "C3S_434_0",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0"
+    }
+  ]
+}
