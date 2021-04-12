@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Forestry - Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019
+        Forestry - High Fire Danger, 1970-2098
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -433,7 +433,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
         <link rel="stylesheet" type="text/css" media="screen"
-            href="../css/style-maris.css?v=1618220673" />
+            href="../css/style-maris.css?v=1618235901" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -563,7 +563,7 @@
                         </span>
                         <span id="breadcrumbs-4" dir="ltr">
                             <span id="breadcrumbs-current">
-                                Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019
+                                High Fire Danger, 1970-2098
                             </span>
                         </span>
                     </div>
@@ -583,24 +583,24 @@
                                 <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <h1>
-                                            Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019
+                                            High Fire Danger, 1970-2098
                                         </h1>
                                         <div>
                                             <p><strong>Context</strong>
-Fire danger metrics are part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href="https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/">European Forest fire Information System (EFFIS)</a>. The fire weather index is used to assess the fire danger level in a harmonized way throughout Europe.</p>
+The Canadian Fire Weather Index System (FWI) is used to assess fire danger in a harmonized way across Europe. The FWI uses information about fuel moisture and weather conditions to determine fire behaviour.</p>
 <p><strong>Definition</strong>
-The fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF).  The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography.</p>
+The incedence of high fire danger is expressed as the number of days per year with a FWI greater than 30.  The calculation of the FWI is based on 24-hour accumulated precipitation and daily noon values of air temperature, relative humidity, and wind speed. The projected change in the number of days with high fire danger is calculated relative to the 1986-2005 period.</p>
 <p><strong>Understand</strong>
-It is customary to quote a danger class as well as an index number. The fire weather index can be categorised into 6 classes of danger as follows:
-less than 5.2: very low; 5.2 to 11.2: low; 11.2 to 21.3: moderate; 21.3 to 38.0: high; 38.0 to 50.0: very high; greater than 50: extreme.</p>
+The FWI can be understood in terms of six danger classes based on the <a href="https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/">European Forest fire Information System (EFFIS)</a> classification.
+Very low danger: FWI is less than 5.2. Low danger: FWI is between 5.2 and 11.2. Moderate danger: FWI is between 11.2 and 21.3. High danger: FWI is between 21.3 and 38.0.  Very high danger: FWI is between 38.0 and 50. Extreme danger: FWI is greater than 50.</p>
 <p><strong>Data Sources</strong>
-The fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis. </p>
+The FWI is generated using the Global ECMWF Fire Forecasting model (GEFF). Projections from multiple global climate models downscaled to a regional climate model were used to generate the meteorological input for the GEFF model. The GEFF model was run for four different climate scenarios: the present climate (labelled &#39;historical&#39;), and three Representative Concentration Pathway (RCP) scenarios consistent with an optimistic emission scenario where emissions start declining beyond 2020 (RCP2.6), a scenario where emissions start declining beyond 2040 (RCP4.5) and a pessimistic scenario where emissions continue to rise throughout the century (RCP8.5). The projected changes to fire danger under future climate conditions are calculated relative to the 1986-2005 period.</p>
 <p><strong>Supporting Information</strong>
-The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview">Climate Data Store</a>.</p>
+The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-fire-danger-indicators?tab=overview">Climate Data Store</a>.</p>
 <hr>
 <p><strong>Visualisation and Navigation</strong>
-The fire weather index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.</p>
-<p>Historical fire weather index statistics are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>
+The projected change in the number of days per year with high fire danger (FWI greater than 30) is presented for three CMIP5 scenarios: RCP2.6 with low greenhouse gas emissions, RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>
+<p>Statistics for the number of days with high fire danger are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>
 
                                         </div>
                                     </div>
@@ -611,7 +611,7 @@ The fire weather index based on historical ERA5 Reanalysis Short Model data is p
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
                                 <h2 style="float: left; position: relative;">
-                                    Fire Weather Index
+                                    Projected change in the number of days with high fire danger
                                 </h2>
                                 <button class="standard-button primary-button"
                                     onclick="window.location = 'fire-weather-indices-detail.html'"
