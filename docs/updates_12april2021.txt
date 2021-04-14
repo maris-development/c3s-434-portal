@@ -1,0 +1,53 @@
+Done:
+    https://c3s.maris.nl/energy/climatological-heat-waves-in-europe-detail.html
+    
+
+Loading too long to test:
+    Agriculture:
+        https://c3s.maris.nl/agriculture/tropical-nights-detail.html
+
+Updated:
+    Agriculture:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_bedd_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_frostdays_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmax_detail
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmean_detail
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmin_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_precip_detail
+        
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tropicalnights_detail
+
+    Health:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_mosquito_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_heatwave_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_universalthermalclimateindex_detail
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_meanradianttemperature_detail 
+
+    Forestry:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_firedangerindex_detail
+
+
+Errors:
+    https://c3s.maris.nl/health/health-heat-waves-in-europe.html 
+        -> why does this one work: https://c3s.maris.nl/energy/climatological-heat-waves-in-europe.html (Same workflow, different indicator, maybe cache doesn't take that into account?)
+
+Changes:
+    [child] app:
+        min-height: 1400px 
+        md=8 
+        Legend for max-mean-min underneath plot so data is more readable.
+            'legend': {
+                'xanchor':'center',
+                'yanchor':'top',
+                'orientation':'v',
+                'y':-0.15,
+                'x':0.1
+            }
+
+Todo: Check all the texts
+        

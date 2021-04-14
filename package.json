@@ -16,7 +16,7 @@
         "dev": "npm-run-all -p nodemon browser-sync",
         "nodemon": "nodemon --watch src -e js,json,ejs,css ./src/index.js",
         "browser-sync": "browser-sync start -s 'public' --files=./public",
-        "build": "node ./src/index.js"
+        "build": "node ./src/index.js && ./scripts/move_to_c3s.maris.nl.cmd"
     },
     "devDependencies": {
         "browser-sync": "^2.26.12",
