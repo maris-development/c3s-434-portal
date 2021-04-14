@@ -49,9 +49,6 @@ if(git_json_result.statusCode === 200){
 }
 
 
-// Add data_apps to data_themes & data_overview
-Object.assign(data_themes, data_apps);
-Object.assign(data_overview, data_apps);
 
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir);
@@ -59,13 +56,23 @@ fse.copy(`${srcPath}/assets`, outputDir);
 //generate all pages
 createAppPages(data_apps);
 
+// Add data_apps to data_themes & data_overview
+Object.assign(data_themes, data_apps);
+
 createThemePages(data_themes);
+
+// Add data_apps to data_themes & data_overview
+Object.assign(data_overview, data_apps);
 
 createOverviewPage(data_overview);
 
 createIndexPage();
 
-fs.writeFileSync("./data/data_apps_output.json", JSON.stringify(data_apps, null, 2));
+
+// Add all data to data_apps
+Object.assign(data_apps, data_themes, data_overview);
+
+fs.writeFileSync("./data/data_consolidated.json", JSON.stringify(data_apps, null, 2));
 
 
 function createIndexPage() {
@@ -178,13 +185,13 @@ function slugify(string, lowercase = true, separator = '-') {
 
 function createHTMLfiles(dataset) {
   //create overview and detail pages for each app
-  if (!dataset.overview_var) {
-    dataset.overview_var = null;
-  }
+  // if (!dataset.overview_var) {
+  //   dataset.overview_var = null;
+  // }
 
-  if (!dataset.detail_var) {
-    dataset.detail_var = null;
-  }
+  // if (!dataset.detail_var) {
+  //   dataset.detail_var = null;
+  // }
 
   //maak filenames voor dat we de git detail laden.
   dataset.overviewpage = overviewFileName(dataset);
