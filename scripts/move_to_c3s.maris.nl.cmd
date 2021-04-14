@@ -1,9 +1,9 @@
 @ECHO off
 
 CALL P:
-CD P:\paul\Workspaces\c3s
+CD S:\install\c3s
 
-IF /I NOT "%cd%" == "P:\paul\Workspaces\c3s" (
+IF /I NOT "%cd%" == "S:\install\c3s" (
     ECHO Not in correct directory.
     EXIT
 ) ELSE (
