@@ -10,8 +10,8 @@ https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_meanradianttempera
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_universalthermalclimateindex_detail
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_universalthermalclimateindex_overview
 
-https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_detail
-https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_overview
+https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_detail (NO yaml available)
+https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_overview (NO yaml available) (new release)
 
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmin_detail
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmin_overview
@@ -22,8 +22,8 @@ https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmean_
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmax_detail
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmax_overview
 
-https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_detail
-https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_overview
+https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_detail (NO yaml available)
+https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_overview (NO yaml available)
 
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_precip_detail
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_precip_overview
@@ -42,3 +42,39 @@ https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_heatwave_ov
 
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_mosquito_detail
 https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_mosquito_overview
+
+
+
+preloading_c3s_434_agriculture_bedd_detail.yaml
+preloading_c3s_434_agriculture_bedd_overview.yaml
+preloading_c3s_434_agriculture_frostdays_detail_web.yaml
+preloading_c3s_434_agriculture_frostdays_overview_web.yaml
+preloading_c3s_434_agriculture_precip_detail_web.yaml
+preloading_c3s_434_agriculture_precip_overview_web.yaml
+preloading_c3s_434_agriculture_tmax_detail_web.yaml
+preloading_c3s_434_agriculture_tmax_overview_web.yaml
+preloading_c3s_434_agriculture_tmean_detail_web.yaml
+preloading_c3s_434_agriculture_tmean_overview_web.yaml
+preloading_c3s_434_agriculture_tmin_detail_web.yaml
+preloading_c3s_434_agriculture_tmin_overview_web.yaml
+preloading_c3s_434_agriculture_tropicalnights_detail_web.yaml
+preloading_c3s_434_agriculture_tropicalnights_overview_web.yaml
+preloading_c3s_434_firedangerindex_detail.yaml
+preloading_c3s_434_firedangerindex_overview.yaml
+preloading_c3s_434_fireweatherindex_detail.yaml
+preloading_c3s_434_fireweatherindex_overview.yaml
+preloading_c3s_434_health_heatwave_detail_web.yaml
+preloading_c3s_434_health_heatwave_overview_web.yaml
+preloading_c3s_434_health_mosquito_detail_web.yaml
+preloading_c3s_434_health_mosquito_overview_web.yaml
+preloading_c3s_434_meanradianttemperature_detail.yaml
+preloading_c3s_434_meanradianttemperature_overview.yaml
+preloading_c3s_434_universalthermalclimateindex_detail.yaml
+preloading_c3s_434_universalthermalclimateindex_overview.yaml
+
+
+MISSING:
+preloading_c3s_434_marine_sealevel_overview.yaml
+preloading_c3s_434_marine_sealevel_detail.yaml
+preloading_c3s_434_tourism_snow_overview.yaml
+preloading_c3s_434_tourism_snow_detail.yaml

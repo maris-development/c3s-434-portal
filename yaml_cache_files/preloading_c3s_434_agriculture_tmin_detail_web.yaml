@@ -1,0 +1,35 @@
+workflow_name: workflow
+kwargs: 
+  statistic:
+   - 'Mean of daily minimum temperature'
+   - 'Maximum of daily minimum temperature'
+   - 'Minimum of daily minimum temperature'
+  speriod: 
+   - '2071-2099'
+   - '2041-2070'
+   - '2011-2040'
+  smon: 
+   - 'Annual'
+   - 'Winter (Dec-Feb)'
+   - 'Spring (Mar-May)'
+   - 'Summer (Jun-Aug)'
+   - 'Autumn (Sep-Nov)'
+   - 'January'
+   - 'February'
+   - 'March'
+   - 'April'
+   - 'May'
+   - 'June'
+   - 'July'
+   - 'August'
+   - 'September'
+   - 'October'
+   - 'November'
+   - 'December'
+  rcp: 
+   - 'RCP8.5'
+   - 'RCP2.6'
+  nuts_level:
+   - 'National level (NUTS0)'
+   - 'First sub-national level (NUTS1)'
+   - 'Second sub-national level (NUTS2)'

@@ -1,0 +1,21 @@
+workflow_name: workflow
+kwargs: 
+  period: 
+   - '1971-2000'
+   - '1981-2010'
+   - '1991-2020'
+   - '2001-2030'
+   - '2011-2040'
+   - '2021-2050'
+   - '2031-2060'
+   - '2041-2070'
+   - '2051-2080'
+   - '2061-2090'
+   - '2070-2099'
+  rcp: 
+   - 'RCP4.5'
+   - 'RCP8.5'
+  nuts_level:
+   - 'National level (NUTS0)'
+   - 'First sub-national level (NUTS1)'
+   - 'Second sub-national level (NUTS2)'

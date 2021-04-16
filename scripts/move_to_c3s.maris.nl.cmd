@@ -1,10 +1,10 @@
 @ECHO off
 
-CALL P:
+CALL S:
 CD S:\install\c3s
 
 IF /I NOT "%cd%" == "S:\install\c3s" (
-    ECHO Not in correct directory.
+    ECHO Not in correct directory. %cd%
     EXIT
 ) ELSE (
     ECHO Removing files from S:\www\c3s.maris.nl\

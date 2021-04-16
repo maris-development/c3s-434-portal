@@ -1,0 +1,14 @@
+workflow_name: download_application
+kwargs:
+  rcp: 
+   - 'RCP2.6'
+   - 'RCP4.5'
+   - 'RCP8.5'
+  period:
+   - '2006-2035'
+   - '2036-2065'
+   - '2066-2095'
+  nutslevel:
+   - '0'
+   - '1'
+   - '2'

@@ -1,0 +1,20 @@
+workflow_name: workflow
+kwargs:
+  month: 
+   - 'Winter (Dec-Feb)'
+   - 'Spring (Mar-May)'
+   - 'Summer (Jun-Aug)'
+   - 'Autumn (Sep-Nov)'
+   - 'January'
+   - 'February'
+   - 'March'
+   - 'April'
+   - 'May'
+   - 'June'
+   - 'July'
+   - 'August'
+   - 'September'
+   - 'October'
+   - 'November'
+   - 'December'
+

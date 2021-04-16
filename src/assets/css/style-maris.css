@@ -58,19 +58,18 @@
     background-position: center;
 }
 
-.container-themes .img-tourism {
-    /* background: url(/grfx/img-climate-extremes.jpg) no-repeat; */
-    background-color: grey;
+.container-themes .img-coastal {
+    background: url(/grfx/img-coastal.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.container-themes .img-coastal {
-    /* background: url(/grfx/img-climate-extremes.jpg) no-repeat; */
-    background-color: grey;
+.container-themes .img-tourism {
+    background: url(/grfx/img-tourism.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
+
 
 .container-themes .column:hover,
 .not-active-yet {

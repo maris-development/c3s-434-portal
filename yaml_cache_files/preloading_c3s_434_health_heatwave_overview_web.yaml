@@ -1,0 +1,5 @@
+workflow_name: workflow
+kwargs: 
+  rcp: 
+   - 'RCP4.5'
+   - 'RCP8.5'
