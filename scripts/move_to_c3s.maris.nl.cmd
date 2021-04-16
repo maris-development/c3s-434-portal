@@ -13,10 +13,10 @@ IF /I NOT "%cd%" == "S:\install\c3s" (
 
 @REM @ECHO on
 @REM Remove directories
- FOR /D %%d IN (S:\www\c3s.maris.nl\*) DO (
-    @REM  echo "%%d"
-    rmdir /Q /S "%%d"
- )
+FOR /D %%d IN (S:\www\c3s.maris.nl\*) DO (
+@REM  echo "%%d"
+rmdir /Q /S "%%d"
+)
 
 @REM Remove files
 FOR %%i IN (S:\www\c3s.maris.nl\*) DO (

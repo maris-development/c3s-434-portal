@@ -1,0 +1,8 @@
+workflow_name: workflow
+kwargs: 
+  rcp: 
+   - 'RCP4.5 (2071-2100)'
+   - 'RCP8.5 (2041-2070)'
+  indicator:
+   - 'annual_highest_high_water_level'
+   - 'mean_sea_level'

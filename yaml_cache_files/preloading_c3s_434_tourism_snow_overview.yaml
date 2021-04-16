@@ -1,0 +1,17 @@
+workflow_name: workflow
+kwargs: 
+  speriod:
+   - '2011-2040'
+   - '2041-2070' 
+   - '2071-2099' 
+  rcp: 
+   - 'RCP4.5'
+   - 'RCP8.5'
+  altitude:
+   - '500m'
+   - '1000m'
+   - '1500m'
+   - '2000m'
+  indicator:
+   - 'total_snow_precipitation_from_november_to_april'
+   - 'period_with_high_amount_of_natural_snow'

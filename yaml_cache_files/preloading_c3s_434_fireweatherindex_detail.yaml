@@ -1,4 +1,4 @@
-workflow_name: download_application
+workflow_name: application
 kwargs:
   year: 
    - '1980'

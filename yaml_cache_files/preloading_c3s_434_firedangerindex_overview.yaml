@@ -1,4 +1,4 @@
-workflow_name: download_application
+workflow_name: workflow
 kwargs:
   rcp: 
    - 'RCP2.6'
