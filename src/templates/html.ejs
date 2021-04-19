@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= page_title %> - European Climate Data Explorer
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <%- include('./partials/style') %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="../css/style-maris.css?v=<%= Math.floor((new Date())/ 1000)%>" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+</head>
+
+<body dir="ltr"
+    class="cover-layout-empty-layout template-view portaltype-collective-cover-content site-cca section-knowledge subsection-c-a-indicators subsection-c-a-indicators-c-a-indicators icons-on userrole-anonymous">
+    <div class="top-page-area">
+        <div class="edit-bar-wrapper">
+            <div class="content-container"> </div>
+        </div>
+        <div class="header">
+            <%- include('./partials/nav') %>
+        </div>
+    </div>
+
+    <div class="content-container site-container">
+        <div id="portal-columns">
+            <div id="portal-column-content" class="cell width-full position-0">
+
+                <div id="viewlet-above-content">
+                    <div id="portal-breadcrumbs">
+                        <span id="breadcrumbs-you-are-here">You are here:</span>
+                        <span id="breadcrumbs-home">
+                            <a href="/">Home</a>
+                            <span class="breadcrumbSeparator">/</span>
+                        </span>
+                        <span id="breadcrumbs-1" dir="ltr">
+                            <a href="#">Knowledge</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-2" dir="ltr">
+                            <a href="../index.html">European Climate Data Explorer</a>
+                            <span class="breadcrumbSeparator"> /</span>
+                        </span>
+                        <span id="breadcrumbs-4" dir="ltr">
+                            <span id="breadcrumbs-current">
+                                <%= page_title %>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div id="content">
+                        <div class="row">
+                            <div class="column col-md-12" data-panel="">
+                                <div class="tile tile-default" >
+                                    <div class="cover-richtext-tile tile-content">
+                                        <h1>
+                                            <%= page_title %>
+                                        </h1>
+                                        <div>
+                                            <%- page_text %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <%- include('./partials/footer-nav') %>
+
+        <%- include('./partials/footer') %>
+
+    </footer>
+
+    
+
+</body>
+
+</html>

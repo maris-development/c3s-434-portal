@@ -4,11 +4,11 @@ const c3s_toolbox_url = "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/m
 
 //load data files.
 const data_apps = JSON.parse(
-    fs.readFileSync("data_apps.json", "utf-8")
+    fs.readFileSync("../data/data_apps.json", "utf-8")
 );
 
 const data_git_json = JSON.parse(
-    fs.readFileSync("git_data.json", "utf-8")
+    fs.readFileSync("../data/git_data.json", "utf-8")
 );
 
 let themes = {};

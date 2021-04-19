@@ -85,7 +85,8 @@
 
                         <div class="row">
                             <!-- For each category of hazards -->
-                            <% for(const category in hazard_list) { 
+                            <% for(const index in category_order) { 
+                                const category = category_order[index];
                                 if(hazard_list.hasOwnProperty(category)){ 
                                     if(category === "Other") continue;
                                     %>
@@ -94,7 +95,8 @@
                                             <%= category %>
                                         </h2>
                                         <!-- For each hazard in the category -->
-                                        <% for(const hazard in hazard_list[category]) {
+                                        <% for(const hazard_index in hazard_type_order[index]) {
+                                            const hazard = hazard_type_order[index][hazard_index];
                                             if(hazard_list[category].hasOwnProperty(hazard)){ %>
                                             <h3>
                                                 <%= hazard %>
@@ -108,7 +110,10 @@
                                                         </a></li>
                                                     <% } %>
                                             </ul>
-                                            <% } } %>
+                                            <% } else {
+                                                console.warn("Warning: No indicators with hazard type: ", hazard);
+                                            }
+                                        } %>
                                     </div>
                                 <% } 
                             } 
@@ -146,6 +151,12 @@
                             <% 
                             }
                             %>
+                        </div>
+
+                        <div class="row">
+                            <br>
+                            <br>
+                            <%- include('./partials/disclaimer-link') %>    
                         </div>
                     </div>
                 </div>

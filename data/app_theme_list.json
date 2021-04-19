@@ -77,16 +77,16 @@
   ],
   "Forestry": [
     {
-      "id": "C3S_434_005",
-      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-forestry-fireindex-detail-web/master/configuration.json?configuration_version=3.0",
-      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-forestry-fireindex-overview-web/master/configuration.json?configuration_version=3.0",
-      "PageTitle": "Fire Danger Index - for comparison with the Australian Mark5 rating system, 1979-2019"
+      "id": "C3S_434_004",
+      "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-fireweatherindex-detail-web/master/configuration.json?configuration_version=3.0",
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-fireweatherindex-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019"
     },
     {
-      "id": "C3S_434_004",
+      "id": "C3S_434_020",
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-detail-web/master/configuration.json?configuration_version=3.0",
       "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-overview-web/master/configuration.json?configuration_version=3.0",
-      "PageTitle": "Fire Weather Index - for harmonized fire danger assessment throughout Europe, 1979-2019"
+      "PageTitle": "High Fire Danger, 1970-2098"
     }
   ],
   "Energy": [
@@ -95,30 +95,34 @@
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-detail-web/master/configuration.json?configuration_version=3.0",
       "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-overview-web/master/configuration.json?configuration_version=3.0",
       "PageTitle": "Climatological Heatwave (High Temperature), 1971-2099"
-    },
+    }
+  ],
+  "Coastal": [
     {
       "id": "C3S_434_018",
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-detail-web/master/configuration.json?configuration_version=3.0",
       "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0",
-      "PageTitle": "Annual Highest High Water, 1977-2100"
+      "PageTitle": "Annual Highest High Water, 2070-2100"
     },
     {
       "id": "C3S_434_019",
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-detail-web/master/configuration.json?configuration_version=3.0",
       "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0",
-      "PageTitle": "Mean Sea Level, 1977-2100"
+      "PageTitle": "Mean Sea Level, 2070-2100"
     }
   ],
   "Tourism": [
     {
-      "id": "C3S_434_0",
+      "id": "C3S_434_021",
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0",
-      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0"
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "Total Winter Snow, 2011-2099"
     },
     {
-      "id": "C3S_434_0",
+      "id": "C3S_434_022",
       "detail_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0",
-      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0"
+      "overview_cds_url": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-overview-web/master/configuration.json?configuration_version=3.0",
+      "PageTitle": "High Snowfall Days, 2011-2099"
     }
   ]
 }
