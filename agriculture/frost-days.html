@@ -433,7 +433,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
         <link rel="stylesheet" type="text/css" media="screen"
-            href="../css/style-maris.css?v=1618386398" />
+            href="../css/style-maris.css?v=1618830012" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -625,12 +625,7 @@ Monthly and annual projected changes in the number of frost days index are prese
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
 
-                                <script type="text/javascript">
-                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                                </script>
                                 <div class="t-ct">
-
-
                                     <div id="toolbox-app">
                                         <div class="pre-app-loading">
                                             <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
@@ -640,32 +635,41 @@ Monthly and annual projected changes in the number of frost days index are prese
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
 
-                                <script>
-                                    const OVERVIEW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-frostdays-overview-web/master/configuration.json?configuration_version=3.0';
-                                </script>
-
-                                <script>
-                                    const WORKFLOWPARAMS = {};
-                                </script>
-                                
                                 <script type="text/javascript">
+                                    window.cds_toolbox = { 
+                                        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+                                    };
+                                    const pageURL = window.location.origin + window.location.pathname;
+                                </script>
+
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
+
+                                <script type="text/javascript">
+                                    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-frostdays-overview-web/master/configuration.json?configuration_version=3.0';
+                                    const WORKFLOWPARAMS = {};
+                                
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
                                             window.cds_toolbox.runApp(
-                                                'toolbox-app', OVERVIEW, {
-                                                workflowParams: WORKFLOWPARAMS,
-                                            });
+                                                'toolbox-app', 
+                                                WORKFLOW, 
+                                                {
+                                                    workflowParams: WORKFLOWPARAMS,
+                                                }
+                                            );
                                         }, false);
                                     })();
                                 </script>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <p>
+    Content in the European Climate Data Explorer pages is delivered by ECMWF through the <a href="/disclaimer.html">Copernicus Climate Change Service (C3S</a>).
+</p>
                     </div>
                 </div>
             </div>

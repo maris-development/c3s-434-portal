@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Tourism - Total snow precipitation
+        Tourism - Total Winter Snow, 2011-2099
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -433,7 +433,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
         <link rel="stylesheet" type="text/css" media="screen"
-            href="../css/style-maris.css?v=1618386398" />
+            href="../css/style-maris.css?v=1618830012" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -563,7 +563,7 @@
                         </span>
                         <span id="breadcrumbs-4" dir="ltr">
                             <span id="breadcrumbs-current">
-                                Total snow precipitation
+                                Total Winter Snow, 2011-2099
                             </span>
                         </span>
                     </div>
@@ -583,10 +583,22 @@
                                 <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <h1>
-                                            Total snow precipitation
+                                            Total Winter Snow, 2011-2099
                                         </h1>
                                         <div>
-                                            Total snow precipitation (November to April) overview (There's only a 'detail' workflow available for this indicator) - Description not available yet.
+                                            <p><strong>Context</strong>
+Snow indices for Europe can be used to characterize the operating conditions of winter ski resorts under future climate scenarios. They are used in the assessment of snow reliability for mountainous regions across Europe.</p>
+<p><strong>Definition</strong>
+Total snow precipitation is the cumulative value of snowfall over the winter sports season (November year N-1 to April year N). The projected change in cumulative snowfall for each region and elevation is calculated relative to the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-uerra-europe-complete?tab=overview">UERRA</a> historical reanalysis data. </p>
+<p><strong>Data Sources</strong>
+Snow indices are generated using the Crocus snowpack model, a multi-layer snowpack model embedded in the SURFEX land surface model. The SURFEX (Surface Externalisée) model is forced with atmospheric fields provided by adjusted EURO-CORDEX ensemble climate projections. The data covers the period from 2011-2099. It consists of two climate change scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>
+<p><strong>Supporting Information</strong>
+The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-snow-indicators?tab=overview">Climate Data Store</a></p>
+<hr>
+<p><strong>Visualisation and Navigation</strong>
+The projected change in cumulative snowfall from November to April is provided for <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS-3</a> sub-national regions, as 30-year means for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. The snow index is further discretised in steps of 100m land-surface elevation.</p>
+<p>Statistics for cumulative snowfall are also available via the &quot;Explore in Detail&quot; button where timeseries data can be plotted.</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -596,7 +608,7 @@
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
                                 <h2 style="float: left; position: relative;">
-                                    Total snow precipitation
+                                    Projected change in total snow precipitation from November to April
                                 </h2>
                                 <button class="standard-button primary-button"
                                     onclick="window.location = 'tourism-snow-precipitation-detail.html'"
@@ -611,12 +623,7 @@
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
 
-                                <script type="text/javascript">
-                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                                </script>
                                 <div class="t-ct">
-
-
                                     <div id="toolbox-app">
                                         <div class="pre-app-loading">
                                             <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
@@ -626,32 +633,41 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
 
-                                <script>
-                                    const OVERVIEW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0';
-                                </script>
-
-                                <script>
-                                    const WORKFLOWPARAMS = {"hdef":"total_snow_precipitation_from_november_to_april"};
-                                </script>
-                                
                                 <script type="text/javascript">
+                                    window.cds_toolbox = { 
+                                        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+                                    };
+                                    const pageURL = window.location.origin + window.location.pathname;
+                                </script>
+
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
+
+                                <script type="text/javascript">
+                                    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-overview-web/master/configuration.json?configuration_version=3.0';
+                                    const WORKFLOWPARAMS = {"hdef":"total_snow_precipitation_from_november_to_april"};
+                                
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
                                             window.cds_toolbox.runApp(
-                                                'toolbox-app', OVERVIEW, {
-                                                workflowParams: WORKFLOWPARAMS,
-                                            });
+                                                'toolbox-app', 
+                                                WORKFLOW, 
+                                                {
+                                                    workflowParams: WORKFLOWPARAMS,
+                                                }
+                                            );
                                         }, false);
                                     })();
                                 </script>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <p>
+    Content in the European Climate Data Explorer pages is delivered by ECMWF through the <a href="/disclaimer.html">Copernicus Climate Change Service (C3S</a>).
+</p>
                     </div>
                 </div>
             </div>

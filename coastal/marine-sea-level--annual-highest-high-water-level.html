@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Coastal - Annual Highest High Water, 1977-2100
+        Coastal - Annual Highest High Water, 2070-2100
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -433,7 +433,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
         <link rel="stylesheet" type="text/css" media="screen"
-            href="../css/style-maris.css?v=1618386398" />
+            href="../css/style-maris.css?v=1618830012" />
 
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -563,7 +563,7 @@
                         </span>
                         <span id="breadcrumbs-4" dir="ltr">
                             <span id="breadcrumbs-current">
-                                Annual Highest High Water, 1977-2100
+                                Annual Highest High Water, 2070-2100
                             </span>
                         </span>
                     </div>
@@ -583,15 +583,15 @@
                                 <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <h1>
-                                            Annual Highest High Water, 1977-2100
+                                            Annual Highest High Water, 2070-2100
                                         </h1>
                                         <div>
                                             <p><strong>Context</strong>
 The annual highest high water index informs an understanding of European coastal hydrodynamics under the impact of climate change. It provides added value for various coastal sectors and studies such as port, shipping, and coastal management with particular relvance to coastal flooding.</p>
 <p><strong>Definition</strong>
-The annual highest high water (m) is calculated from tidal dyamics and sea level rise data based upon past observational data and future climate projections.  Storm surges caused by atmospheric forcing are not taken into account for this index.</p>
+The annual highest high water (m) is calculated from tidal dyamics and sea level rise data based upon past observational data and future climate projections.  Projected changes in the annual highest high water index are calculated relative to the mean of the historical portion of this dataset which covers the period from 1977-2005. Storm surges caused by atmospheric forcing, and coastal subsidence and/or uplifting  are not taken into account for this index.</p>
 <p><strong>Data Sources</strong>
-The data covers the period from 1977 to 2100. It consists of a historical period, 1977-2005, based on the ERA5 reanalysis and a future period, 2070-2100, based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions. Projected changes in the annual highest high water index are calculated relative to the mean of the historical portion of this dataset which covers the period from 1977-2005.</p>
+The data covers the period from 2070 to 2100 based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions.</p>
 <p>The index is generated using the Global Tide and Surge Model (GTSM, Deltares) and the Wave Model (WAM, ECMWF). High resolution forcing fields for the GTSM are provided by the Danish Meteorological Institute&#39;s regional model (HIRHAM5) which is downscaled from the EC-EARTH global climate model. Given that the projections of these climate scenarios are based on a single combination of the regional and global climate models, users of these data should take into consideration that there is an inevitable underestimation of the uncertainty associated with this dataset.</p>
 <p><strong>Supporting Information</strong>
 The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-water-level-change-indicators?tab=overview">Climate Data Store</a>.</p>
@@ -624,12 +624,7 @@ The annual highest high water is presented for the future period 2070-2100 based
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
 
-                                <script type="text/javascript">
-                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                                </script>
                                 <div class="t-ct">
-
-
                                     <div id="toolbox-app">
                                         <div class="pre-app-loading">
                                             <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
@@ -639,32 +634,41 @@ The annual highest high water is presented for the future period 2070-2100 based
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
 
-                                <script>
-                                    const OVERVIEW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0';
-                                </script>
-
-                                <script>
-                                    const WORKFLOWPARAMS = {"hdef":"annual_highest_high_water_level"};
-                                </script>
-                                
                                 <script type="text/javascript">
+                                    window.cds_toolbox = { 
+                                        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+                                    };
+                                    const pageURL = window.location.origin + window.location.pathname;
+                                </script>
+
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
+
+                                <script type="text/javascript">
+                                    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-marine-sealevel-overview-web/master/configuration.json?configuration_version=3.0';
+                                    const WORKFLOWPARAMS = {"hdef":"annual_highest_high_water_level"};
+                                
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
                                             window.cds_toolbox.runApp(
-                                                'toolbox-app', OVERVIEW, {
-                                                workflowParams: WORKFLOWPARAMS,
-                                            });
+                                                'toolbox-app', 
+                                                WORKFLOW, 
+                                                {
+                                                    workflowParams: WORKFLOWPARAMS,
+                                                }
+                                            );
                                         }, false);
                                     })();
                                 </script>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <p>
+    Content in the European Climate Data Explorer pages is delivered by ECMWF through the <a href="/disclaimer.html">Copernicus Climate Change Service (C3S</a>).
+</p>
                     </div>
                 </div>
             </div>

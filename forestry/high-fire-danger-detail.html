@@ -428,7 +428,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1618386398"" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1618830012"" />
 
     <link rel=" shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -584,7 +584,7 @@
                                             <p><strong>Context</strong>
 The Canadian Fire Weather Index System (FWI) is used to assess fire danger in a harmonized way across Europe. The FWI uses information about fuel moisture and weather conditions to determine fire behaviour.</p>
 <p><strong>Definition</strong>
-The incedence of high fire danger is expressed as the number of days per year with a FWI greater than 30.  The calculation of the FWI is based on 24-hour accumulated precipitation and daily noon values of air temperature, relative humidity, and wind speed. The projected change in the number of days with high fire danger is calculated relative to the 1986-2005 period.</p>
+The incidence of high fire danger is expressed as the number of days per year with a FWI greater than 30.  The calculation of the FWI is based on 24-hour accumulated precipitation and daily noon values of air temperature, relative humidity, and wind speed. The projected change in the number of days with high fire danger is calculated relative to the 1986-2005 period.</p>
 <p><strong>Understand</strong>
 The FWI can be understood in terms of six danger classes based on the <a href="https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/">European Forest fire Information System (EFFIS)</a> classification.
 Very low danger: FWI is less than 5.2. Low danger: FWI is between 5.2 and 11.2. Moderate danger: FWI is between 11.2 and 21.3. High danger: FWI is between 21.3 and 38.0.  Very high danger: FWI is between 38.0 and 50. Extreme danger: FWI is greater than 50.</p>
@@ -594,9 +594,9 @@ The FWI is generated using the Global ECMWF Fire Forecasting model (GEFF). Proje
 The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-fire-danger-indicators?tab=overview">Climate Data Store</a>.</p>
 <hr>
 <p><strong>Visualisation and Navigation</strong>
-The map shows the 30-year average of the number of days with high fire danger for the chosen time period and scenario plotted as area means for each region. The EUROSTAT NUTS classification (<a href="https://ec.europa.eu/eurostat/web/nuts/background">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level: national level (NUTS-0), first sub-national level (NUTS-1), second sub-national level (NUTS-2), and third sub-national level (NUTS-3).</p>
+The map shows the 30-year average of the projected change in the number of days with high fire danger for the chosen time period and scenario plotted as area means for each region. The EUROSTAT NUTS classification (<a href="https://ec.europa.eu/eurostat/web/nuts/background">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level: national level (NUTS-0), first sub-national level (NUTS-1), second sub-national level (NUTS-2), and third sub-national level (NUTS-3).</p>
 <p>The regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot.  Likewise, the trans-national average for the EEA member and cooperating countries (EEA 38) can be accessed via the &quot;Europe&quot; bounding box.</p>
-<p>The statistical uncertainty associated with the climate projections is conveyed by showing the mean, best case, and worst case of the multi-model outcomes on the time series plot. The values represent the centres of a 30-year running average from 1971 to 2100 which results in a time series covering the period from 1986 to 2085.</p>
+<p>The statistical uncertainty associated with the climate projections is conveyed by showing the mean, best case, and worst case of the multi-model outcomes on the time series plot. </p>
 <p>Click and hover the mouse over the time series plot to view the data values and to reveal action buttons for features such as “zoom” and “download plot as a png”.</p>
 
                                         </div>
@@ -633,13 +633,8 @@ The map shows the 30-year average of the number of days with high fire danger fo
 
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
-                                <script type="text/javascript">
-                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                                    const pageURL = window.location.origin + window.location.pathname;
-                                </script>
+                                
                                 <div class="t-ct">
-
-
                                     <div id="toolbox-app">
                                         <div class="pre-app-loading">
                                             <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
@@ -649,31 +644,41 @@ The map shows the 30-year average of the number of days with high fire danger fo
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
-                                <script>
-                                    const DETAIL = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-detail-web/master/configuration.json?configuration_version=3.0';
-                                </script>
-                                
-                                <script>
-                                    const WORKFLOWPARAMS = {};
-                                </script>
 
                                 <script type="text/javascript">
+                                    window.cds_toolbox = { 
+                                        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+                                    };
+                                    const pageURL = window.location.origin + window.location.pathname;
+                                </script>
+
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
+
+                                <script type="text/javascript">
+                                    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-detail-web/master/configuration.json?configuration_version=3.0';
+                                    const WORKFLOWPARAMS = {};
+                                
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
                                             window.cds_toolbox.runApp(
-                                                'toolbox-app', DETAIL, {
+                                                'toolbox-app', 
+                                                WORKFLOW, 
+                                                {
                                                     workflowParams: WORKFLOWPARAMS,
-                                                });
+                                                }
+                                            );
                                         }, false);
                                     }) ();
                                 </script>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <p>
+    Content in the European Climate Data Explorer pages is delivered by ECMWF through the <a href="/disclaimer.html">Copernicus Climate Change Service (C3S</a>).
+</p>
                     </div>
                 </div>
             </div>

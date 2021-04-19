@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tourism - Period with high amount of natural snow - Explore indicator</title>
+    <title>Tourism - High Snowfall Days, 2011-2099 - Explore indicator</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <style>
@@ -428,7 +428,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1618386398"" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=1618830012"" />
 
     <link rel=" shortcut icon" type="image/x-icon" href="/favicon.ico">
 
@@ -554,7 +554,7 @@
                             <span class="breadcrumbSeparator"> /</span>
                         </span>
                         <span id="breadcrumbs-4" dir="ltr">
-                            <a href="../tourism/tourism-high-amount-of-natural-snow.html">Period with high amount of natural snow</a>
+                            <a href="../tourism/tourism-high-amount-of-natural-snow.html">High Snowfall Days, 2011-2099</a>
                             <span class="breadcrumbSeparator"> /</span>
                         </span>
                         <span id="breadcrumbs-4" dir="ltr">
@@ -578,10 +578,26 @@
                                 <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <h1>
-                                            Period with high amount of natural snow - Explore Indicator
+                                            High Snowfall Days, 2011-2099 - Explore Indicator
                                         </h1>
                                         <div>
-                                            Period with high amount of natural snow detail - Description not available yet.
+                                            <p><strong>Context</strong>
+Snow indices for Europe can be used to characterize the operating conditions of winter ski resorts under future climate scenarios. They are used in the assessment of snow reliability for mountainous regions across Europe.</p>
+<p><strong>Definition</strong>
+The number of days from August 1st of year N-1 to July 31st of year N fulfilling the conditions &quot;Snow water equivalent &gt;= 120 kg m-2&quot; using a natural snow simulation. The projected change in the number of high snowfall days for each region and elevation is calculated relative to the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-uerra-europe-complete?tab=overview">UERRA</a> historical reanalysis data.</p>
+<p><strong>Data Sources</strong>
+Snow indices are generated using the Crocus snowpack model, a multi-layer snowpack model embedded in the SURFEX land surface model. The SURFEX (Surface Externalisée) model is forced with atmospheric fields provided by adjusted EURO-CORDEX ensemble climate projections. The data covers the period from 2011-2099. It consists of two climate change scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>
+<p><strong>Supporting Information</strong>
+The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-snow-indicators?tab=overview">Climate Data Store</a></p>
+<hr>
+<p><strong>Visualisation and Navigation</strong>
+The projected change in the number of high snowfall days from August to July are provided for <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS-3</a> sub-national regions, as 30-year means for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. The snow index is further discretised in steps of 100m land-surface elevation.</p>
+<p>The map shows the 30-year average of the projected change in the number of days with high snowfall, for the chosen time period, scenario and elevation, plotted as area means for each region.</p>
+<p>The regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to see it&#39;s name, if there is data at the selected elevation the area mean will also be shown. Click on a region that contains data at the selected elevation to request a century-long timeseries plot.</p>
+<p>The time series plot shows the ensemble mean and a range of percentiles derived from multiple global climate model (GCM) and regional climate model (RCM) pairings. </p>
+<p>Click and hover the mouse over the time series plot to view the data values and to reveal action buttons for features such as “zoom” and “download plot as a png”.</p>
+<p>This index is expressed as a change relative to a reference period so the historical time series of the UERRA reanalysis data is also shown.</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -603,7 +619,7 @@
 
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
-                                <h2 style="float: left; position: relative;">Period with high amount of natural snow  - Explore Indicator</h2>
+                                <h2 style="float: left; position: relative;">Projected change in the period with high amount of natural snow  - Explore Indicator</h2>
                                 <button class="standard-button primary-button"
                                     onclick="window.location = 'tourism-high-amount-of-natural-snow.html'"
                                     style="float: right; position: relative;" ;>
@@ -616,13 +632,8 @@
 
                         <div class="row">
                             <div class="column col-md-12" data-panel="">
-                                <script type="text/javascript">
-                                    window.cds_toolbox = { cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' };
-                                    const pageURL = window.location.origin + window.location.pathname;
-                                </script>
+                                
                                 <div class="t-ct">
-
-
                                     <div id="toolbox-app">
                                         <div class="pre-app-loading">
                                             <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg"
@@ -632,31 +643,41 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <script type="text/javascript"
-                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.16.0.js"></script>
-                                <script>
-                                    const DETAIL = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0';
-                                </script>
-                                
-                                <script>
-                                    const WORKFLOWPARAMS = {"hdef":"period_with_high_amount_of_natural_snow"};
-                                </script>
 
                                 <script type="text/javascript">
+                                    window.cds_toolbox = { 
+                                        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+                                    };
+                                    const pageURL = window.location.origin + window.location.pathname;
+                                </script>
+
+                                <script type="text/javascript"
+                                    src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
+
+                                <script type="text/javascript">
+                                    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-tourism-snow-detail-web/master/configuration.json?configuration_version=3.0';
+                                    const WORKFLOWPARAMS = {"hdef":"period_with_high_amount_of_natural_snow"};
+                                
                                     (function () {
                                         document.addEventListener('DOMContentLoaded', function () {
                                             window.cds_toolbox.runApp(
-                                                'toolbox-app', DETAIL, {
+                                                'toolbox-app', 
+                                                WORKFLOW, 
+                                                {
                                                     workflowParams: WORKFLOWPARAMS,
-                                                });
+                                                }
+                                            );
                                         }, false);
                                     }) ();
                                 </script>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <p>
+    Content in the European Climate Data Explorer pages is delivered by ECMWF through the <a href="/disclaimer.html">Copernicus Climate Change Service (C3S</a>).
+</p>
                     </div>
                 </div>
             </div>
