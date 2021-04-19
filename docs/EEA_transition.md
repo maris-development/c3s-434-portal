@@ -175,29 +175,46 @@ The climate adapt application page contents are stored in the consolidated JSON 
 ### Embed code
 
 ```html
+<!-- HTML, toolbox app fills the element with id="toolbox-app" -->
+<div class="t-ct">
+    <div id="toolbox-app">
+        <div class="pre-app-loading">
+            <img src="https://cds.climate.copernicus.eu/toolbox/assets/spinner.svg" alt="Loading">
+            <div>
+                Loading indicator...
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Needed for the toolbox to function correctly -->
+<script type="text/javascript">
+    window.cds_toolbox = { 
+        cds_public_path: 'https://cds.climate.copernicus.eu/toolbox/' 
+    };
+</script>
+
 <!-- Make sure to always use an up-to-date version of the toolbox -->
 <script type="text/javascript"
     src="https://cds.climate.copernicus.eu/toolbox/toolbox-4.23.1.js"></script>
 
 <!-- WORKFLOW contains the URL to the configuration for the embed -->
 <!-- WORKFLOWPARAMS contains the extra parameter(s) to pass to the workflow/indicator app -->
-<script>
-    const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-detail-web/master/configuration.json?configuration_version=3.0';
-    const WORKFLOWPARAMS = {"indicator":"Length of season"};
-</script>
-
 <script type="text/javascript">
-    (function () {
-        document.addEventListener('DOMContentLoaded', function () {
-            window.cds_toolbox.runApp(
-                'toolbox-app', 
-                WORKFLOW, 
-                {
-                    workflowParams: WORKFLOWPARAMS,
-                }
-            );
-        }, false);
-    }) ();
+const WORKFLOW = 'https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-mosquito-detail-web/master/configuration.json?configuration_version=3.0';
+const WORKFLOWPARAMS = {"indicator":"Length of season"};
+
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        window.cds_toolbox.runApp(
+            'toolbox-app', // ID to attach to
+            WORKFLOW, 
+            {
+                workflowParams: WORKFLOWPARAMS,
+            }
+        );
+    }, false);
+}) ();
 </script>
 ```
 
