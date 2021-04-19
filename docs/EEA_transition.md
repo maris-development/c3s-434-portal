@@ -2,7 +2,7 @@
 
 There are several sources to collect page information from.
  - This repository (MARIS B.V, contains HTML generator (uses Node, Yarn, Embedded JS))
- - A consolidated json, compiled after the meeting on Monday morning April 19th.
+ - [A consolidated json, compiled after the meeting on Monday morning April 19th](https://github.com/maris-development/c3s-434-portal/blob/static-generator/data/data_consolidated.json).
  - [Cedadev C3S 434 Page Text Github](https://github.com/cedadev/c3s_434_ecde_page_text)
 
 # C3S.maris.nl consolidated JSON
