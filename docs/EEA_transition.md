@@ -49,7 +49,7 @@ The overview list is generated from the indicator list (consolidated JSON > `"in
 
 The overviewlist is ordered by category and hazard type, using the arrays defined in the JSON.
 
-```json
+```jsonc
 {
   ...
   "overview_page": {
@@ -96,7 +96,7 @@ A theme page is used to collect multiple climate adapt applications together, it
 
 The theme page contents are stored in the consolidated JSON under the key `"themes"`.
 
-```json 
+```jsonc 
 {
   ...
   "themes": {
@@ -127,7 +127,7 @@ A Climate Adapt overview application consists of two pages that form a pair. One
 
 The climate adapt application page contents are stored in the consolidated JSON under the key `"indicators"`.
 
-```json 
+```jsonc 
 {
   "indicators": {
     "C3S_434_013": {
