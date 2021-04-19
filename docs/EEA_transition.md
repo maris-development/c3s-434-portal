@@ -19,6 +19,8 @@ All of them are combined in index.js, and form **./data/data_consolidated.json**
 
 # C3S.maris.nl generator Script
 
+[Located in static-generator branch of this repository.](https://github.com/maris-development/c3s-434-portal/tree/static-generator)
+
 Requirements:  
 - NodeJS (min v12)
 - Yarn  
