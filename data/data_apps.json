@@ -242,10 +242,10 @@
             "hazards": ["Coastal flooding"],
             "vars": {
                 "detail": {
-                    "hdef": "annual_highest_high_water_level"
+                    "indicator": "annual_highest_high_water_level"
                 },
                 "overview": {
-                    "hdef": "annual_highest_high_water_level"
+                    "indicator": "annual_highest_high_water_level"
                 }
             }
         },
@@ -263,10 +263,10 @@
             "hazards": ["Relative sea level"],
             "vars": {
                 "detail": {
-                    "hdef": "mean_sea_level"
+                    "indicator": "mean_sea_level"
                 },
                 "overview": {
-                    "hdef": "mean_sea_level"
+                    "indicator": "mean_sea_level"
                 }
             }
         },
@@ -284,10 +284,10 @@
             "hazards": ["Snow and land ice"],
             "vars": {
                 "detail": {
-                    "hdef": "total_snow_precipitation_from_november_to_april"
+                    "indicator": "total_snow_precipitation_from_november_to_april"
                 },
                 "overview": {
-                    "hdef": "total_snow_precipitation_from_november_to_april"
+                    "indicator": "total_snow_precipitation_from_november_to_april"
                 }
             }
         },
@@ -305,10 +305,10 @@
             "hazards": ["Snow and land ice"],
             "vars": {
                 "detail": {
-                    "hdef": "period_with_high_amount_of_natural_snow"
+                    "indicator": "period_with_high_amount_of_natural_snow"
                 },
                 "overview": {
-                    "hdef": "period_with_high_amount_of_natural_snow"
+                    "indicator": "period_with_high_amount_of_natural_snow"
                 }
             }
         }

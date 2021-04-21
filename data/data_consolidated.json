@@ -363,10 +363,10 @@
       ],
       "vars": {
         "detail": {
-          "hdef": "annual_highest_high_water_level"
+          "indicator": "annual_highest_high_water_level"
         },
         "overview": {
-          "hdef": "annual_highest_high_water_level"
+          "indicator": "annual_highest_high_water_level"
         }
       },
       "overviewpage": "marine-sea-level--annual-highest-high-water-level.html",
@@ -389,10 +389,10 @@
       ],
       "vars": {
         "detail": {
-          "hdef": "mean_sea_level"
+          "indicator": "mean_sea_level"
         },
         "overview": {
-          "hdef": "mean_sea_level"
+          "indicator": "mean_sea_level"
         }
       },
       "overviewpage": "marine-sea-level--mean-sea-level.html",
@@ -415,10 +415,10 @@
       ],
       "vars": {
         "detail": {
-          "hdef": "total_snow_precipitation_from_november_to_april"
+          "indicator": "total_snow_precipitation_from_november_to_april"
         },
         "overview": {
-          "hdef": "total_snow_precipitation_from_november_to_april"
+          "indicator": "total_snow_precipitation_from_november_to_april"
         }
       },
       "overviewpage": "tourism-snow-precipitation.html",
@@ -441,10 +441,10 @@
       ],
       "vars": {
         "detail": {
-          "hdef": "period_with_high_amount_of_natural_snow"
+          "indicator": "period_with_high_amount_of_natural_snow"
         },
         "overview": {
-          "hdef": "period_with_high_amount_of_natural_snow"
+          "indicator": "period_with_high_amount_of_natural_snow"
         }
       },
       "overviewpage": "tourism-high-amount-of-natural-snow.html",
