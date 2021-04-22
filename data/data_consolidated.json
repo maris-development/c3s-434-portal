@@ -481,7 +481,7 @@
     },
     "agriculture": {
       "theme_title": "Agriculture",
-      "description": "Food supply will be affected by many aspects of climate change, not only through the direct effect of changing weather patterns on plant growth but also indirectly through impacts on pests and disease outbreaks. Agriculture is also a significant source of greenhouse gas emissions now and a potential contributor to negative emissions in the future. Consequently, both mitigation and adaptation are important in the agriculture sector. The Copernicus Climate Change Service will provide indicators of both the impacts of climate change on the agricultural sector and of the emissions associated with the agricultural sector. Our initial range of indicators relates to weather events which are likely to have an impact on crop yields.",
+      "description": "Food supply will be affected by many aspects of climate change, not only through the direct effect of changing weather patterns on plant growth but also indirectly through impacts on pests and disease outbreaks. Agriculture is also a significant source of greenhouse gas emissions now and a potential contributor to negative emissions in the future. Consequently, both mitigation and adaptation are important in the agriculture sector. The Copernicus Climate Change Service will provide indices of both the impacts of climate change on the agricultural sector and of the emissions associated with the agricultural sector. Our initial range of indices relates to weather events which are likely to have an impact on crop yields.",
       "apps": [
         {
           "title": "Biologically Effective Degree Days, 2011-2099",
@@ -515,7 +515,7 @@
     },
     "forestry": {
       "theme_title": "Forestry",
-      "description": "European forests provide vital ecosystems as well as valuable recreational and economic resources. They provide a versatile and renewable source of raw materials which play a central role in plans for a more sustainable future, and can also contribute to the removal of carbon dioxide from the atmosphere. Bur forests are also at risk from the effects of climate change. Rising temperatures and changing rainfall patterns can increase the risk of forest fires or make the trees vulnerable to pests and diseases. <br><br>Two indicators related to the risk of forest fire are available. The \"fire weather index\" defined by the Canadian Forest Service Fire Weather Index rating system which has been adopted by the <a href=\"https://effis.jrc.ec.europa.eu/\">European Forest Fire Information System (EFFIS)</a>. We also provide, for comparison, a \"fire danger index\" defined by the Australian Mark5 rating system.",
+      "description": "European forests provide vital ecosystems as well as valuable recreational and economic resources. They provide a versatile and renewable source of raw materials which play a central role in plans for a more sustainable future, and can also contribute to the removal of carbon dioxide from the atmosphere. Bur forests are also at risk from the effects of climate change. Rising temperatures and changing rainfall patterns can increase the risk of forest fires or make the trees vulnerable to pests and diseases. <br><br>Two indices related to the risk of forest fire are available. The \"fire weather index\" defined by the Canadian Forest Service Fire Weather Index rating system which has been adopted by the <a href=\"https://effis.jrc.ec.europa.eu/\">European Forest Fire Information System (EFFIS)</a>. We also provide, for comparison, a \"fire danger index\" defined by the Australian Mark5 rating system.",
       "apps": [
         {
           "title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
@@ -567,7 +567,7 @@
     }
   },
   "overview_page": {
-    "description": "This page provides a comprehensive list of the indices provided in Climate-ADAPT from the Copernicus Climate Change Service. The indicators are listed in hazard categories defined by the European Topic Centre on Climate Change impacts, vulnerability and Adaptation in their report \"<a href=\"https://www.eionet.europa.eu/etcs/etc-cca/products/etc-cca-reports/climate-related-hazard-indices-for-europe/@@download/file/ETC-CCA_technical_paper_1_2020_final.pdf\">Climate-related hazard indices for Europe</a>\".",
+    "description": "This page provides a comprehensive list of the indices provided in Climate-ADAPT from the Copernicus Climate Change Service. The indices are listed in hazard categories defined by the European Topic Centre on Climate Change impacts, vulnerability and Adaptation in their report \"<a href=\"https://www.eionet.europa.eu/etcs/etc-cca/products/etc-cca-reports/climate-related-hazard-indices-for-europe/@@download/file/ETC-CCA_technical_paper_1_2020_final.pdf\">Climate-related hazard indices for Europe</a>\".",
     "category_order": [
       "Heat and cold",
       "Wet and dry",

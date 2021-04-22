@@ -1,5 +1,5 @@
 {
-    "description": "This page provides a comprehensive list of the indices provided in Climate-ADAPT from the Copernicus Climate Change Service. The indicators are listed in hazard categories defined by the European Topic Centre on Climate Change impacts, vulnerability and Adaptation in their report \"<a href=\"https://www.eionet.europa.eu/etcs/etc-cca/products/etc-cca-reports/climate-related-hazard-indices-for-europe/@@download/file/ETC-CCA_technical_paper_1_2020_final.pdf\">Climate-related hazard indices for Europe</a>\".",
+    "description": "This page provides a comprehensive list of the indices provided in Climate-ADAPT from the Copernicus Climate Change Service. The indices are listed in hazard categories defined by the European Topic Centre on Climate Change impacts, vulnerability and Adaptation in their report \"<a href=\"https://www.eionet.europa.eu/etcs/etc-cca/products/etc-cca-reports/climate-related-hazard-indices-for-europe/@@download/file/ETC-CCA_technical_paper_1_2020_final.pdf\">Climate-related hazard indices for Europe</a>\".",
     "category_order": [
         "Heat and cold",
         "Wet and dry",
