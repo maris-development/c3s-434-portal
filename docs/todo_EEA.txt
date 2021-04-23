@@ -1,10 +1,44 @@
 
+Done:
+    Agriculture:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_bedd_detail
 
-Reformat json to correctly use keyvalue array.
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmax_detail
 
-Overview list order fix (or on their end?)
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmean_detail
 
-Links to embed
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tmin_detail
 
-Disclaimer
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_frostdays_detail
 
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_precip_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_agriculture_tropicalnights_detail
+
+
+    Health:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_universalthermalclimateindex_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_meanradianttemperature_detail
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_heatwave_detail
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_heatwave_overview
+
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_mosquito_detail
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_health_mosquito_overview
+
+    Forestry:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_firedangerindex_detail
+        
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_fireweatherindex_detail
+
+    Energy:
+        See Health heatwave workflows
+
+    Tourism:
+        Both don't work in portal
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_overview 
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_detail
+
+    Coastal:
+        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_detail

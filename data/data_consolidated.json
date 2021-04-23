@@ -108,10 +108,10 @@
       ],
       "vars": {
         "detail": {
-          "indicator": "Length of season"
+          "indicator": "Suitability"
         },
         "overview": {
-          "indicator": "season_length"
+          "indicator": "suitability"
         }
       },
       "overviewpage": "climatic-suitability-of-tiger-mosquito--suitability.html",
