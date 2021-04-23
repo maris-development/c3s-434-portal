@@ -6,7 +6,8 @@ const config = {
         data_themes: "./data/data_themes.json",
         data_html_pages: "./data/data_html_pages.json",
         outdir: "./public",
-        source: "./src"
+        source: "./src",
+        maris_css: "./src/assets/css/style-maris.css"
     },
     url: {
         toolbox_app: "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0",

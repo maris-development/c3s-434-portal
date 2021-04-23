@@ -6,6 +6,9 @@ const rimraf = require('rimraf');
 const sync_request = require('sync-request');
 const { StringDecoder } = require('string_decoder');
 const marked = require('marked');
+const crypto = require('crypto');
+
+const hashSum = crypto.createHash('sha256');
 
 const decoder = new StringDecoder('utf8');
 
@@ -32,6 +35,10 @@ const data_apps = JSON.parse(fs.readFileSync(config.dev.data_apps, 'utf-8'));
 const data_themes = JSON.parse(fs.readFileSync(config.dev.data_themes, 'utf-8'));
 const data_overview = JSON.parse(fs.readFileSync(config.dev.data_overview, 'utf-8'));
 const data_html_pages = JSON.parse(fs.readFileSync(config.dev.data_html_pages, 'utf-8'));
+const maris_css_file = fs.readFileSync(config.dev.maris_css, 'utf-8');
+
+hashSum.update(maris_css_file);
+const maris_css_hash = hashSum.digest('hex').substring(0,10);
 
 //retrieve indicator texts from github.
 let data_git_json;
@@ -90,7 +97,7 @@ Object.assign(data_apps_reformatted, data_themes_reformatted, { overview_page: d
 fs.writeFileSync('./data/data_consolidated.json', JSON.stringify(data_apps_reformatted, null, 2));
 
 function createIndexPage() {
-    ejs.renderFile(`${srcPath}/templates/index.ejs`, {}, (err, data) => {
+    ejs.renderFile(`${srcPath}/templates/index.ejs`, {"css_version": maris_css_hash}, (err, data) => {
         if (err) throw err;
         fs.writeFile(`${outputDir}/index.html`, data, (err) => {
             if (err) throw err;
@@ -128,6 +135,7 @@ function createOverviewPage(overview_data) {
     // process.exit();
 
     overview_data.hazard_list = hazard_list;
+    overview_data.css_version = maris_css_hash;
 
     ejs.renderFile(`${srcPath}/templates/overview-list.ejs`, overview_data, (err, data) => {
         if (err) throw err;
@@ -267,6 +275,7 @@ function createHTMLfiles(dataset) {
     }
 
     dataset.vars = dataset.vars || { detail: {}, overview: {} };
+    dataset.css_version = maris_css_hash;
 
     ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
         if (err) throw err;
@@ -279,6 +288,8 @@ function createHTMLfiles(dataset) {
             }
         );
     });
+    
+    dataset.css_version = maris_css_hash;
 
     // detail page
     ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
@@ -317,6 +328,7 @@ function createThemePages(data) {
 
         // sort apps by title
         theme.apps.sort((a, b) => a.title.localeCompare(b.title));
+        theme.css_version = maris_css_hash;
 
         //render html
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
@@ -333,6 +345,7 @@ function createThemePages(data) {
 function createHtmlPages(data) {
     for (const pagename in data) {
         let htmlPage = data[pagename];
+        htmlPage.css_version = maris_css_hash;
         //render html
         ejs.renderFile(`${srcPath}/templates/html.ejs`, htmlPage, (err, data) => {
             if (err) throw err;

@@ -20,7 +20,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_014": {
       "description": "<p><strong>Context</strong>\nThe daily minimum temperature index provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.</p>\n<p><strong>Definition</strong>\nThe daily minimum air temperature (°C) is representative of the temperature at a height of 2m above the surface. </p>\n<p><strong>Data Sources</strong>\nThe monthly average of daily minimum temperature is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981–2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates a warmer temperature than the reference period while a negative value indicates a cooler temperature than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly average projected changes of  daily minimum temperature index are presented as 30-year means for each month of the year for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for average daily minimum temperature, maximum daily minimum temperature and minimum daily minimum temperature are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -42,7 +43,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_015": {
       "description": "<p><strong>Context</strong>\nThe daily mean temperature index provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.</p>\n<p><strong>Definition</strong>\nThe daily mean air temperature (°C) is representative of the temperature at a height of 2m above the surface. </p>\n<p><strong>Data Sources</strong>\nThe monthly average of daily mean temperature is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981–2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates a warmer temperature than the reference period while a negative value indicates a cooler temperature than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly average projected changes of the daily mean temperature index are presented as 30-year means for each month of the year for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for average daily mean temperature are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -64,7 +66,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_002": {
       "description": "<p><strong>Context</strong>\nThe tiger mosquito (Aedes albopictus) transmits vector-borne diseases, such as dengue and chikungunya. Environmental factors such as temperature and rainfall impact the survival chance and seasonal activity of the tiger mosquito which is a serious threat for human health in Europe.</p>\n<p><strong>Definition</strong>\nThe season length, in days, of the climatic suitability for the presence of the tiger mosquito is determined by temperature statistics and hours of sunlight (photoperiod). The egg hatching in spring is based on two criteria: the photoperiod should be above 11.25 hours and the spring temperature should be above 10.5 °C. The autumn diapause of the mosquito is determined by the autumn temperature that should be below 9.5 °C and the photoperiod that should be below 13.5 hours.</p>\n<p><strong>Understand</strong>\nThe duration of tiger mosquito presence is also known as the mosquito season.  It begins when the insect’s eggs hatch after winter and continues until the eggs are no longer hatching (going in diapause) in autumn.</p>\n<p><strong>Data Sources</strong>\nThe season length for tiger mosquito suitability is calculated using bias-adjusted EURO-CORDEX data for two CMIP5 scenarios with different possible future greenhouse gas emissions: RCP4.5 (medium emissions) and RCP8.5 (high emissions). The data covers the period 1971 to 2099 and statistics are averaged for 30 years in overlapping time periods set 10 years apart.  Finally, the time series are averaged for the model ensemble.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-health-vector?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe season length of the climatic suitability for the tiger mosquito is presented for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the season length of the climatic suitability for the tiger mosquito are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -90,7 +93,8 @@
       },
       "overviewpage": "climatic-suitability-of-tiger-mosquito--season-length.html",
       "detailpage": "climatic-suitability-of-tiger-mosquito--season-length-detail.html",
-      "units": "(days)"
+      "units": "(days)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_003": {
       "description": "<p><strong>Context</strong>\nThe tiger mosquito (Aedes albopictus) transmits vector-borne diseases, such as dengue and chikungunya. Environmental factors such as temperature and rainfall impact the survival chance and seasonal activity of the tiger mosquito which is a serious threat for human health in Europe.</p>\n<p><strong>Definition</strong>\nThe climatic suitability index for the presence of the tiger mosquito  is determined by January temperature and annual rainfall statistics. If the January temperature is below 0 °C and the annual rainfall below 500 mm, then the location is not suitable for the mosquito to survive the winter.</p>\n<p><strong>Understand</strong>\nA suitability index of 0 indicates that an area is not suitable (has no favourable environmental conditions) for tiger mosquito presence whereas an area with an index of 100 is totally suitable.</p>\n<p><strong>Data Sources</strong>\nThe tiger mosquito suitability statistics are calculated using bias-adjusted EURO-CORDEX data for two CMIP5 scenarios with different possible future greenhouse gas emissions: RCP4.5 (medium emissions) and RCP8.5 (high emissions). The data covers the period 1971 to 2099 and statistics are averaged for 30 years in overlapping time periods set 10 years apart.  Finally, the time series are averaged for the model ensemble.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-health-vector?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe climatic suitability index for the tiger mosquito is presented for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the climatic suitability index of the tiger mosquito are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -116,7 +120,8 @@
       },
       "overviewpage": "climatic-suitability-of-tiger-mosquito--suitability.html",
       "detailpage": "climatic-suitability-of-tiger-mosquito--suitability-detail.html",
-      "units": ""
+      "units": "",
+      "css_version": "cb65990da8"
     },
     "C3S_434_004": {
       "description": "<p><strong>Context</strong>\nThe Canadian Fire Weather Index System (FWI) is used to assess fire danger in a harmonized way across Europe. The FWI uses information about fuel moisture and weather conditions to determine fire behaviour. </p>\n<p><strong>Definition</strong>\nThe fire weather index indicates fire intensity by combining the rate of fire spread with the amount of fuel being consumed. The fire weather index is calculated using the Canadian Forest Service Fire Weather Index rating system (FWI). The fire danger model used to produce the dataset is the Global ECMWF Fire Forecast model (GEFF).  The fire danger model takes into account temperature, relative humidity, wind speed, precipitation, drought conditions, fuel availability, vegetation characteristics and topography.</p>\n<p><strong>Understand</strong>\nIt is customary to quote a danger class as well as an index number. The fire weather index can be categorised into 6 classes of danger as follows:\nVery low danger: FWI is less than 5.2. Low danger: FWI is between 5.2 and 11.2. Moderate danger: FWI is between 11.2 and 21.3. High danger: FWI is between 21.3 and 38.0.  Very high danger: FWI is between 38.0 and 50. Extreme danger: FWI is greater than 50.</p>\n<p><strong>Data Sources</strong>\nThe fire weather index is calculated using weather forecasts from historical simulations provided by the ECMWF ERA5 reanalysis. The fire weather index is part of a dataset produced by the Copernicus Emergency Management Service (CEMS) for the <a href=\"https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/\">European Forest fire Information System (EFFIS)</a>.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe fire weather index based on historical ERA5 Reanalysis Short Model data is presented for each month and year from 1979 to 2019.</p>\n<p>Historical fire weather index statistics are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -138,7 +143,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_020": {
       "description": "<p><strong>Context</strong>\nThe Canadian Fire Weather Index System (FWI) is used to assess fire danger in a harmonized way across Europe. The FWI uses information about fuel moisture and weather conditions to determine fire behaviour.</p>\n<p><strong>Definition</strong>\nThe incidence of high fire danger is expressed as the number of days per year with a FWI greater than 30.  The calculation of the FWI is based on 24-hour accumulated precipitation and daily noon values of air temperature, relative humidity, and wind speed. The projected change in the number of days with high fire danger is calculated relative to the 1986-2005 period.</p>\n<p><strong>Understand</strong>\nThe FWI can be understood in terms of six danger classes based on the <a href=\"https://effis.jrc.ec.europa.eu/about-effis/technical-background/fire-danger-forecast/\">European Forest fire Information System (EFFIS)</a> classification.\nVery low danger: FWI is less than 5.2. Low danger: FWI is between 5.2 and 11.2. Moderate danger: FWI is between 11.2 and 21.3. High danger: FWI is between 21.3 and 38.0.  Very high danger: FWI is between 38.0 and 50. Extreme danger: FWI is greater than 50.</p>\n<p><strong>Data Sources</strong>\nThe FWI is generated using the Global ECMWF Fire Forecasting model (GEFF). Projections from multiple global climate models downscaled to a regional climate model were used to generate the meteorological input for the GEFF model. The GEFF model was run for four different climate scenarios: the present climate (labelled &#39;historical&#39;), and three Representative Concentration Pathway (RCP) scenarios consistent with an optimistic emission scenario where emissions start declining beyond 2020 (RCP2.6), a scenario where emissions start declining beyond 2040 (RCP4.5) and a pessimistic scenario where emissions continue to rise throughout the century (RCP8.5). The projected changes to fire danger under future climate conditions are calculated relative to the 1986-2005 period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-fire-danger-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe projected change in the number of days per year with high fire danger (FWI greater than 30) is presented for three CMIP5 scenarios: RCP2.6 with low greenhouse gas emissions, RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the number of days with high fire danger are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -160,7 +166,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_016": {
       "description": "<p><strong>Context</strong>\nA health-related heatwave is a prolonged period of extremely high temperature and humidity for a particular region during which daily minima and maxima both exceed thresholds.  Heatwaves have consequences for health, agriculture, power, wildfire and infrastructure. </p>\n<p><strong>Definition</strong>\nThe annual number of heatwave days is based on the heatwave definition used by the health community. A health-related heatwave is considered to be a period of at least 2 consecutive days on which the maximum apparent temperature (Tappmax) exceeds the 90th percentile of Tappmax and the minimum temperature (Tmin) exceeds the 90th percentile of Tmin. Health heatwaves are calculated for each month of the summer period between June and August.  The apparent temperature is a measure of relative discomfort due to combined heat and high humidity.</p>\n<p><strong>Data Sources</strong>\nThe health-related heatwave statistics are calculated using bias-adjusted EURO-CORDEX data for two CMIP5 scenarios with different possible future greenhouse gas emissions: RCP4.5 (medium emissions) and RCP8.5 (high emissions). The data covers the period 1971 to 2099 and statistics are averaged for 30 years in overlapping time periods set 10 years apart.  Finally, the time series are averaged for the model ensemble.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe annual number of heatwave days are presented for the health-related definition of heatwaves for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the number of health-related heatwave days are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -186,7 +193,8 @@
       },
       "overviewpage": "health-heat-waves-in-europe.html",
       "detailpage": "health-heat-waves-in-europe-detail.html",
-      "units": "(days)"
+      "units": "(days)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_017": {
       "description": "<p><strong>Context</strong>\nA climatological heatwave is a prolonged period of extremely high temperature for a particular region that exceeds a maximum threshold.  Heatwaves have consequences for health, agriculture, power, wildfire and infrastructure. </p>\n<p><strong>Definition</strong>\nThe annual number of heatwave days is based on the climatological definition of a heatwave. A climatological heatwave is considered to be a period of at least 3 consecutive days on which the daily maximum temperature exceeds the 99th percentile of the daily maximum temperatures of the May to September season for the control period of 1971 to 2000.</p>\n<p><strong>Data Sources</strong>\nThe climatological heatwave statistics are calculated using bias-adjusted EURO-CORDEX data for two CMIP5 scenarios with different possible future greenhouse gas emissions: RCP4.5 (medium emissions) and RCP8.5 (high emissions). The data covers the period 1971 to 2099 and statistics are averaged for 30 years in overlapping time periods set 10 years apart.  Finally, the time series are averaged for the model ensemble.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe annual number of heatwave days are presented for the climatological definition of heatwaves for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the number of climatological heatwave days are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -213,7 +221,8 @@
       },
       "overviewpage": "climatological-heat-waves-in-europe.html",
       "detailpage": "climatological-heat-waves-in-europe-detail.html",
-      "units": "(days)"
+      "units": "(days)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_008": {
       "description": "<p><strong>Context</strong>\nThe universal thermal climate index (UTCI) is a human biometeorology parameter that is used to assess the linkages between outdoor environment and human well‐being. Thermal comfort indices describe how the human body experiences atmospheric conditions, specifically air temperature, humidity, wind and radiation.</p>\n<p><strong>Definition</strong>\nThe universal thermal climate index (UTCI) is an equivalent temperature (°C), it is a measure of the human physiological response to the thermal environment. The universal thermal climate index (UTCI) describes the synergistic heat exchanges between the thermal environment and the human body, namely its energy budget, physiology and clothing. UTCI takes into consideration the clothing adaptation of the population in response to actual environmental temperature. There are four variables required to calculate the UTCI: 2m air temperature, 2m dew point temperature (or relative humidity), wind speed at 10m above ground level and mean radiant temperature (MRT).</p>\n<p><strong>Understand</strong>\nThere are 10 UTCI thermal stress categories that correspond to specific human physiological responses to the thermal environment. The categories relate to UTCI values as follows:\nabove +46: extreme heat stress; +38 to +46: very strong heat stress; +32 to +38: strong heat stress; +26 to +32: moderate heat stress; +9 to +26: no thermal stress; +9 to 0: slight cold stress; 0 to -13: moderate cold stress; -13 to -27: strong cold stress; -27 to -40: very strong cold stress; below -40: extreme cold stress.</p>\n<p><strong>Data Sources</strong>\nThe universal thermal climate index (UTCI) is computed using data from the ECMWF ERA5 reanalysis. </p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe universal thermal climate index (UTCI) is presented for each month and year from 1979 to 2019.</p>\n<p>UTCI statistics are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -235,7 +244,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_007": {
       "description": "<p><strong>Context</strong>\nThe mean radiant temperature (MRT) is a human biometeorology parameter that is used to assess the linkages between the outdoor environment and human well‐being. Thermal comfort indices describe how the human body experiences atmospheric conditions, specifically air temperature, humidity, wind and radiation.</p>\n<p><strong>Definition</strong>\nThe mean radiant temperature (°C) is a numerical representation of how human beings experience radiation. The mean radiant temperature (MRT) is based on the principle that the net exchange of radiant energy between objects is approximately proportional to their temperature difference multiplied by their ability to emit and absorb heat (emissivity). In this context the MRT applies to a person in an outdoor environment and is a function of the direct, diffuse and reflected thermal and solar radiation they experience.  </p>\n<p><strong>Data Sources</strong>\nThe mean radiant temperature (MRT) is computed using solar and thermal data from the ECMWF ERA5 reanalysis. </p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-utci-historical?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe mean radiant temperature (MRT) is presented for each month and year from 1979 to 2019.</p>\n<p>MRT statistics are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -257,7 +267,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_012": {
       "description": "<p><strong>Context</strong>\nThe precipitation sum provides information on possible water shortage or excess.</p>\n<p><strong>Definition</strong>\nThe precipitation sum index is expressed as a percentage change in total precpitation relative to a reference period. </p>\n<p><strong>Data Sources</strong>\nThe precipitation sum index is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes in the precipitation sum are calculated relative to a (1981–2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates more precipitation than the reference period while a negative value indicates less precipitation than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly and annual projected changes in the precipitation sum index are presented as 30-year means for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the precipitation sum are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -279,7 +290,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_010": {
       "description": "<p><strong>Context</strong>\nThe number of frost days provides information on frost damage.</p>\n<p><strong>Definition</strong>\nA frost day is when the daily minimum temperature is less than 0°C.</p>\n<p><strong>Data Sources</strong>\nThe number of frost days index is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981-2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates more frost days than the reference period while a negative value indicates fewer frost days than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly and annual projected changes in the number of frost days index are presented as 30-year means for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the number of frost days are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -301,7 +313,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_011": {
       "description": "<p><strong>Context</strong>\nThe number of tropical nights provides an indication of the likely occurrence of various pests.</p>\n<p><strong>Definition</strong>\nOn a tropical night the minimum temperature remains above 20°C.</p>\n<p><strong>Data Sources</strong>\nThe number of tropical nights index is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981-2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates more tropical nights than the reference period while a negative value indicates fewer tropical nights than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly and annual projected changes in the number of tropical nights index are presented as 30-year means for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for the number of tropical nights are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -323,7 +336,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_009": {
       "description": "<p><strong>Context</strong>\nThe biologically effective degree days index provides information about the growing season.</p>\n<p><strong>Definition</strong>\nThe biologically effective degree days (°C) index is the sum of daily mean temperatures above 10°C and less than 30°C for a given period.</p>\n<p><strong>Data Sources</strong>\nThe biologically effective degree days index is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981-2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates higher biological effectiveness than the reference period while a negative value indicates lower biological effectiveness than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nMonthly and annual projected changes in the biologically effective degree days index are presented as 30-year means for two CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p>Statistics for biologically effective degree days are also available via the &quot;Explore in Detail&quot; button as national, sub-national and trans-national area-means for which time series data can be plotted.</p>\n",
@@ -345,7 +359,8 @@
       "vars": {
         "detail": {},
         "overview": {}
-      }
+      },
+      "css_version": "cb65990da8"
     },
     "C3S_434_018": {
       "description": "<p><strong>Context</strong>\nThe annual highest high water index informs an understanding of European coastal hydrodynamics under the impact of climate change. It provides added value for various coastal sectors and studies such as port, shipping, and coastal management with particular relvance to coastal flooding.</p>\n<p><strong>Definition</strong>\nThe annual highest high water (m) is calculated from tidal dyamics and sea level rise data based upon past observational data and future climate projections.  Projected changes in the annual highest high water index are calculated relative to the mean of the historical portion of this dataset which covers the period from 1977-2005. Storm surges caused by atmospheric forcing, and coastal subsidence and/or uplifting  are not taken into account for this index.</p>\n<p><strong>Data Sources</strong>\nThe data covers the period from 2070 to 2100 based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions.</p>\n<p>The index is generated using the Global Tide and Surge Model (GTSM, Deltares) and the Wave Model (WAM, ECMWF). High resolution forcing fields for the GTSM are provided by the Danish Meteorological Institute&#39;s regional model (HIRHAM5) which is downscaled from the EC-EARTH global climate model. Given that the projections of these climate scenarios are based on a single combination of the regional and global climate models, users of these data should take into consideration that there is an inevitable underestimation of the uncertainty associated with this dataset.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-water-level-change-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe annual highest high water is presented for the future period 2070-2100 based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions.</p>\n<p>Further statistics for the annual highest high water are also available via the &quot;Explore in Detail&quot; button .</p>\n",
@@ -371,7 +386,8 @@
       },
       "overviewpage": "marine-sea-level--annual-highest-high-water-level.html",
       "detailpage": "marine-sea-level--annual-highest-high-water-level-detail.html",
-      "units": "(m)"
+      "units": "(m)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_019": {
       "description": "<p><strong>Context</strong>\nThe mean sea level index informs an understanding of European coastal hydrodynamics under the impact of climate change. It provides added value for various coastal sectors and studies such as port, shipping, and coastal management with particular relvance to coastal management.</p>\n<p><strong>Definition</strong>\nThe mean sea level (m) is calculated from tidal dyamics and sea level rise data based upon past observational data and future climate projections.  Projected changes in the mean sea level index are calculated relative to the mean of the mean sea level during the historical portion of this dataset which covers the period from 1977-2005. Storm surges caused by atmospheric forcing, and coastal subsidence and/or uplifting  are not taken into account for this index.</p>\n<p><strong>Data Sources</strong>\nThe data covers the period from 2070 to 2100 based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions.</p>\n<p>The index is generated using the Global Tide and Surge Model (GTSM, Deltares) and the Wave Model (WAM, ECMWF). High resolution forcing fields for the GTSM are provided by the Danish Meteorological Institute&#39;s regional model (HIRHAM5) which is downscaled from the EC-EARTH global climate model. Given that the projections of these climate scenarios are based on a single combination of the regional and global climate models, users of these data should take into consideration that there is an inevitable underestimation of the uncertainty associated with this dataset.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-water-level-change-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe mean sea level is presented for the future period 2070-2100 based on CMIP5 scenario RCP4.5 with medium greenhouse gas emissions.</p>\n<p>Further statistics for mean sea level are also available via the &quot;Explore in Detail&quot; button .</p>\n",
@@ -397,7 +413,8 @@
       },
       "overviewpage": "marine-sea-level--mean-sea-level.html",
       "detailpage": "marine-sea-level--mean-sea-level-detail.html",
-      "units": "(m)"
+      "units": "(m)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_021": {
       "description": "<p><strong>Context</strong>\nSnow indices for Europe can be used to characterize the operating conditions of winter ski resorts under future climate scenarios. They are used in the assessment of snow reliability for mountainous regions across Europe.</p>\n<p><strong>Definition</strong>\nTotal snow precipitation is the cumulative value of snowfall over the winter sports season (November year N-1 to April year N). The projected change in cumulative snowfall for each region and elevation is calculated relative to the 1981-2010 period of the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-uerra-europe-complete?tab=overview\">UERRA</a> historical reanalysis. </p>\n<p><strong>Data Sources</strong>\nSnow indices are generated using the Crocus snowpack model, a multi-layer snowpack model embedded in the SURFEX land surface model. The SURFEX (Surface Externalisée) model is forced with atmospheric fields provided by adjusted EURO-CORDEX ensemble climate projections. The data covers the period from 2011-2099. It consists of two climate change scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-snow-indicators?tab=overview\">Climate Data Store</a></p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe projected change in cumulative snowfall from November to April is provided for <a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">NUTS-3</a> sub-national regions, as 30-year means for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. The snow index is further discretised in steps of 100m land-surface elevation.</p>\n<p>Statistics for cumulative snowfall are also available via the &quot;Explore in Detail&quot; button where timeseries data can be plotted.</p>\n",
@@ -423,7 +440,8 @@
       },
       "overviewpage": "tourism-snow-precipitation.html",
       "detailpage": "tourism-snow-precipitation-detail.html",
-      "units": "(kg m-2)"
+      "units": "(kg m-2)",
+      "css_version": "cb65990da8"
     },
     "C3S_434_022": {
       "description": "<p><strong>Context</strong>\nSnow indices for Europe can be used to characterize the operating conditions of winter ski resorts under future climate scenarios. They are used in the assessment of snow reliability for mountainous regions across Europe.</p>\n<p><strong>Definition</strong>\nThe number of days from August 1st of year N-1 to July 31st of year N fulfilling the conditions &quot;Snow water equivalent &gt;= 120 kg m-2&quot; using a natural snow simulation. The projected change in the number of high snowfall days for each region and elevation is calculated relative to the 1981-2010 period of the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-uerra-europe-complete?tab=overview\">UERRA</a> historical reanalysis.</p>\n<p><strong>Data Sources</strong>\nSnow indices are generated using the Crocus snowpack model, a multi-layer snowpack model embedded in the SURFEX land surface model. The SURFEX (Surface Externalisée) model is forced with atmospheric fields provided by adjusted EURO-CORDEX ensemble climate projections. The data covers the period from 2011-2099. It consists of two climate change scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-tourism-snow-indicators?tab=overview\">Climate Data Store</a></p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe projected change in the number of high snowfall days from August to July are provided for <a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">NUTS-3</a> sub-national regions, as 30-year means for two CMIP5 scenarios: RCP4.5 with medium greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. The snow index is further discretised in steps of 100m land-surface elevation.</p>\n<p>Statistics for high snowfall days are also available via the &quot;Explore in Detail&quot; button where timeseries data can be plotted.</p>\n",
@@ -449,7 +467,8 @@
       },
       "overviewpage": "tourism-high-amount-of-natural-snow.html",
       "detailpage": "tourism-high-amount-of-natural-snow-detail.html",
-      "units": "(days)"
+      "units": "(days)",
+      "css_version": "cb65990da8"
     }
   },
   "themes": {
@@ -477,7 +496,8 @@
           "title": "Thermal Comfort Indices - Universal Thermal Climate Index, 1979-2019",
           "url": "health/thermal-comfort-indices--universal-thermal-climate-index.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     },
     "agriculture": {
       "theme_title": "Agriculture",
@@ -511,7 +531,8 @@
           "title": "Tropical Nights, 2011-2099",
           "url": "agriculture/tropical-nights.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     },
     "forestry": {
       "theme_title": "Forestry",
@@ -525,7 +546,8 @@
           "title": "Fire Weather Index - Monthly Mean, 1979-2019",
           "url": "forestry/fire-weather-index.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     },
     "energy": {
       "theme_title": "Energy",
@@ -535,7 +557,8 @@
           "title": "Climatological Heatwave (High Temperature), 1971-2099",
           "url": "energy/climatological-heat-waves-in-europe.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     },
     "tourism": {
       "theme_title": "Tourism",
@@ -549,7 +572,8 @@
           "title": "Total Winter Snow, 2011-2099",
           "url": "tourism/tourism-snow-precipitation.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     },
     "coastal": {
       "theme_title": "Coastal",
@@ -563,7 +587,8 @@
           "title": "Mean Sea Level, 2070-2100",
           "url": "coastal/marine-sea-level--mean-sea-level.html"
         }
-      ]
+      ],
+      "css_version": "cb65990da8"
     }
   },
   "overview_page": {
@@ -712,12 +737,14 @@
           }
         ]
       }
-    }
+    },
+    "css_version": "cb65990da8"
   },
   "html_pages": {
     "disclaimer": {
       "page_title": "Disclaimer",
-      "page_text": "<p>Content in the European Climate Data Explorer pages is delivered by ECMWF through the Copernicus Climate Change Service to enhance public access to information about the European Union’s Copernicus Programme. The goal is to keep this information timely and accurate. If errors are brought to the attention of ECMWF, they will try to correct them. However, ECMWF accepts no responsibility or liability whatsoever with regard to the information on this site.</p><p>While abiding by the highest scientific and technical standards, ECMWF cannot warrant that any information provided by the Copernicus Climate Change Service will be entirely free from errors or omissions or that such errors or omissions can or will be rectified entirely. </p><p>References to geographical or other territories and groupings are based on terms provided to ECMWF by ECMWF Member States and Co-operating States, terminology used by other relevant international organisations or other sources deemed relevant by ECMWF. The use of such references and terminology used on this website, as well as, in the materials contained therein or linked to, do not constitute or imply an expression of opinion by ECMWF concerning the status of any State or territory, or its frontiers or sovereignty. The colours, boundaries and names shown and the designations used on maps available from or through this website are not intended to imply any judgment, official endorsement, or acceptance by ECMWF as to the legal status or frontier of any territory.</p><p>It is our goal to minimize disruption caused by technical errors. However, some data or information on our site may have been created or structured in files or formats that are not error-free and we cannot guarantee that our service will not be interrupted or otherwise affected by such problems. ECMWF accepts no responsibility with regard to such problems incurred as a result of using this site or any linked external sites.</p><p>ECMWF may change material on the site without prior notice.</p>"
+      "page_text": "<p>Content in the European Climate Data Explorer pages is delivered by ECMWF through the Copernicus Climate Change Service to enhance public access to information about the European Union’s Copernicus Programme. The goal is to keep this information timely and accurate. If errors are brought to the attention of ECMWF, they will try to correct them. However, ECMWF accepts no responsibility or liability whatsoever with regard to the information on this site.</p><p>While abiding by the highest scientific and technical standards, ECMWF cannot warrant that any information provided by the Copernicus Climate Change Service will be entirely free from errors or omissions or that such errors or omissions can or will be rectified entirely. </p><p>References to geographical or other territories and groupings are based on terms provided to ECMWF by ECMWF Member States and Co-operating States, terminology used by other relevant international organisations or other sources deemed relevant by ECMWF. The use of such references and terminology used on this website, as well as, in the materials contained therein or linked to, do not constitute or imply an expression of opinion by ECMWF concerning the status of any State or territory, or its frontiers or sovereignty. The colours, boundaries and names shown and the designations used on maps available from or through this website are not intended to imply any judgment, official endorsement, or acceptance by ECMWF as to the legal status or frontier of any territory.</p><p>It is our goal to minimize disruption caused by technical errors. However, some data or information on our site may have been created or structured in files or formats that are not error-free and we cannot guarantee that our service will not be interrupted or otherwise affected by such problems. ECMWF accepts no responsibility with regard to such problems incurred as a result of using this site or any linked external sites.</p><p>ECMWF may change material on the site without prior notice.</p>",
+      "css_version": "cb65990da8"
     }
   }
 }

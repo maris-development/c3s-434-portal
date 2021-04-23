@@ -33,12 +33,12 @@ Done:
         https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_fireweatherindex_detail
 
     Energy:
-        See Health heatwave workflows
+        Same as Health heatwave workflows
 
     Tourism:
-        Both don't work in portal
-        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_overview 
-        https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_detail
+        Both don't work in portal, but do work in the toolbox. can you take a look @James?
+            https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_overview (not adjusted since last Friday)
+            https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_tourism_snow_detail
 
     Coastal:
         https://cds.climate.copernicus.eu/toolbox-editor/ecde/c3s_434_marine_sealevel_detail
