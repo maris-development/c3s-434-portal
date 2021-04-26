@@ -14,7 +14,6 @@
       "hazards": [
         "Extreme heat"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "average-maximum-temperature.html",
       "detailpage": "average-maximum-temperature-detail.html",
       "units": "(°C)",
@@ -38,7 +37,6 @@
       "hazards": [
         "Cold spells and frost"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "average-minimum-temperature.html",
       "detailpage": "average-minimum-temperature-detail.html",
       "units": "(°C)",
@@ -62,7 +60,6 @@
       "hazards": [
         "Mean temperature"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "average-mean-temperature.html",
       "detailpage": "average-mean-temperature-detail.html",
       "units": "(°C)",
@@ -94,7 +91,6 @@
           "indicator": "season_length"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "climatic-suitability-of-tiger-mosquito--season-length.html",
       "detailpage": "climatic-suitability-of-tiger-mosquito--season-length-detail.html",
       "units": "(days)",
@@ -122,7 +118,6 @@
           "indicator": "suitability"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "climatic-suitability-of-tiger-mosquito--suitability.html",
       "detailpage": "climatic-suitability-of-tiger-mosquito--suitability-detail.html",
       "units": "",
@@ -142,7 +137,6 @@
       "hazards": [
         "Wildfire"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "fire-weather-index.html",
       "detailpage": "fire-weather-index-detail.html",
       "units": "",
@@ -166,7 +160,6 @@
       "hazards": [
         "Wildfire"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "high-fire-danger.html",
       "detailpage": "high-fire-danger-detail.html",
       "units": "(days)",
@@ -198,7 +191,6 @@
           "hdef": "health_related"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "health-heat-waves-in-europe.html",
       "detailpage": "health-heat-waves-in-europe-detail.html",
       "units": "(days)",
@@ -227,7 +219,6 @@
           "hdef": "climatological_related"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "climatological-heat-waves-in-europe.html",
       "detailpage": "climatological-heat-waves-in-europe-detail.html",
       "units": "(days)",
@@ -247,7 +238,6 @@
       "hazards": [
         "Extreme heat"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "thermal-comfort-indices--universal-thermal-climate-index.html",
       "detailpage": "thermal-comfort-indices--universal-thermal-climate-index-detail.html",
       "units": "(°C)",
@@ -271,7 +261,6 @@
       "hazards": [
         "Mean temperature"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "thermal-comfort-indices--mean-radiant-temperature.html",
       "detailpage": "thermal-comfort-indices--mean-radiant-temperature-detail.html",
       "units": "(°C)",
@@ -295,7 +284,6 @@
       "hazards": [
         "Mean precipitation"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "projected-change-in-precipitation-sum.html",
       "detailpage": "projected-change-in-precipitation-sum-detail.html",
       "units": "(%)",
@@ -319,7 +307,6 @@
       "hazards": [
         "Cold spells and frost"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "frost-days.html",
       "detailpage": "frost-days-detail.html",
       "units": "(days)",
@@ -343,7 +330,6 @@
       "hazards": [
         "Extreme heat"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "tropical-nights.html",
       "detailpage": "tropical-nights-detail.html",
       "units": "(days)",
@@ -367,7 +353,6 @@
       "hazards": [
         "Mean temperature"
       ],
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "biologically-effective-degree-days.html",
       "detailpage": "biologically-effective-degree-days-detail.html",
       "units": "(°C)",
@@ -399,7 +384,6 @@
           "indicator": "annual_highest_high_water_level"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "marine-sea-level--annual-highest-high-water-level.html",
       "detailpage": "marine-sea-level--annual-highest-high-water-level-detail.html",
       "units": "(m)",
@@ -427,7 +411,6 @@
           "indicator": "mean_sea_level"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "marine-sea-level--mean-sea-level.html",
       "detailpage": "marine-sea-level--mean-sea-level-detail.html",
       "units": "(m)",
@@ -455,7 +438,6 @@
           "indicator": "total_snow_precipitation_from_november_to_april"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "tourism-snow-precipitation.html",
       "detailpage": "tourism-snow-precipitation-detail.html",
       "units": "(kg m-2)",
@@ -483,7 +465,6 @@
           "indicator": "period_with_high_amount_of_natural_snow"
         }
       },
-      "toolbox_embed_version": "4.23.1",
       "overviewpage": "tourism-high-amount-of-natural-snow.html",
       "detailpage": "tourism-high-amount-of-natural-snow-detail.html",
       "units": "(days)",
@@ -517,8 +498,7 @@
           "url": "health/thermal-comfort-indices--universal-thermal-climate-index.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     },
     "agriculture": {
       "theme_title": "Agriculture",
@@ -553,8 +533,7 @@
           "url": "agriculture/tropical-nights.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     },
     "forestry": {
       "theme_title": "Forestry",
@@ -569,8 +548,7 @@
           "url": "forestry/fire-weather-index.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     },
     "energy": {
       "theme_title": "Energy",
@@ -581,8 +559,7 @@
           "url": "energy/climatological-heat-waves-in-europe.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     },
     "tourism": {
       "theme_title": "Tourism",
@@ -597,8 +574,7 @@
           "url": "tourism/tourism-snow-precipitation.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     },
     "coastal": {
       "theme_title": "Coastal",
@@ -613,8 +589,7 @@
           "url": "coastal/marine-sea-level--mean-sea-level.html"
         }
       ],
-      "css_version": "cb65990da8",
-      "toolbox_embed_version": "4.23.1"
+      "css_version": "cb65990da8"
     }
   },
   "overview_page": {
@@ -658,7 +633,6 @@
         "Biochemical ocean properties"
       ]
     ],
-    "toolbox_embed_version": "4.23.1",
     "hazard_list": {
       "Heat and cold": {
         "Extreme heat": [
