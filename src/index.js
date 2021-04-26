@@ -52,6 +52,8 @@ if (git_json_result.statusCode === 200) {
 // copy assets to output dir
 fse.copy(`${srcPath}/assets`, outputDir);
 
+data_apps["toolbox_embed_version"] = config.dev.toolbox_version;
+
 //generate all pages
 createAppPages(data_apps);
 
@@ -72,7 +74,10 @@ createHtmlPages(data_html_pages);
 // console.log(data_themes);
 
 //reformat the data_apps object, so it correctly uses key-value pair with the identifier as key
-let data_apps_reformatted = {"indicators": {}};
+let data_apps_reformatted = {
+    "indicators": {},
+    "toolbox_embed_version": config.dev.toolbox_version
+};
 
 for (const index in data_apps['indicators']) {
     const dataset = data_apps['indicators'][index];
@@ -152,7 +157,7 @@ function createAppPages(data) {
 
         dataset.overview = config.url.toolbox_app.replace('%APP%', dataset.overview);
         dataset.detail = config.url.toolbox_app.replace('%APP%', dataset.detail);
-
+        dataset.toolbox_embed_version = data.toolbox_embed_version;
         // theme directory
         if (!fs.existsSync(`${outputDir}/${dataset.theme.toLowerCase()}/`)) {
             fs.mkdirSync(`${outputDir}/${dataset.theme.toLowerCase()}/`);
@@ -329,6 +334,7 @@ function createThemePages(data) {
         // sort apps by title
         theme.apps.sort((a, b) => a.title.localeCompare(b.title));
         theme.css_version = maris_css_hash;
+        theme.toolbox_embed_version = data.toolbox_embed_version;
 
         //render html
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
