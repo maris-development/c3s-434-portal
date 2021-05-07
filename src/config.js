@@ -8,7 +8,7 @@ const config = {
         outdir: "./public",
         source: "./src",
         maris_css: "./src/assets/css/style-maris.css",
-        toolbox_version: "4.24.0"
+        toolbox_version: "4.25.1"
     },
     url: {
         toolbox_app: "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0",
