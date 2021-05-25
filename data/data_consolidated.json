@@ -614,6 +614,36 @@
       "Oceanic",
       "Other"
     ],
+    "hazard_type": [
+      [
+        "Mean temperature",
+        "Extreme heat",
+        "Cold spells and frost"
+      ],
+      [
+        "Mean precipitation",
+        "Extreme precipitation",
+        "River flooding",
+        "Aridity",
+        "Drought",
+        "Wildfire"
+      ],
+      [
+        "Mean wind speed",
+        "Severe windstorm"
+      ],
+      [
+        "Snow and land ice"
+      ],
+      [
+        "Relative sea level",
+        "Coastal flooding"
+      ],
+      [
+        "Ocean temperature",
+        "Biochemical ocean properties"
+      ]
+    ],
     "hazard_type_order_left": [
       [
         "Mean temperature",
