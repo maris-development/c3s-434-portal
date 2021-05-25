@@ -9,12 +9,28 @@
         "Oceanic",
         "Other"
     ],
-    "hazard_type_order": [
+
+    "category_order_left": [
+        "Heat and cold",
+        "Wet and dry"
+    ],
+    "category_order_right": [
+        "Wind",
+        "Snow and ice",
+        "Coastal",
+        "Oceanic",
+        "Other"
+    ],
+
+    "hazard_type_order_left": [
         ["Mean temperature", "Extreme heat", "Cold spells and frost"],
-        ["Mean precipitation", "Extreme precipitation", "River flooding", "Aridity", "Drought", "Wildfire"],
+        ["Mean precipitation", "Extreme precipitation", "River flooding", "Aridity", "Drought", "Wildfire"]
+    ],
+    "hazard_type_order_right": [
         ["Mean wind speed", "Severe windstorm"],
         ["Snow and land ice"],
         ["Relative sea level", "Coastal flooding"],
-        ["Ocean temperature", "Biochemical ocean properties"]
+        ["Ocean temperature", "Biochemical ocean properties"],
+        ["Other"]
     ]
 }

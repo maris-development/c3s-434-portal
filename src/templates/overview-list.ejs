@@ -69,7 +69,7 @@
 
                     <div id="content">
                         <div class="row">
-                            <div class="column col-md-16 " data-panel="">
+                            <div class="column col-md-12" data-panel="">
                                 <div class="tile tile-default" >
                                     <div class="cover-richtext-tile tile-content">
                                         <button class="right standard-button secundary-button"><a href="index.html">Go
@@ -84,73 +84,84 @@
                         </div>
 
                         <div class="row">
-                            <!-- For each category of hazards -->
-                            <% for(const index in category_order) { 
-                                const category = category_order[index];
-                                if(hazard_list.hasOwnProperty(category)){ 
-                                    if(category === "Other") continue;
-                                    %>
-                                    <div class="column col-md-6">
-                                        <h2>
-                                            <%= category %>
-                                        </h2>
-                                        <!-- For each hazard in the category -->
-                                        <% for(const hazard_index in hazard_type_order[index]) {
-                                            const hazard = hazard_type_order[index][hazard_index];
-                                            if(hazard_list[category].hasOwnProperty(hazard)){ %>
-                                            <h3>
-                                                <%= hazard %>
-                                            </h3>
-                                            <ul>
-                                                <!--  for each indicator in the hazard. -->
-                                                <% for(const appindex in hazard_list[category][hazard]) { %>
-                                                    <% const app = hazard_list[category][hazard][appindex] %>
-                                                    <li><a href="<%= app.url %>">
-                                                            <%= app.title %>
-                                                        </a></li>
-                                                    <% } %>
-                                            </ul>
-                                            <% } else {
-                                                console.warn("Warning: No indicators with hazard type: ", hazard);
-                                            }
-                                        } %>
-                                    </div>
-                                <% } 
-                            } 
-
-                            // Special occasion for "Other" category", always last, and don't print "Other" subcat.
-                            if(hazard_list.hasOwnProperty("Other")){
-                            %>
-
-                                <div class="column col-md-6">
-                                    <h2>Other</h2>
-
-                                    <% for(const hazard in hazard_list["Other"]) {
-                                        if(hazard_list["Other"].hasOwnProperty(hazard)){ 
-                                            if(hazard !== "Other") {
+                            <div class="column col-md-6">
+                                <div class="row">
+                                    <!-- For each category of hazards (left column) -->
+                                    <% for(const index in category_order_left) { 
+                                        const category = category_order_left[index];
+                                        if(hazard_list.hasOwnProperty(category)){ 
+                                            //if(category === "Other") continue;
                                             %>
-
-                                                <h3>
-                                                    <%= hazard %>
-                                                </h3>
-
-                                            <%
-                                            }
-                                            %>
-                                            
-                                            <ul>
-                                                <% for(const appindex in hazard_list["Other"][hazard]) { %>
-                                                    <% const app = hazard_list["Other"][hazard][appindex] %>
-                                                    <li><a href="<%= app.url %>"><%= app.title %></a></li>
-                                                <% 
+                                            <div class="column col-md-12">
+                                                <h2>
+                                                    <%= category %>
+                                                </h2>
+                                                <!-- For each hazard in the category -->
+                                                <% for(const hazard_index in hazard_type_order_left[index]) {
+                                                    const hazard = hazard_type_order_left[index][hazard_index];
+                                                    if(hazard_list[category].hasOwnProperty(hazard)){ %>
+                                                    <h3>
+                                                        <%= hazard %>
+                                                    </h3>
+                                                    <ul>
+                                                        <!--  for each indicator in the hazard. -->
+                                                        <% for(const appindex in hazard_list[category][hazard]) { %>
+                                                            <% const app = hazard_list[category][hazard][appindex] %>
+                                                            <li>
+                                                                <a href="<%= app.url %>"> <%= app.title %> </a>
+                                                            </li>
+                                                        <% } %>
+                                                    </ul>
+                                                    <% } else {
+                                                        // console.warn("Warning: No indicators with hazard type: ", hazard);
+                                                    }
                                                 } %>
-                                            </ul>
-                                    <%  } 
+                                            </div>
+                                        <% } 
                                     } %>
                                 </div>
-                            <% 
-                            }
-                            %>
+                            </div>
+                            <div class="column col-md-6">
+                                <div class="row">
+                                    <% for(const index in category_order_right) { 
+                                        const category = category_order_right[index];
+                                        if(hazard_list.hasOwnProperty(category)){ 
+                                            //if(category === "Other") continue;
+                                            %>
+                                            <div class="column col-md-12">
+                                                <h2>
+                                                    <%= category %>
+                                                </h2>
+                                                <!-- For each hazard in the category -->
+                                                <% for(const hazard_index in hazard_type_order_right[index]) {
+                                                    const hazard = hazard_type_order_right[index][hazard_index];
+                                                    if(hazard_list[category].hasOwnProperty(hazard)){ 
+                                                        if(hazard != "Other") { %>
+                                                            <h3>
+                                                                <%= hazard %>
+                                                            </h3>    
+                                                        <% } %>
+                                                        
+                                                        <ul>
+                                                            <!--  for each indicator in the hazard. -->
+                                                            <% for(const appindex in hazard_list[category][hazard]) { %>
+                                                                <% const app = hazard_list[category][hazard][appindex] %>
+                                                                <li>
+                                                                    <a href="<%= app.url %>"> <%= app.title %> </a>
+                                                                </li>
+                                                            <% } %>
+                                                        </ul>
+                                                    <% 
+                                                    } else {
+                                                        console.warn("Warning: No indicators with hazard type:", category, '>', hazard);
+                                                    }
+                                                } %>
+                                            </div>
+                                        <% } 
+                                    } %>
+                                </div>
+                            </div>
+                    
                         </div>
 
                         <div class="row">
