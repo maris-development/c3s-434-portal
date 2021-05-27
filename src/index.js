@@ -128,10 +128,15 @@ function createOverviewPage(overview_data) {
                 hazard_list[dataset['hazard_category']][hazard] = [];
             }
 
-            hazard_list[dataset['hazard_category']][hazard].push({
-                title: dataset.page_title,
-                url: dataset.theme.toLowerCase() + '/' + overviewFileName(dataset),
-            });
+            //prevent duplicates
+            if(!hazard_list[dataset['hazard_category']][hazard]
+                    .find(element => element.title == dataset.page_title)){
+                //add to themed list.
+                hazard_list[dataset['hazard_category']][hazard].push({
+                    title: dataset.page_title,
+                    url: dataset.theme.toLowerCase() + '/' + overviewFileName(dataset),
+                });
+            }            
         }
     }
 

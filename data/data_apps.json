@@ -108,6 +108,19 @@
             "hazards": ["Wildfire"]
         },
         {
+            "description": "High Fire Danger index (this option will be overwritten)",
+            "description_detail": "High Fire Danger (this option will be overwritten)",
+            "detail": "hidden-app-firedangerindex-detail-web",
+            "identifier": "C3S_434_020",
+            "indicator_title": "High Fire Danger Index",
+            "overview": "hidden-app-firedangerindex-overview-web",
+            "page_title": "High Fire Danger Index",
+            "page_url": "high-fire-danger",
+            "theme": "Tourism",
+            "hazard_category": "Wet and dry",
+            "hazards": ["Wildfire"]
+        },
+        {
             "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>A climate heat wave is considered to be a period of at least 3 consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season for the control period of 1971 to 2000.<br><br>Health heat waves are calculated for the summer period between June and August. Health heat waves are days in which the maximal apparent temperature (Tappmax) exceeds the 90th percentile of Tappmax for each month and the minimum temperature (Tmin) exceeds the 90th percentile of Tmin for each month for at least 2 days.  The apparent temperature is a measure of relative discomfort due to combined heat and high humidity.<br><br>The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085. Finally, the time series are averaged over the model ensemble.<br><br>The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>30-year smoothed averages of the number of heat wave days are presented as 10-year means for either the climatological or heath definition of heat waves for 2 CMIP5 scenarios; RCP4.5 with medium greenhouse gas emissions or RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of heat wave days are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
             "description_detail": "The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085.  Finally, the time series are averaged over the model ensemble.<br>The heat wave statistics are calculated using bias-adjusted EURO-CORDEX data for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions).<br><br>The map shows the 30-year smoothed average of the number of heat wave days centred at a given year for the chosen heat wave definition and scenario plotted as area means for each European NUTS region. The NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level; NUTS-0: Countries, NUTS-1: major socio-economic regions, NUTS-2: basic regions, and NUTS-3: small regions.<br><br>The map of NUTS regions facilitates dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot. The time series plot shows the range of heat wave responses to the chosen scenario conditions across the EURO-CORDEX model ensemble. Hover the mouse over the plot to view the time series data values.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
             "detail": "hidden-app-health-heatwave-detail-web",
@@ -125,6 +138,28 @@
                 },
                 "overview": {
                     "hdef": "health_related"
+                }
+            }
+        },
+        {
+            "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>The climatological definition of a heat wave relies on the results of the EURO-CORDEX project. A climatological heat wave is considered to be a period of at least three consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season of the control period of 1971 to 2000. The health-related definition of a heat wave relies on the results of the EURO-heat project. For the summer period of June to August a health heat wave is defined as days in which the maximal apparent temperature (Tappmax) exceeds the threshold (90th percentile of Tappmax for each month) and the minimum temperature (Tmin) exceeds its threshold(90th percentile of Tmin for each month) for at least two days. The apparent temperature is a measure of relative discomfort due to combined heat and high humidity and is calculated as a combination of air and dew point temperature. The statistics are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a timeseries covering the period from 1986 to 2085. Finally, the timeseries are averaged for the model ensemble. The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset. The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>A climatological definition and a heath definition of the number of heat wave days is presented for 2 CMIP5 scenarios; RCP4.5 and RCP8.5.<br><br>Annual statistics for the number of heat wave days are also available for CMIP5 scenarios RCP4.5 and RCP8.5 as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 via the \"Explore in Detail\" button.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
+            "description_detail": "",
+            "detail": "hidden-app-health-heatwave-detail-web",
+            "exclude": false,
+            "indicator_title": "Number of Heat Wave Days",
+            "overview": "hidden-app-health-heatwave-overview-web",
+            "page_title": "Heat waves in Europe",
+            "page_url": "climatological-heat-waves-in-europe",
+            "theme": "Agriculture",
+            "identifier": "C3S_434_017",
+            "hazard_category": "Heat and cold",
+            "hazards": ["Extreme heat"],
+            "vars": {
+                "detail": {
+                    "hdef": "climatological_related"
+                },
+                "overview": {
+                    "hdef": "climatological_related"
                 }
             }
         },
