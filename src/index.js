@@ -302,12 +302,15 @@ function createHTMLfiles(dataset) {
     let themes = dataset.theme;
 
     themes.forEach((theme) => {
-        dataset.theme = theme;
-        ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
+        const appData = {};
+
+        Object.assign(appData, dataset);
+
+        appData.theme = theme;
+
+        ejs.renderFile(`${srcPath}/templates/overview.ejs`, appData, (err, data) => {
             if (err) throw err;
-            let overviewPage = `${outputDir}/${dataset.theme.toLowerCase()}/${
-                dataset.overviewpage
-            }`;
+            let overviewPage = `${outputDir}/${appData.theme.toLowerCase()}/${appData.overviewpage}`;
             fs.writeFile(overviewPage, data, (err) => {
                 if (err) throw err;
                 console.log(`[Overview page] \t${overviewPage} has been created.`);
@@ -315,9 +318,9 @@ function createHTMLfiles(dataset) {
         });
 
         // detail page
-        ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
+        ejs.renderFile(`${srcPath}/templates/detail.ejs`, appData, (err, data) => {
             if (err) throw err;
-            let detailPage = `${outputDir}/${dataset.theme.toLowerCase()}/${dataset.detailpage}`;
+            let detailPage = `${outputDir}/${appData.theme.toLowerCase()}/${appData.detailpage}`;
             fs.writeFile(detailPage, data, (err) => {
                 if (err) throw err;
                 console.log(`[Detail page] \t\t${detailPage} has been created.`);
@@ -337,7 +340,7 @@ function createThemePages(data) {
             const dataset = data['indicators'][app_index];
 
             if (
-                theme.theme_title.toLowerCase() == dataset.theme.toLowerCase() &&
+                dataset.theme.map(x => x.toLowerCase()).includes(theme.theme_title.toLowerCase()) &&
                 !dataset.exclude
             ) {
                 theme.apps.push({

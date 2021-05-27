@@ -5,7 +5,9 @@
       "description_detail": "<p><strong>Context</strong>\nThe daily maximum temperature index provides information on long-term climate variability and change. Temperature plays a fundamental role in agricultural productivity, biodiversity and public health.</p>\n<p><strong>Definition</strong>\nThe daily maximum air temperature (°C) is representative of the temperature at a height of 2m above the surface. </p>\n<p><strong>Data Sources</strong>\nThe monthly average of daily maximum temperature is calculated from an ensemble of five global climate model (GCM) simulations for two CMIP5 scenario projections: RCP2.6 (with low greenhouse gas emissions) and RCP8.5 (with high greenhouse gas emissions). Projected changes are calculated relative to a (1981–2010) ERA5 reference period.</p>\n<p><strong>Understand</strong>\nA positive value indicates a warmer temperature than the reference period while a negative value indicates a cooler temperature than the reference period.</p>\n<p><strong>Supporting Information</strong>\nThe data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this index can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.</p>\n<hr>\n<p><strong>Visualisation and Navigation</strong>\nThe projected change in daily maximum temperature statistics for the chosen scenario and time period are plotted as area means for each region. The EUROSTAT NUTS classification (<a href=\"https://ec.europa.eu/eurostat/web/nuts/background\">Nomenclature of Territorial Units for Statistics</a>) is a hierarchical system for dividing up the economic territory of Europe. The size of the regions shown on the map can be adjusted by selecting the appropriate NUTS level: national level (NUTS-0), first sub-national level (NUTS-1), second sub-national level (NUTS-2), and third sub-national level (NUTS-3).</p>\n<p>The regions on the map facilitate dynamic access to the underlying data. Hover the mouse pointer over a region to view the value of the area mean or click on a region to request a time series plot.  Likewise, the trans-national average for the EEA member and cooperating countries (EEA 38) can be accessed via the &quot;Europe&quot; bounding box.</p>\n<p>The time series plot shows the ensemble mean and range of the temperature responses to the chosen scenario conditions across an ensemble of five CMIP5 climate models. Click and hover the mouse over the time series plot to view the data values and to reveal action buttons for features such as “zoom” and “download plot as a png”.  Links below the plot enable the download of time series data in the spreadsheet compatible .csv format.</p>\n<p>This index is expressed as a change relative to a reference period so the (1981-2010) ERA5 reference climatology is also provided. The reference climate contains the mean climatology, the standard deviation from the mean, and the 5th and 95th percentiles.</p>\n",
       "indicator_title": "Projected change in the monthly average of daily maximum temperature",
       "page_title": "Daily Maximum Temperature - Monthly Mean, 2011-2099",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "identifier": "C3S_434_013",
       "detail": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmax-detail-web/master/configuration.json?configuration_version=3.0",
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmax-overview-web/master/configuration.json?configuration_version=3.0",
@@ -32,7 +34,9 @@
       "page_title": "Daily Minimum Temperature - Monthly Mean, 2011-2099",
       "page_url": "average-minimum-temperature",
       "identifier": "C3S_434_014",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Cold spells and frost"
@@ -54,7 +58,9 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-tmean-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Daily Mean Temperature - Monthly Mean, 2011-2099",
       "page_url": "average-mean-temperature",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "hazard_category": "Heat and cold",
       "identifier": "C3S_434_015",
       "hazards": [
@@ -78,7 +84,9 @@
       "identifier": "C3S_434_002",
       "page_title": "Climatic Suitability for the Tiger Mosquito - Season Length, 1971-2099",
       "page_url": "climatic-suitability-of-tiger-mosquito--season-length",
-      "theme": "Health",
+      "theme": [
+        "Health"
+      ],
       "hazard_category": "Other",
       "hazards": [
         "Other"
@@ -105,7 +113,9 @@
       "identifier": "C3S_434_003",
       "page_title": "Climatic Suitability for the Tiger Mosquito - Suitability Index, 1971-2099",
       "page_url": "climatic-suitability-of-tiger-mosquito--suitability",
-      "theme": "Health",
+      "theme": [
+        "Health"
+      ],
       "hazard_category": "Other",
       "hazards": [
         "Other"
@@ -132,7 +142,9 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-fireweatherindex-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Fire Weather Index - Monthly Mean, 1979-2019",
       "page_url": "fire-weather-index",
-      "theme": "Forestry",
+      "theme": [
+        "Forestry"
+      ],
       "hazard_category": "Wet and dry",
       "hazards": [
         "Wildfire"
@@ -155,7 +167,10 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-firedangerindex-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
       "page_url": "high-fire-danger",
-      "theme": "Tourism",
+      "theme": [
+        "Forestry",
+        "Tourism"
+      ],
       "hazard_category": "Wet and dry",
       "hazards": [
         "Wildfire"
@@ -178,7 +193,9 @@
       "page_title": "Health Heatwave (High Temperature and Humidity), 1971-2099",
       "page_url": "health-heat-waves-in-europe",
       "identifier": "C3S_434_016",
-      "theme": "Health",
+      "theme": [
+        "Health"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Extreme heat"
@@ -205,7 +222,10 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-health-heatwave-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Climatological Heatwave (High Temperature), 1971-2099",
       "page_url": "climatological-heat-waves-in-europe",
-      "theme": "Energy",
+      "theme": [
+        "Agriculture",
+        "Energy"
+      ],
       "identifier": "C3S_434_017",
       "hazard_category": "Heat and cold",
       "hazards": [
@@ -233,7 +253,9 @@
       "page_title": "Thermal Comfort Indices - Universal Thermal Climate Index, 1979-2019",
       "page_url": "thermal-comfort-indices--universal-thermal-climate-index",
       "identifier": "C3S_434_008",
-      "theme": "Health",
+      "theme": [
+        "Health"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Extreme heat"
@@ -256,7 +278,9 @@
       "identifier": "C3S_434_007",
       "page_title": "Thermal Comfort Indices - Mean Radiant Temperature, 1979-2019",
       "page_url": "thermal-comfort-indices--mean-radiant-temperature",
-      "theme": "Health",
+      "theme": [
+        "Health"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Mean temperature"
@@ -278,7 +302,9 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-precip-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Precipitation Sum, 2011-2099",
       "page_url": "projected-change-in-precipitation-sum",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "identifier": "C3S_434_012",
       "hazard_category": "Wet and dry",
       "hazards": [
@@ -302,7 +328,9 @@
       "page_title": "Frost Days, 2011-2099",
       "identifier": "C3S_434_010",
       "page_url": "frost-days",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Cold spells and frost"
@@ -325,7 +353,9 @@
       "page_title": "Tropical Nights, 2011-2099",
       "identifier": "C3S_434_011",
       "page_url": "tropical-nights",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "hazard_category": "Heat and cold",
       "hazards": [
         "Extreme heat"
@@ -347,7 +377,9 @@
       "overview": "https://cds.climate.copernicus.eu/workflows/c3s/hidden-app-agriculture-bedd-overview-web/master/configuration.json?configuration_version=3.0",
       "page_title": "Biologically Effective Degree Days, 2011-2099",
       "page_url": "biologically-effective-degree-days",
-      "theme": "Agriculture",
+      "theme": [
+        "Agriculture"
+      ],
       "identifier": "C3S_434_009",
       "hazard_category": "Heat and cold",
       "hazards": [
@@ -371,7 +403,9 @@
       "page_title": "Annual Highest High Water, 2070-2100",
       "page_url": "marine-sea-level--annual-highest-high-water-level",
       "identifier": "C3S_434_018",
-      "theme": "Coastal",
+      "theme": [
+        "Coastal"
+      ],
       "hazard_category": "Coastal",
       "hazards": [
         "Coastal flooding"
@@ -398,7 +432,9 @@
       "page_title": "Mean Sea Level, 2070-2100",
       "page_url": "marine-sea-level--mean-sea-level",
       "identifier": "C3S_434_019",
-      "theme": "Coastal",
+      "theme": [
+        "Coastal"
+      ],
       "hazard_category": "Coastal",
       "hazards": [
         "Relative sea level"
@@ -425,7 +461,9 @@
       "page_title": "Total Winter Snow, 2011-2099",
       "page_url": "tourism-snow-precipitation",
       "identifier": "C3S_434_021",
-      "theme": "Tourism",
+      "theme": [
+        "Tourism"
+      ],
       "hazard_category": "Snow and ice",
       "hazards": [
         "Snow and land ice"
@@ -452,7 +490,9 @@
       "page_title": "Days with a High Amount of Natural Snow, 2011-2099",
       "page_url": "tourism-high-amount-of-natural-snow",
       "identifier": "C3S_434_022",
-      "theme": "Tourism",
+      "theme": [
+        "Tourism"
+      ],
       "hazard_category": "Snow and ice",
       "hazards": [
         "Snow and land ice"
@@ -509,6 +549,10 @@
           "url": "agriculture/biologically-effective-degree-days.html"
         },
         {
+          "title": "Climatological Heatwave (High Temperature), 1971-2099",
+          "url": "agriculture/climatological-heat-waves-in-europe.html"
+        },
+        {
           "title": "Daily Maximum Temperature - Monthly Mean, 2011-2099",
           "url": "agriculture/average-maximum-temperature.html"
         },
@@ -539,6 +583,10 @@
       "theme_title": "Forestry",
       "description": "European forests provide vital ecosystems as well as valuable recreational and economic resources. They provide a versatile and renewable source of raw materials which play a central role in plans for a more sustainable future, and can also contribute to the removal of carbon dioxide from the atmosphere. Bur forests are also at risk from the effects of climate change. Rising temperatures and changing rainfall patterns can increase the risk of forest fires or make the trees vulnerable to pests and diseases. <br><br>Two indices related to the risk of forest fire are available. The \"fire weather index\" defined by the Canadian Forest Service Fire Weather Index rating system which has been adopted by the <a href=\"https://effis.jrc.ec.europa.eu/\">European Forest Fire Information System (EFFIS)</a>. We also provide, for comparison, a \"fire danger index\" defined by the Australian Mark5 rating system.",
       "apps": [
+        {
+          "title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
+          "url": "forestry/high-fire-danger.html"
+        },
         {
           "title": "Fire Weather Index - Monthly Mean, 1979-2019",
           "url": "forestry/fire-weather-index.html"
@@ -684,47 +732,47 @@
         "Extreme heat": [
           {
             "title": "Daily Maximum Temperature - Monthly Mean, 2011-2099",
-            "url": "a/average-maximum-temperature.html"
+            "url": "agriculture/average-maximum-temperature.html"
           },
           {
             "title": "Health Heatwave (High Temperature and Humidity), 1971-2099",
-            "url": "h/health-heat-waves-in-europe.html"
+            "url": "health/health-heat-waves-in-europe.html"
           },
           {
             "title": "Climatological Heatwave (High Temperature), 1971-2099",
-            "url": "e/climatological-heat-waves-in-europe.html"
+            "url": "agriculture/climatological-heat-waves-in-europe.html"
           },
           {
             "title": "Thermal Comfort Indices - Universal Thermal Climate Index, 1979-2019",
-            "url": "h/thermal-comfort-indices--universal-thermal-climate-index.html"
+            "url": "health/thermal-comfort-indices--universal-thermal-climate-index.html"
           },
           {
             "title": "Tropical Nights, 2011-2099",
-            "url": "a/tropical-nights.html"
+            "url": "agriculture/tropical-nights.html"
           }
         ],
         "Cold spells and frost": [
           {
             "title": "Daily Minimum Temperature - Monthly Mean, 2011-2099",
-            "url": "a/average-minimum-temperature.html"
+            "url": "agriculture/average-minimum-temperature.html"
           },
           {
             "title": "Frost Days, 2011-2099",
-            "url": "a/frost-days.html"
+            "url": "agriculture/frost-days.html"
           }
         ],
         "Mean temperature": [
           {
             "title": "Daily Mean Temperature - Monthly Mean, 2011-2099",
-            "url": "a/average-mean-temperature.html"
+            "url": "agriculture/average-mean-temperature.html"
           },
           {
             "title": "Thermal Comfort Indices - Mean Radiant Temperature, 1979-2019",
-            "url": "h/thermal-comfort-indices--mean-radiant-temperature.html"
+            "url": "health/thermal-comfort-indices--mean-radiant-temperature.html"
           },
           {
             "title": "Biologically Effective Degree Days, 2011-2099",
-            "url": "a/biologically-effective-degree-days.html"
+            "url": "agriculture/biologically-effective-degree-days.html"
           }
         ]
       },
@@ -732,11 +780,11 @@
         "Other": [
           {
             "title": "Climatic Suitability for the Tiger Mosquito - Season Length, 1971-2099",
-            "url": "h/climatic-suitability-of-tiger-mosquito--season-length.html"
+            "url": "health/climatic-suitability-of-tiger-mosquito--season-length.html"
           },
           {
             "title": "Climatic Suitability for the Tiger Mosquito - Suitability Index, 1971-2099",
-            "url": "h/climatic-suitability-of-tiger-mosquito--suitability.html"
+            "url": "health/climatic-suitability-of-tiger-mosquito--suitability.html"
           }
         ]
       },
@@ -744,17 +792,17 @@
         "Wildfire": [
           {
             "title": "Fire Weather Index - Monthly Mean, 1979-2019",
-            "url": "f/fire-weather-index.html"
+            "url": "forestry/fire-weather-index.html"
           },
           {
             "title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
-            "url": "t/high-fire-danger.html"
+            "url": "forestry/high-fire-danger.html"
           }
         ],
         "Mean precipitation": [
           {
             "title": "Precipitation Sum, 2011-2099",
-            "url": "a/projected-change-in-precipitation-sum.html"
+            "url": "agriculture/projected-change-in-precipitation-sum.html"
           }
         ]
       },
@@ -762,13 +810,13 @@
         "Coastal flooding": [
           {
             "title": "Annual Highest High Water, 2070-2100",
-            "url": "c/marine-sea-level--annual-highest-high-water-level.html"
+            "url": "coastal/marine-sea-level--annual-highest-high-water-level.html"
           }
         ],
         "Relative sea level": [
           {
             "title": "Mean Sea Level, 2070-2100",
-            "url": "c/marine-sea-level--mean-sea-level.html"
+            "url": "coastal/marine-sea-level--mean-sea-level.html"
           }
         ]
       },
@@ -776,11 +824,11 @@
         "Snow and land ice": [
           {
             "title": "Total Winter Snow, 2011-2099",
-            "url": "t/tourism-snow-precipitation.html"
+            "url": "tourism/tourism-snow-precipitation.html"
           },
           {
             "title": "Days with a High Amount of Natural Snow, 2011-2099",
-            "url": "t/tourism-high-amount-of-natural-snow.html"
+            "url": "tourism/tourism-high-amount-of-natural-snow.html"
           }
         ]
       }
