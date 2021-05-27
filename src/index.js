@@ -38,7 +38,7 @@ const data_html_pages = JSON.parse(fs.readFileSync(config.dev.data_html_pages, '
 const maris_css_file = fs.readFileSync(config.dev.maris_css, 'utf-8');
 
 hashSum.update(maris_css_file);
-const maris_css_hash = hashSum.digest('hex').substring(0,10);
+const maris_css_hash = hashSum.digest('hex').substring(0, 10);
 
 //retrieve indicator texts from github.
 let data_git_json;
@@ -73,40 +73,47 @@ createHtmlPages(data_html_pages);
 
 //reformat the data_apps object, so it correctly uses key-value pair with the identifier as key
 let data_apps_reformatted = {
-    "indicators": {},
-    "toolbox_embed_version": config.dev.toolbox_version
+    indicators: {},
+    toolbox_embed_version: config.dev.toolbox_version,
 };
 
 for (const index in data_apps['indicators']) {
     const dataset = data_apps['indicators'][index];
-    data_apps_reformatted.indicators[dataset.identifier] = dataset
+    data_apps_reformatted.indicators[dataset.identifier] = dataset;
 }
 
-let data_themes_reformatted = {"themes": {}}
+let data_themes_reformatted = { themes: {} };
 for (const index in data_themes['themes']) {
     const theme = data_themes['themes'][index];
     let key = theme.theme_title.toLowerCase();
-    data_themes_reformatted.themes[key] = theme
+    data_themes_reformatted.themes[key] = theme;
 }
 
 //remove inidicators key from other data objects:
 delete data_overview.indicators;
 delete data_themes.indicators;
 
-
 // Add all data to data_apps
-Object.assign(data_apps_reformatted, data_themes_reformatted, { overview_page: data_overview, html_pages: data_html_pages });
+Object.assign(data_apps_reformatted, data_themes_reformatted, {
+    overview_page: data_overview,
+    html_pages: data_html_pages,
+});
 
 fs.writeFileSync('./data/data_consolidated.json', JSON.stringify(data_apps_reformatted, null, 2));
 
 function createIndexPage() {
-    ejs.renderFile(`${srcPath}/templates/index.ejs`, {"css_version": maris_css_hash}, (err, data) => {
-        if (err) throw err;
-        fs.writeFile(`${outputDir}/index.html`, data, (err) => {
+    ejs.renderFile(
+        `${srcPath}/templates/index.ejs`,
+        { css_version: maris_css_hash },
+        (err, data) => {
             if (err) throw err;
-            console.log(`index.html has been created.`);
-        });
-    });
+            const indexPage = `${outputDir}/index.html`;
+            fs.writeFile(indexPage, data, (err) => {
+                if (err) throw err;
+                console.log(`[Index page] \t\t${indexPage} has been created.`);
+            });
+        }
+    );
 }
 
 function createOverviewPage(overview_data) {
@@ -129,14 +136,17 @@ function createOverviewPage(overview_data) {
             }
 
             //prevent duplicates
-            if(!hazard_list[dataset['hazard_category']][hazard]
-                    .find(element => element.title == dataset.page_title)){
+            if (
+                !hazard_list[dataset['hazard_category']][hazard].find(
+                    (element) => element.title == dataset.page_title
+                )
+            ) {
                 //add to themed list.
                 hazard_list[dataset['hazard_category']][hazard].push({
                     title: dataset.page_title,
-                    url: dataset.theme.toLowerCase() + '/' + overviewFileName(dataset),
+                    url: dataset.theme[0].toLowerCase() + '/' + overviewFileName(dataset),
                 });
-            }            
+            }
         }
     }
 
@@ -145,9 +155,10 @@ function createOverviewPage(overview_data) {
 
     ejs.renderFile(`${srcPath}/templates/overview-list.ejs`, overview_data, (err, data) => {
         if (err) throw err;
-        fs.writeFile(`${outputDir}/overview-list.html`, data, (err) => {
+        const overviewPage = `${outputDir}/overview-list.html`;
+        fs.writeFile(overviewPage, data, (err) => {
             if (err) throw err;
-            console.log(`overview-list.html has been created.`);
+            console.log(`[Overview page] \t${overviewPage} has been created.`);
         });
     });
 }
@@ -159,11 +170,13 @@ function createAppPages(data) {
         dataset.overview = config.url.toolbox_app.replace('%APP%', dataset.overview);
         dataset.detail = config.url.toolbox_app.replace('%APP%', dataset.detail);
         dataset.toolbox_embed_version = config.dev.toolbox_version;
-        
-        // theme directory
-        if (!fs.existsSync(`${outputDir}/${dataset.theme.toLowerCase()}/`)) {
-            fs.mkdirSync(`${outputDir}/${dataset.theme.toLowerCase()}/`);
-        }
+
+        dataset.theme.forEach((theme) => {
+            // theme directory
+            if (!fs.existsSync(`${outputDir}/${theme.toLowerCase()}/`)) {
+                fs.mkdirSync(`${outputDir}/${theme.toLowerCase()}/`);
+            }
+        });
 
         createHTMLfiles(dataset);
 
@@ -286,31 +299,30 @@ function createHTMLfiles(dataset) {
     dataset.vars = dataset.vars || { detail: {}, overview: {} };
     dataset.css_version = maris_css_hash;
 
-    ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
-        if (err) throw err;
-        fs.writeFile(
-            `${outputDir}/${dataset.theme.toLowerCase()}/${dataset.overviewpage}`,
-            data,
-            (err) => {
-                if (err) throw err;
-                console.log(`${dataset.overviewpage} has been created.`);
-            }
-        );
-    });
-    
-    dataset.css_version = maris_css_hash;
+    let themes = dataset.theme;
 
-    // detail page
-    ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
-        if (err) throw err;
-        fs.writeFile(
-            `${outputDir}/${dataset.theme.toLowerCase()}/${dataset.detailpage}`,
-            data,
-            (err) => {
+    themes.forEach((theme) => {
+        dataset.theme = theme;
+        ejs.renderFile(`${srcPath}/templates/overview.ejs`, dataset, (err, data) => {
+            if (err) throw err;
+            let overviewPage = `${outputDir}/${dataset.theme.toLowerCase()}/${
+                dataset.overviewpage
+            }`;
+            fs.writeFile(overviewPage, data, (err) => {
                 if (err) throw err;
-                console.log(`${dataset.detailpage} has been created.`);
-            }
-        );
+                console.log(`[Overview page] \t${overviewPage} has been created.`);
+            });
+        });
+
+        // detail page
+        ejs.renderFile(`${srcPath}/templates/detail.ejs`, dataset, (err, data) => {
+            if (err) throw err;
+            let detailPage = `${outputDir}/${dataset.theme.toLowerCase()}/${dataset.detailpage}`;
+            fs.writeFile(detailPage, data, (err) => {
+                if (err) throw err;
+                console.log(`[Detail page] \t\t${detailPage} has been created.`);
+            });
+        });
     });
 }
 
@@ -343,9 +355,10 @@ function createThemePages(data) {
         ejs.renderFile(`${srcPath}/templates/theme.ejs`, theme, (err, data) => {
             if (err) throw err;
             const outputFile = `${theme.theme_title.toLowerCase()}.html`;
-            fs.writeFile(`${outputDir}/${outputFile}`, data, (err) => {
+            const themePage = `${outputDir}/${outputFile}`;
+            fs.writeFile(themePage, data, (err) => {
                 if (err) throw err;
-                console.log(`${outputFile} has been created.`);
+                console.log(`[Theme page] \t\t${themePage} has been created.`);
             });
         });
     }
@@ -359,9 +372,10 @@ function createHtmlPages(data) {
         ejs.renderFile(`${srcPath}/templates/html.ejs`, htmlPage, (err, data) => {
             if (err) throw err;
             const outputFile = `${pagename}.html`;
-            fs.writeFile(`${outputDir}/${outputFile}`, data, (err) => {
+            const htmlFile = `${outputDir}/${outputFile}`;
+            fs.writeFile(htmlFile, data, (err) => {
                 if (err) throw err;
-                console.log(`${outputFile} has been created.`);
+                console.log(`[Html page] \t\t${htmlFile} has been created.`);
             });
         });
     }

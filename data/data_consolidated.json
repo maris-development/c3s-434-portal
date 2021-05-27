@@ -509,10 +509,6 @@
           "url": "agriculture/biologically-effective-degree-days.html"
         },
         {
-          "title": "Climatological Heatwave (High Temperature), 1971-2099",
-          "url": "agriculture/climatological-heat-waves-in-europe.html"
-        },
-        {
           "title": "Daily Maximum Temperature - Monthly Mean, 2011-2099",
           "url": "agriculture/average-maximum-temperature.html"
         },
@@ -543,10 +539,6 @@
       "theme_title": "Forestry",
       "description": "European forests provide vital ecosystems as well as valuable recreational and economic resources. They provide a versatile and renewable source of raw materials which play a central role in plans for a more sustainable future, and can also contribute to the removal of carbon dioxide from the atmosphere. Bur forests are also at risk from the effects of climate change. Rising temperatures and changing rainfall patterns can increase the risk of forest fires or make the trees vulnerable to pests and diseases. <br><br>Two indices related to the risk of forest fire are available. The \"fire weather index\" defined by the Canadian Forest Service Fire Weather Index rating system which has been adopted by the <a href=\"https://effis.jrc.ec.europa.eu/\">European Forest Fire Information System (EFFIS)</a>. We also provide, for comparison, a \"fire danger index\" defined by the Australian Mark5 rating system.",
       "apps": [
-        {
-          "title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
-          "url": "forestry/high-fire-danger.html"
-        },
         {
           "title": "Fire Weather Index - Monthly Mean, 1979-2019",
           "url": "forestry/fire-weather-index.html"
@@ -692,47 +684,47 @@
         "Extreme heat": [
           {
             "title": "Daily Maximum Temperature - Monthly Mean, 2011-2099",
-            "url": "agriculture/average-maximum-temperature.html"
+            "url": "a/average-maximum-temperature.html"
           },
           {
             "title": "Health Heatwave (High Temperature and Humidity), 1971-2099",
-            "url": "health/health-heat-waves-in-europe.html"
+            "url": "h/health-heat-waves-in-europe.html"
           },
           {
             "title": "Climatological Heatwave (High Temperature), 1971-2099",
-            "url": "agriculture/climatological-heat-waves-in-europe.html"
+            "url": "e/climatological-heat-waves-in-europe.html"
           },
           {
             "title": "Thermal Comfort Indices - Universal Thermal Climate Index, 1979-2019",
-            "url": "health/thermal-comfort-indices--universal-thermal-climate-index.html"
+            "url": "h/thermal-comfort-indices--universal-thermal-climate-index.html"
           },
           {
             "title": "Tropical Nights, 2011-2099",
-            "url": "agriculture/tropical-nights.html"
+            "url": "a/tropical-nights.html"
           }
         ],
         "Cold spells and frost": [
           {
             "title": "Daily Minimum Temperature - Monthly Mean, 2011-2099",
-            "url": "agriculture/average-minimum-temperature.html"
+            "url": "a/average-minimum-temperature.html"
           },
           {
             "title": "Frost Days, 2011-2099",
-            "url": "agriculture/frost-days.html"
+            "url": "a/frost-days.html"
           }
         ],
         "Mean temperature": [
           {
             "title": "Daily Mean Temperature - Monthly Mean, 2011-2099",
-            "url": "agriculture/average-mean-temperature.html"
+            "url": "a/average-mean-temperature.html"
           },
           {
             "title": "Thermal Comfort Indices - Mean Radiant Temperature, 1979-2019",
-            "url": "health/thermal-comfort-indices--mean-radiant-temperature.html"
+            "url": "h/thermal-comfort-indices--mean-radiant-temperature.html"
           },
           {
             "title": "Biologically Effective Degree Days, 2011-2099",
-            "url": "agriculture/biologically-effective-degree-days.html"
+            "url": "a/biologically-effective-degree-days.html"
           }
         ]
       },
@@ -740,11 +732,11 @@
         "Other": [
           {
             "title": "Climatic Suitability for the Tiger Mosquito - Season Length, 1971-2099",
-            "url": "health/climatic-suitability-of-tiger-mosquito--season-length.html"
+            "url": "h/climatic-suitability-of-tiger-mosquito--season-length.html"
           },
           {
             "title": "Climatic Suitability for the Tiger Mosquito - Suitability Index, 1971-2099",
-            "url": "health/climatic-suitability-of-tiger-mosquito--suitability.html"
+            "url": "h/climatic-suitability-of-tiger-mosquito--suitability.html"
           }
         ]
       },
@@ -752,17 +744,17 @@
         "Wildfire": [
           {
             "title": "Fire Weather Index - Monthly Mean, 1979-2019",
-            "url": "forestry/fire-weather-index.html"
+            "url": "f/fire-weather-index.html"
           },
           {
             "title": "Fire Weather Index - Days With High Fire Danger, 2011-2099",
-            "url": "forestry/high-fire-danger.html"
+            "url": "t/high-fire-danger.html"
           }
         ],
         "Mean precipitation": [
           {
             "title": "Precipitation Sum, 2011-2099",
-            "url": "agriculture/projected-change-in-precipitation-sum.html"
+            "url": "a/projected-change-in-precipitation-sum.html"
           }
         ]
       },
@@ -770,13 +762,13 @@
         "Coastal flooding": [
           {
             "title": "Annual Highest High Water, 2070-2100",
-            "url": "coastal/marine-sea-level--annual-highest-high-water-level.html"
+            "url": "c/marine-sea-level--annual-highest-high-water-level.html"
           }
         ],
         "Relative sea level": [
           {
             "title": "Mean Sea Level, 2070-2100",
-            "url": "coastal/marine-sea-level--mean-sea-level.html"
+            "url": "c/marine-sea-level--mean-sea-level.html"
           }
         ]
       },
@@ -784,11 +776,11 @@
         "Snow and land ice": [
           {
             "title": "Total Winter Snow, 2011-2099",
-            "url": "tourism/tourism-snow-precipitation.html"
+            "url": "t/tourism-snow-precipitation.html"
           },
           {
             "title": "Days with a High Amount of Natural Snow, 2011-2099",
-            "url": "tourism/tourism-high-amount-of-natural-snow.html"
+            "url": "t/tourism-high-amount-of-natural-snow.html"
           }
         ]
       }
