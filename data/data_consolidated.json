@@ -64,7 +64,7 @@
       "hazard_category": "Heat and cold",
       "identifier": "C3S_434_015",
       "hazards": [
-        "Mean temperature"
+        "Mean air temperature"
       ],
       "overviewpage": "average-mean-temperature.html",
       "detailpage": "average-mean-temperature-detail.html",
@@ -147,7 +147,7 @@
       ],
       "hazard_category": "Wet and dry",
       "hazards": [
-        "Wildfire"
+        "Fire weather"
       ],
       "overviewpage": "fire-weather-index.html",
       "detailpage": "fire-weather-index-detail.html",
@@ -173,7 +173,7 @@
       ],
       "hazard_category": "Wet and dry",
       "hazards": [
-        "Wildfire"
+        "Fire weather"
       ],
       "overviewpage": "high-fire-danger.html",
       "detailpage": "high-fire-danger-detail.html",
@@ -283,7 +283,7 @@
       ],
       "hazard_category": "Heat and cold",
       "hazards": [
-        "Mean temperature"
+        "Mean air temperature"
       ],
       "overviewpage": "thermal-comfort-indices--mean-radiant-temperature.html",
       "detailpage": "thermal-comfort-indices--mean-radiant-temperature-detail.html",
@@ -383,7 +383,7 @@
       "identifier": "C3S_434_009",
       "hazard_category": "Heat and cold",
       "hazards": [
-        "Mean temperature"
+        "Mean air temperature"
       ],
       "overviewpage": "biologically-effective-degree-days.html",
       "detailpage": "biologically-effective-degree-days-detail.html",
@@ -664,7 +664,7 @@
     ],
     "hazard_type": [
       [
-        "Mean temperature",
+        "Mean air temperature",
         "Extreme heat",
         "Cold spells and frost"
       ],
@@ -674,7 +674,7 @@
         "River flooding",
         "Aridity",
         "Drought",
-        "Wildfire"
+        "Fire weather"
       ],
       [
         "Mean wind speed",
@@ -694,7 +694,7 @@
     ],
     "hazard_type_order_left": [
       [
-        "Mean temperature",
+        "Mean air temperature",
         "Extreme heat",
         "Cold spells and frost"
       ],
@@ -704,7 +704,7 @@
         "River flooding",
         "Aridity",
         "Drought",
-        "Wildfire"
+        "Fire weather"
       ]
     ],
     "hazard_type_order_right": [
@@ -761,7 +761,7 @@
             "url": "agriculture/frost-days.html"
           }
         ],
-        "Mean temperature": [
+        "Mean air temperature": [
           {
             "title": "Daily Mean Temperature - Monthly Mean, 2011-2099",
             "url": "agriculture/average-mean-temperature.html"
@@ -789,7 +789,7 @@
         ]
       },
       "Wet and dry": {
-        "Wildfire": [
+        "Fire weather": [
           {
             "title": "Fire Weather Index - Monthly Mean, 1979-2019",
             "url": "forestry/fire-weather-index.html"

@@ -37,7 +37,7 @@
             "theme": ["Agriculture"],
             "hazard_category": "Heat and cold",
             "identifier": "C3S_434_015",
-            "hazards": ["Mean temperature"]
+            "hazards": ["Mean air temperature"]
         },
         {
             "description": "Season Length",
@@ -92,7 +92,7 @@
             "page_url": "fire-weather-index",
             "theme": ["Forestry"],
             "hazard_category": "Wet and dry",
-            "hazards": ["Wildfire"]
+            "hazards": ["Fire weather"]
         },
         {
             "description": "High Fire Danger index (this option will be overwritten)",
@@ -105,7 +105,7 @@
             "page_url": "high-fire-danger",
             "theme": ["Forestry", "Tourism"],
             "hazard_category": "Wet and dry",
-            "hazards": ["Wildfire"]
+            "hazards": ["Fire weather"]
         },
         {
             "description": "A heat wave is a prolonged period of extremely high temperature for a particular region.  Heat waves have consequences for health, agriculture, power, wildfire and infrastructure. The annual number of heat wave days is based on two definitions, one used in the climate community and another used in the health community, both of which are presented here. <br><br>A climate heat wave is considered to be a period of at least 3 consecutive days on which the daily maximal temperature exceeds the 99th percentile of the daily maximal temperatures of the May to September season for the control period of 1971 to 2000.<br><br>Health heat waves are calculated for the summer period between June and August. Health heat waves are days in which the maximal apparent temperature (Tappmax) exceeds the 90th percentile of Tappmax for each month and the minimum temperature (Tmin) exceeds the 90th percentile of Tmin for each month for at least 2 days.  The apparent temperature is a measure of relative discomfort due to combined heat and high humidity.<br><br>The annual number of heat wave days are averaged for 30 years as a smoothed average from 1971 to 2100. This results in a time series covering the period from 1986 to 2085. Finally, the time series are averaged over the model ensemble.<br><br>The heat wave statistics are calculated using a bias-adjusted EURO-CORDEX dataset for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP4.5 (medium emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.1&deg;x0.1&deg;. <br><br>30-year smoothed averages of the number of heat wave days are presented as 10-year means for either the climatological or heath definition of heat waves for 2 CMIP5 scenarios; RCP4.5 with medium greenhouse gas emissions or RCP8.5 with high greenhouse gas emissions.<br><br>Statistics for the number of heat wave days are also available via the \"Explore in Detail\" button as national and sub-national area-means for NUTS levels 0, 1, 2 and 3 for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S). Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-heat-and-cold-spells?tab=overview\">Climate Data Store</a>.",
@@ -174,7 +174,7 @@
             "page_url": "thermal-comfort-indices--mean-radiant-temperature",
             "theme": ["Health"],
             "hazard_category": "Heat and cold",
-            "hazards": ["Mean temperature"]
+            "hazards": ["Mean air temperature"]
         },
         {
             "description": "The precipitation sum provides information on possible water shortage or excess. <br><br>The climate anomalies of the sum of monthly precipitation and annual precipitation (%) are calculated relative to the 1981-2010 reference period from an ensemble average of 5 global climate model (GCM) simulations for 2 CMIP5 scenarios with different possible future greenhouse gas emissions; RCP2.6 (low emissions) and RCP8.5 (high emissions). The horizontal resolution of the data is 0.5&deg;x0.5&deg;. <br><br>A positive anomaly indicates more precipitation than the reference period while a negative anomaly indicates less precipitation than the reference period.<br><br>Monthly and annual anomalies of the precipitation sum are presented as 30 year means for 2 CMIP5 scenarios; RCP2.6 with low greenhouse gas emissions and RCP8.5 with high greenhouse gas emissions. <br><br>Statistics for the precipitation sum are also available via the \"Explore in Detail\" button as national and sub-national area-means for which time series data can be plotted.<br><br>The data was collated on behalf of the Copernicus Climate Change Service (C3S).  Further information about this indicator can be found in the C3S documentation resources in the <a href=\"https://cds.climate.copernicus.eu/cdsapp#!/dataset/sis-agroclimatic-indicators?tab=overview\">Climate Data Store</a>.",
@@ -226,7 +226,7 @@
             "theme": ["Agriculture"],
             "identifier": "C3S_434_009",
             "hazard_category": "Heat and cold",
-            "hazards": ["Mean temperature"]
+            "hazards": ["Mean air temperature"]
         },
         {
             "description": "Annual highest high water level overview - Description not available yet.",
