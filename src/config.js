@@ -13,7 +13,8 @@ const config = {
     url: {
         toolbox_app: "https://cds.climate.copernicus.eu/workflows/c3s/%APP%/master/configuration.json?configuration_version=3.0",
         git_md: "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/markdown/consolidated/%TITLE%.md",
-        git_json: "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/json/Consolidated.json"
+        git_json: "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/json/Consolidated.json",
+        git_glossary_json: "https://raw.githubusercontent.com/cedadev/c3s_434_ecde_page_text/main/content/json/Glossary.json"
     },
     usage: {
         markdown_texts: false,

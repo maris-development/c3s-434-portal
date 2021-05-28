@@ -1,0 +1,116 @@
+[
+  {
+    "Term": "Air temperature",
+    "Explanation": "The temperature of the air above the ground in a shaded ventilated environment.",
+    "Source: Formal": "https://codes.wmo.int/common/quantity-kind/airTemperature",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "Apparent temperature",
+    "Explanation": "The apparent temperature is a measure of the temperature percieved by humans. At high temperatures it is a measure of the relative discomfort due to combined heat and high humidity and is calculated from a combination of air temperature and dew point temperature.  At low temperatures it is calcuated as a combination of air temperature and wind speed and is known as wind chill.",
+    "Source: Formal": "https://journals.ametsoc.org/view/journals/apme/23/12/1520-0450_1984_023_1674_ausoat_2_0_co_2.xml",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "CMIP5",
+    "Explanation": "Climate modelling groups coordinate their model updates and simulations around the schedule of the Intergovernmental Panel on Climate Change (IPCC) assessment reports. A Coupled Model Intercomparison Project (CMIP) is a coordinated set of simulations run by many different models. The 2013 IPCC fifth assessment report (AR5) featured climate model simulations from CMIP5.",
+    "Source: Formal": "https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip5",
+    "Source: Informal": "https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained"
+  },
+  {
+    "Term": "Dew point temperature",
+    "Explanation": "The temperature to which air must be cooled to become saturated with water vapour.",
+    "Source: Formal": "http://codes.wmo.int/common/quantity-kind/dewPointTemperature",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "ECMWF",
+    "Explanation": "European Centre for Medium-Range Weather Forecasts",
+    "Source: Formal": "http://www.ecmwf.int",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "ERA5",
+    "Explanation": "ERA5 combines vast amounts of historical weather observations into global estimates using advanced modelling and data assimilation systems.",
+    "Source: Formal": "https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "GCM",
+    "Explanation": "Global Climate Model. Climate models use equations to represent the processes and interactions that drive the Earth’s climate. These cover the atmosphere, oceans, land and ice-covered regions of the planet.",
+    "Source: Formal": "https://www.gfdl.noaa.gov/climate-modeling/",
+    "Source: Informal": "https://www.carbonbrief.org/qa-how-do-climate-models-work"
+  },
+  {
+    "Term": "mean",
+    "Explanation": "The mean is the average of a set of values, it is the sum of the values divided by the number of values.",
+    "Source: Formal": "https://en.wikipedia.org/wiki/Mean",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "multi-model ensemble",
+    "Explanation": "When different Global Climate Models (GCMs) are set up to run simulations which all follow the same instructions for starting conditions, historical data and projected data, that suite of simulations is known as a multi-model ensemble.",
+    "Source: Formal": "https://doi.org/10.1098/rsta.2007.2076",
+    "Source: Informal": "https://www.carbonbrief.org/qa-how-do-climate-models-work"
+  },
+  {
+    "Term": "NUTS",
+    "Explanation": "The EUROSTAT NUTS classification (Nomenclature of Territorial Units for Statistics) is a hierarchical system for dividing up the economic territory of the EU and the UK. NUTS-0: Countries, NUTS-1: major socio-economic regions with a populations between 3 million and 7 million, NUTS-2: basic regions for the application of regional policies with populations between 800 000 and 3 million, and NUTS-3: small regions for specific diagnoses with populations between 150 000 and 800 000.",
+    "Source: Formal": "https://ec.europa.eu/eurostat/web/nuts/background",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "percentile",
+    "Explanation": "In statistics, a percentile (or centile) is a value below which a given percentage of the values in the data distribution lie.",
+    "Source: Formal": "https://en.wikipedia.org/wiki/Percentile",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "RCP2.6",
+    "Explanation": "RCP2.5 has an emission pathway that is representative of scenarios that lead to very low greenhouse gas concentration levels. Radiative forcing peaks at around 3.1 W/m2 in the mid 21st century and declines to 2.6 W/m2 by the year 2100.",
+    "Source: Formal": "https://doi.org/10.1007/s10584-011-0148-z",
+    "Source: Informal": "https://skepticalscience.com//rcp.php"
+  },
+  {
+    "Term": "RCP4.5",
+    "Explanation": "RCP4.5 is a stabilisation scenario in which total radiative forcing stabilises at 4.5 W/m2 shortly after the year 2100.",
+    "Source: Formal": "https://doi.org/10.1007/s10584-011-0148-z",
+    "Source: Informal": "https://skepticalscience.com//rcp.php"
+  },
+  {
+    "Term": "RCP8.5",
+    "Explanation": "RCP8.5 is characterised by increasing greenhouse gas emissions over time, it is representative of scenarios that lead to high greenhouse gas concentration levels and has a radiative forcing of 8.5 W/m2 in the year 2100.",
+    "Source: Formal": "https://doi.org/10.1007/s10584-011-0148-z",
+    "Source: Informal": "https://skepticalscience.com//rcp.php"
+  },
+  {
+    "Term": "relative humidity",
+    "Explanation": "The amount of water vapour in air as a percentage of the amount of water vapour needed for saturation at the same temperature.",
+    "Source: Formal": "https://glossary.ametsoc.org/wiki/Relative_humidity",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "running average",
+    "Explanation": "A running (or moving) average is applied to timeseries data to smooth out short-term fluctuations and highlight longer-term trends. The points inside a time window are averaged and the window “runs” along the time axis.",
+    "Source: Formal": "https://en.wikipedia.org/wiki/Moving_average",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "Scenario",
+    "Explanation": "CMIP5 scenarios are called representative concentration pathways (RCPs). They are representative in that they are one of several different scenarios that have similar radiative forcing and emissions characteristics.",
+    "Source: Formal": "https://doi.org/10.1038/nature08823",
+    "Source: Informal": "https://skepticalscience.com//rcp.php"
+  },
+  {
+    "Term": "SD",
+    "Explanation": "Standard Deviation. The standard deviation is a measure of the amount of variation in a set of values. A low standard deviation indicates that the values tend to be close to the mean, while a high standard deviation indicates that the values are spread out over a wider range.",
+    "Source: Formal": "https://en.wikipedia.org/wiki/Standard_deviation",
+    "Source: Informal": ""
+  },
+  {
+    "Term": "diapause",
+    "Explanation": "Diapause is a period of suspended or arrested development during an insect's life cycle, usually as a result of environmental factors.",
+    "Source: Formal": "https://www.amentsoc.org/insects/glossary/terms/diapause",
+    "Source: Informal": ""
+  }
+]

@@ -41,12 +41,20 @@ hashSum.update(maris_css_file);
 const maris_css_hash = hashSum.digest('hex').substring(0, 10);
 
 //retrieve indicator texts from github.
-let data_git_json;
+let data_git_json = [];
 let git_json_result = sync_request('GET', config.url.git_json);
 
 if (git_json_result.statusCode === 200) {
     data_git_json = JSON.parse(decoder.write(git_json_result.body));
     fs.writeFileSync('./data/git_data.json', JSON.stringify(data_git_json, null, 2));
+}
+
+let glossary_html = "";
+let data_git_glossary = [];
+let git_glossary_result = sync_request('GET', config.url.git_glossary_json);
+if (git_glossary_result.statusCode === 200) {
+    data_git_glossary = JSON.parse(decoder.write(git_glossary_result.body));
+    fs.writeFileSync('./data/git_glossary_data.json', JSON.stringify(data_git_glossary, null, 2));
 }
 
 // copy assets to output dir
@@ -68,6 +76,8 @@ createOverviewPage(data_overview);
 createIndexPage();
 
 createHtmlPages(data_html_pages);
+
+createGlossaryPage(data_git_glossary);
 
 // console.log(data_themes);
 
@@ -97,6 +107,7 @@ delete data_themes.indicators;
 Object.assign(data_apps_reformatted, data_themes_reformatted, {
     overview_page: data_overview,
     html_pages: data_html_pages,
+    glossary_table: glossary_html.replace('    ', '')
 });
 
 fs.writeFileSync('./data/data_consolidated.json', JSON.stringify(data_apps_reformatted, null, 2));
@@ -382,4 +393,38 @@ function createHtmlPages(data) {
             });
         });
     }
+}
+
+
+function createGlossaryPage(data){
+
+    let pageName = "glossary";
+    
+    let glossaryTable = {
+        data: data
+    }
+
+    ejs.renderFile(`${srcPath}/templates/partials/glossary-table.ejs`, glossaryTable, (err, data) => {
+        if (err) throw err;
+
+        glossary_html = data.replace('    ', '');
+    });
+
+    let glossaryPage = {
+        "css_version": maris_css_hash,
+        "page_title": "ECDE Glossary",
+        "page_text": glossary_html
+    };
+
+    ejs.renderFile(`${srcPath}/templates/html.ejs`, glossaryPage, (err, data) => {
+        if (err) throw err;
+
+        const outputFile = `${pageName}.html`;
+        const htmlFile = `${outputDir}/${outputFile}`;
+
+        fs.writeFile(htmlFile, data, (err) => {
+            if (err) throw err;
+            console.log(`[Glossary page] \t${htmlFile} has been created.`);
+        });
+    });
 }
