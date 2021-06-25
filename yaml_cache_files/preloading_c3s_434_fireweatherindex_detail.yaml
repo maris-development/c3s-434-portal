@@ -41,6 +41,7 @@ kwargs:
    - '2017'
    - '2018'
    - '2019'
+   - '2020'
   month: 
    - 'Winter (Dec-Feb)'
    - 'Spring (Mar-May)'
