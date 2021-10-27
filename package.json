@@ -5,6 +5,7 @@
     "author": "Arko Rietdijk <arko.rietdijk@gmail.com>",
     "license": "MIT",
     "dependencies": {
+        "axios": "^0.24.0",
         "ejs": "^3.1.5",
         "fs-extra": "^9.0.1",
         "glob": "^7.1.6",
@@ -17,6 +18,7 @@
         "nodemon": "nodemon --watch src -e js,json,ejs,css ./src/index.js",
         "browser-sync": "browser-sync start -s 'public' --files=./public",
         "build": "node ./src/index.js ",
+        "urls": "node ./src/monitoring_urls.js ",
         "move": "./scripts/move_to_c3s.maris.nl.cmd",
         "prepare": "./scripts/prepare_release.cmd"
     },
