@@ -511,7 +511,7 @@
       "css_version": "cb65990da8"
     }
   },
-  "toolbox_embed_version": "4.30.0",
+  "toolbox_embed_version": "latest",
   "themes": {
     "health": {
       "theme_title": "Health",
