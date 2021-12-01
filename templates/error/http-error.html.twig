@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title "%s - %s - "|format(http_code, error_message) ~ parent() %}
+
+
+{% block body %}
+	<div class="container" id="http-error-container">
+		<h1>{{"%s - %s"|format(http_code, error_message)}}</h1>
+		<br>
+		<h4> <a href="/home">Return to home</a> </h4>
+
+		{# {{dump()}} #}
+
+	</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+<script>
+window.c3sMetadata = {{ c3s_metadata|json_encode|raw }};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@^3"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@^2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@^1">
+</script><script src="/js/main.js"></script>
+{% endblock %}
+
+{% block body %}
+<h2>C3S API Test Overview</h2>
+<div class="table-container">
+	<table>
+		<thead>
+			<tr>
+				<th>Identifier</th>
+				<th>Index name (in European Climate Data Explorer)</th>
+				<th>Overview</th>
+				<th>Detail</th>
+				<th>Graph</th>
+				<th>History</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in c3s_testresults %}
+				{% if item.detail is defined and item.overview is defined %}
+					<tr>
+						<td>{{item.detail.c3s_indicator_id}}</td>
+						<td>{{item.detail.title}}</td>
+						<td><a class="{{item.overview.status}} status-indicator" target="_blank" href="{{ item.overview.ecde_url }}">Overview</a></td>
+						<td><a class="{{item.detail.status}} status-indicator" target="_blank"  href="{{ item.detail.ecde_url }}/?{{item.detail.request_content_qs}}#detail">Detail</a></td>
+						<td><a class="view_graph_btn" data-id="{{item.detail.c3s_indicator_id}}_graph_row" href="#">View graph</a></td>
+						<td>
+							<select class="history_select" id="{{item.detail.c3s_indicator_id}}_history_select">
+							{% for log in item.detail.history %}
+								<option class="{{log.status}}" value="{{loop.index0}}">
+								{{- log.input_date|date("Y-m-d") -}}: {{ log.request_content|json_encode() }}
+								</option>
+							{% endfor %}
+							</select>
+							<button class="history_open" data-id="{{item.detail.c3s_indicator_id}}">
+								Open
+							</button>
+							<script>
+								if(!window.c3sIndicatorHistory) window.c3sIndicatorHistory = {};
+								window.c3sIndicatorHistory["{{item.detail.c3s_indicator_id}}"] = {{item.detail.history|json_encode()|raw}};
+							</script>
+						</td>
+					</tr>
+				{% endif %} 	
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<div class="graphs-container">
+	{% for indicator in c3s_metadata %}
+		
+		<div class="indicator_graph_row" id="{{indicator.c3s_identifier }}_graph_row">
+						<h3>{{indicator.c3s_identifier}}: {{indicator.title}}</h3>
+
+			<div class="result">
+				<canvas class="result_chart" id="chart_{{indicator.c3s_identifier }}"></canvas>
+			</div>
+		</div>
+	{% endfor %}
+	
+</div>
+
+{% endblock %}

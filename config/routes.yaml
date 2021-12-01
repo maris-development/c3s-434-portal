@@ -1,0 +1,29 @@
+
+baseSite:
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+  defaults:
+      path: /index.html
+      permanent: true
+
+index:
+  path: /statistics
+  controller: App\Controller\HomeController::index
+
+home:
+  path: /statistics/home
+  controller: App\Controller\HomeController::index
+
+getData:
+  path: /statistics/history/{identifier}/{type}
+  controller: App\Controller\ApiController::getHistory
+
+getTable:
+  path: /statistics/table
+  controller: App\Controller\ApiController::getTable
+
+404catchall:
+  path: /{req}
+  controller: App\Controller\HomeController::http404NotFound
+  requirements:
+      req: ".+"

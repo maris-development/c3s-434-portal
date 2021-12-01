@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>{% block title %}{{project_title}}{% endblock %}</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8">
+		<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<![endif]-->
+		<meta http-equiv="Content-Language" content="en"/>
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src *; frame-src 'self' https://www.facebook.com https://www.linkedin.com;">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="stylesheet" href="../css/bootstrap.min.css" as="style"
+			onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+			as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/cca-search.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/compiled-less.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/style-maris.css?v=<%= css_version %>" />
+			
+		<script src="/js/vendor/jquery-3.6.0.js"></script>
+		<link rel="stylesheet" href="/css/style.css">
+
+		{% block stylesheets %}{% endblock %}
+
+		{% block javascripts %}{% endblock %}
+    	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+	</head>
+
+	<body dir="ltr"
+    class="cover-layout-empty-layout template-view portaltype-collective-cover-content site-cca section-knowledge subsection-c-a-indicators subsection-c-a-indicators-c-a-indicators icons-on userrole-anonymous">
+    
+		{% block header %}
+				<div class="top-page-area">
+				<div class="edit-bar-wrapper">
+					<div class="content-container"> </div>
+				</div>
+				<div class="header">
+								{% include "partials/nav.html.twig" %}
+
+				</div>
+			</div>
+		{% endblock %}
+		
+	    <div class="content-container site-container">
+			<div id="portal-columns">
+					<div id="portal-column-content" class="cell width-full position-0">
+					{% block body %}{% endblock %}
+					{% block footer %}
+						<div id="footer">
+							<p>
+								&copy; Maris B.V. {{ 'now'|date('Y') }} - Made for the <a href="https://climate-adapt.eea.europa.eu/knowledge/european-climate-data-explorer/">European Climate Data Explorer</a>
+							</p>
+						</div>
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
