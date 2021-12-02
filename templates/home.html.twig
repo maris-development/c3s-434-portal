@@ -11,7 +11,26 @@ window.c3sMetadata = {{ c3s_metadata|json_encode|raw }};
 {% endblock %}
 
 {% block body %}
-<h2>C3S API Test Overview</h2>
+<h1>C3S API Test Overview</h1>
+<p>
+	This is the first version of the API Tester for C3S_434. The colors mean the following:
+</p>
+<ul>
+	<li><span class="status-indicator red">Red</span> is a timeout (>10 minutes response time) or error (status code != 200)</li>
+	<li><span class="status-indicator orange">Orange</span> is a warning (>5 minutes response time)</li>
+	<li><span class="status-indicator green">Green</span> is good (Successfully received a 200 status code)</li>
+</ul>
+<p>
+The rules of this three-color system are a temporary solution. We are working on a better system to demonstrate the health of the workflows.
+</p>
+<p>
+
+	Last test done at: 
+		{{ latest_update.date|date('c') }} 
+</p>
+
+
+<h2>Tests done</h2>
 <div class="table-container">
 	<table>
 		<thead>
@@ -55,7 +74,8 @@ window.c3sMetadata = {{ c3s_metadata|json_encode|raw }};
 		</tbody>
 	</table>
 </div>
-
+<br><br>
+<h2>Test result history graphs</h2>
 <div class="graphs-container">
 	{% for indicator in c3s_metadata %}
 		

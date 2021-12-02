@@ -26,6 +26,7 @@ class HomeController extends AbstractController
     {   
         $this->options['c3s_metadata'] = $this->getMetaData();
         $this->options['c3s_testresults'] = $this->api->getTableObj();
+        $this->options['latest_update'] = $this->getLatestUpdate();
         $this->options['meta']['canonical_url'] = $this->lib->httpHost . "/home";
         
         return $this->lib->renderWithCache('home.html.twig', $this->options);
@@ -41,6 +42,18 @@ class HomeController extends AbstractController
         $stmt = $queryBuilder->execute();
 
         return $stmt->fetchAll();
+    }
+
+    private function getLatestUpdate(){
+        $queryBuilder = $this->lib->conn->createQueryBuilder();
+
+        $queryBuilder->select("MAX(input_date) as date")
+            ->from($this->lib->dbTables['c3s_api_testlog'])
+            ->where("c3s_request_type = 'workflow_execution'");
+
+        $stmt = $queryBuilder->execute();
+
+        return $stmt->fetch();
     }
 
         

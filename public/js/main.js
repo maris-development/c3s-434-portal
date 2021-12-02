@@ -15,9 +15,9 @@ $(function () {
         $('html, body')
             .animate(
                 {
-                    scrollTop: $('#' + indicatorId).offset().top,
+                    scrollTop: $('#' + indicatorId).offset().top - 100,
                 },
-                500
+                'slow'
             )
             .promise()
             .done(function () {
