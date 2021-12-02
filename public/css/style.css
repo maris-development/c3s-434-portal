@@ -45,7 +45,7 @@ div.indicator_graph_row {
     margin-top: 1em;
 }
 
-a.status-indicator {
+.status-indicator {
     /* text-decoration: none; */
     font-weight: 700;
     color: black;
@@ -55,17 +55,17 @@ a.status-indicator {
 }
 
 select.history_select option.green,
-a.status-indicator.green {
+.status-indicator.green {
     background-color: rgba(0,255,0,0.5);
 }
 
 select.history_select option.orange,
-a.status-indicator.orange {
+.status-indicator.orange {
     background-color: rgba(255,165,0, 0.5);
 }
 
 select.history_select option.red,
-a.status-indicator.red {
+.status-indicator.red {
     background-color: rgba(255,0,0,0.5);
 }
 
