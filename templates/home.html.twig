@@ -11,7 +11,7 @@ window.c3sMetadata = {{ c3s_metadata|json_encode|raw }};
 {% endblock %}
 
 {% block body %}
-<h1>C3S API Test Overview</h1>
+<h1>ECDE API Monitoring overview</h1>
 <p>
 	This is the first version of the API Tester for C3S_434. The colors mean the following:
 </p>
@@ -23,14 +23,13 @@ window.c3sMetadata = {{ c3s_metadata|json_encode|raw }};
 <p>
 The rules of this three-color system are a temporary solution. We are working on a better system to demonstrate the health of the workflows.
 </p>
-<p>
 
+
+<br>
+<p>
 	Last test done at: 
 		{{ latest_update.date|date('c') }} 
 </p>
-
-
-<h2>Tests done</h2>
 <div class="table-container">
 	<table>
 		<thead>

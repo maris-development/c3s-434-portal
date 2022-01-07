@@ -37,7 +37,7 @@ $(function () {
 
     setTimeout(function () {
         location.reload();
-    }, 10 * 60 * 1000);
+    }, 60 * 60 * 1000); //reload page every hour or so
 });
 
 function showHistoryOfIndicator(indicator) {

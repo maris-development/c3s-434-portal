@@ -3,46 +3,77 @@ body {
 }
 
 
+.site-container {
+    padding: 1.5em;
+    background-color: #fff;
+    border: 1px solid #E5E5E5;
+}
+
 div.indicator_graph_row div.result .result_chart {
     height: 300px;
     width: 200px;
 }
 
 div.graphs-container {
-    min-width: 500px;
-    width: 50vw;
-    margin: 0 auto;
-}
-
-div.table-container {
-    /* margin: 0 auto; */
+    width:100%;
 }
 
 div.table-container table select {
-    max-width: 300px;
+    max-width: 250px;
+    border-color:#ccc;
+    padding:0.1em;
+}
+
+.history_open {
+    background: #0170B7 linear-gradient(#0170B7, #1697E9) no-repeat;
+    color: #fff;
+    border: 2px solid #0170B7;
+    border:none;
+    color:#fff;
+    font-size:0.8em;
+    padding:5px 10px;
+    vertical-align:top;
+    border-radius: 5px;
+}
+
+.history_open:hover {
+    background:#005C96;
+} 
+
+.table-container {
+    width:100%;
 }
 
 div.table-container table,
 div.table-container table th,
 div.table-container table td {
-    border: 1px solid grey;
+    border: 1px solid #ccc;
+    background:#fff;
 }
-div.table-container table td {
-    padding: 0.1em;
+div.table-container table td, div.table-container table th {
+    padding: 0.6em;
 }
+
+div.table-container table th {
+    background:#005C96;
+    color:#fff;
+    border:none;
+}
+
+
 div.table-container table tbody tr:hover {
     background-color: rgba(0,0,0,0.1);
 }
 
 div.table-container table {
-    margin: 0 auto;
     border-collapse: collapse;
 }
 
 div.indicator_graph_row {
-    border: 1px solid grey;
+    border: 1px solid #ccc;
     padding: 0.3em;
-    margin-top: 1em;
+    margin-top: 3em;
+    background:#fff
 }
 
 .status-indicator {
@@ -57,16 +88,29 @@ div.indicator_graph_row {
 select.history_select option.green,
 .status-indicator.green {
     background-color: rgba(0,255,0,0.5);
+    text-decoration:none;
 }
 
 select.history_select option.orange,
 .status-indicator.orange {
     background-color: rgba(255,165,0, 0.5);
+    text-decoration:none;
 }
 
 select.history_select option.red,
 .status-indicator.red {
     background-color: rgba(255,0,0,0.5);
+    text-decoration:none;
+}
+
+.status-indicator.red:hover, .status-indicator.orange:hover, .status-indicator.green:hover {
+    text-decoration:underline;
+    color:#000;
+}
+
+#footer p {
+    padding:20px;
+    text-align:center;
 }
 
 

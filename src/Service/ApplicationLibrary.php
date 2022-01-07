@@ -30,7 +30,7 @@ class ApplicationLibrary extends AbstractExtension
 
 
     public $DefaultContent = array(
-        "project_title"    => "C3S Toolbox Tester Dashboard",
+        "project_title"    => "ECDE API Monitoring overview",
         "project_abbreviation"    => "C3S-434-TTD",
         "project_description"    => "Testing the C3S Toolbox workflows published for ECDE",
         "current_menu"     => "home",
